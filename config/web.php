@@ -135,7 +135,13 @@ $config = [
                 ]
             ]
         ],
-
+    ],
+    'modules'=>[
+        'desk' => [
+            'class' => 'ut8ia\medicine\MedicineModule',
+            'layoutPath' => '@app/views/layouts',
+            'layout' => 'admin'
+        ],
     ],
     'params' => $params,
 ];
