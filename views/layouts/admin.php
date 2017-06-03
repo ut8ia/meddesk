@@ -9,11 +9,14 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use ut8ia\adminmenu\Adminmenu;
 use ut8ia\adminmenu\AdminmenuAsset;
+use ut8ia\medicine\assets\CommonFormsAsset;
 
 AdminAppAsset::register($this);
 AdminmenuAsset::register($this);
+CommonFormsAsset::register($this);
 
 $this->title .= ' - Admin zone' . $this->title;
+
 ?>
 <?php $this->beginPage() ?>
     <!DOCTYPE html>
@@ -43,7 +46,7 @@ $this->title .= ' - Admin zone' . $this->title;
         } else {
             $menuItems = [['label' => 'Home', 'url' => ['/site/index']],
                 [
-                    'label' => Yii::t('main', 'Logout') . ' (' . Yii::$app->user->identity->username . ')',
+                    'label' => Yii::t('app', 'Logout') . ' (' . Yii::$app->user->identity->username . ')',
                     'url' => ['/site/logout'],
                     'linkOptions' => ['data-method' => 'post']
                 ]

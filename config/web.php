@@ -3,14 +3,23 @@
 $params = require(__DIR__ . '/params.php');
 
 $config = [
-    'id' => 'basic',
+    'id' => 'meddesk',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
-        'request' => [
-            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '2345gtrerbty45tf',
-        ],
+        'language' => 'uk_UA',
+//        'i18n' => [
+//            'translations' => [
+//                '*' => [
+//                    'class' => 'yii\i18n\PhpMessageSource',
+//                    'basePath' => '@app/messages',
+//                    'sourceLanguage' => 'en',
+//                    'fileMap' => [
+//                        //'main' => 'main.php',
+//                    ],
+//                ],
+//            ],
+//        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
@@ -43,104 +52,142 @@ $config = [
             'showScriptName' => false,
             'enableStrictParsing' => false,
             'rules' => [
+                '/' => 'site/index',
             ],
         ],
         'adminmenu' => [
             'class' => ut8ia\adminmenu\Adminmenu::class,
             'items' => [
-                0 => [
-                    'name' => 'Весь контент',
+
+                [
+                    'name' => 'Прийом',
                     'items' => [
-                        1 => [
-                            'module' => 'content',
-                            'controller' => 'content',
+                        [
+                            'module' => 'desk',
+                            'controller' => 'mypatients',
                             'url' => 'index',
-                            'name' => 'Контент'],
-                        2 => [
-                            'module' => 'content',
-                            'controller' => 'tags',
-                            'name' => 'Теги',
-                            'url' => 'index'],
-                        3 => [
-                            'module' => 'content',
-                            'controller' => 'contentrubrics',
-                            'name' => 'Рубріки',
-                            'url' => 'index'],
-                        4 => [
-                            'module' => 'content',
-                            'controller' => 'contentsections',
-                            'name' => 'Секції',
-                            'url' => 'index']
+                            'name' => 'Мої пацієнти'
+                        ],
+                        [
+                            'module' => 'desk',
+                            'controller' => 'mymeets',
+                            'url' => 'index',
+                            'name' => 'Приймання'
+                        ],
+                        [
+                            'module' => 'desk',
+                            'controller' => 'myschedule',
+                            'url' => 'index',
+                            'name' => 'Розклад прийому'
+                        ],
+                        [
+                            'module' => 'desk',
+                            'controller' => 'myprofile',
+                            'url' => 'index',
+                            'name' => 'Мої налаштування'
+                        ],
                     ]
                 ],
-                3 => [
-                    'name' => 'Інтерфейс сайта',
+                [
+                    'name' => 'Реєстратура',
                     'items' => [
-                        1 => [
-                            'module' => 'frontinterface',
-                            'controller' => 'records',
+                        [
+                            'module' => 'desk',
+                            'controller' => 'patients',
                             'url' => 'index',
-                            'name' => 'Частинки'],
-                        2 => [
-                            'module' => 'frontinterface',
-                            'controller' => 'rubrics',
+                            'name' => 'Пацієнти'
+                        ],
+                        [
+                            'module' => 'desk',
+                            'controller' => 'meets',
                             'url' => 'index',
-                            'name' => 'Рубріки']
+                            'name' => 'Приймання'
+                        ],
+                        [
+                            'module' => 'desk',
+                            'controller' => 'schedule',
+                            'url' => 'index',
+                            'name' => 'Розклад прийому'
+                        ],
+                        [
+                            'module' => 'desk',
+                            'controller' => 'scheduletemplates',
+                            'url' => 'index',
+                            'name' => 'Шаблони'
+                        ],
                     ]
                 ],
-                4 => [
-                    'name' => 'Quality',
+                [
+                    'name' => 'Курси реабілітації',
                     'items' => [
-                        1 => [
-                            'module' => 'qualityadmin',
-                            'controller' => 'records',
+                        [
+                            'module' => 'desk',
+                            'controller' => 'courses',
                             'url' => 'index',
-                            'name' => 'Quality items'],
-                        2 => [
-                            'module' => 'qualityadmin',
-                            'controller' => 'rubrics',
+                            'name' => 'Курси реабілатції'
+                        ],
+                        [
+                            'module' => 'desk',
+                            'controller' => 'courseslist',
                             'url' => 'index',
-                            'name' => 'quality rubrics']
+                            'name' => 'Записи на курс'
+                        ],
+                        [
+                            'module' => 'desk',
+                            'controller' => 'excerpts',
+                            'url' => 'index',
+                            'name' => 'Виписки'
+                        ],
                     ]
                 ],
-                5 => [
-                    'name' => 'Methods',
+                [
+                    'name' => 'Налаштування',
                     'items' => [
-                        1 => [
-                            'module' => 'methodsadmin',
-                            'controller' => 'records',
+                        [
+                            'module' => 'desk',
+                            'controller' => 'scheduleexceptiondays',
                             'url' => 'index',
-                            'name' => 'Methods items'],
-                        2 => [
-                            'module' => 'methodsadmin',
-                            'controller' => 'rubrics',
+                            'name' => 'Дні-виключення'
+                        ],
+                        [
+                            'module' => 'desk',
+                            'controller' => 'expertgroups',
                             'url' => 'index',
-                            'name' => 'methods rubrics']
+                            'name' => 'Групи фахівців'
+                        ],
+                        [
+                            'module' => 'desk',
+                            'controller' => 'places',
+                            'url' => 'index',
+                            'name' => 'Місця прийому'
+                        ],
+                        [
+                            'module' => 'desk',
+                            'controller' => 'meettypes',
+                            'url' => 'index',
+                            'name' => 'Типи прийому'
+                        ],
                     ]
                 ],
-                8 => [
-                    'name' => 'Лента',
-                    'items' => [
-                        1 => [
-                            'module' => 'infoadmin',
-                            'controller' => 'records',
-                            'url' => 'index',
-                            'name' => 'Материали'],
-                        2 => [
-                            'module' => 'infoadmin',
-                            'controller' => 'rubrics',
-                            'url' => 'index',
-                            'name' => 'Рубрики']
-                    ]
-                ]
+
             ]
         ],
     ],
-    'modules'=>[
+    'modules' => [
         'desk' => [
             'class' => 'ut8ia\medicine\MedicineModule',
             'layoutPath' => '@app/views/layouts',
-            'layout' => 'admin'
+            'layout' => 'admin',
+            'formsConfig'=>[
+                'enableClientValidation' => true,
+                'options' => ['class' => 'form-horizontal', 'style' => 'padding-left:0px;'],
+                'fieldConfig' => [
+                    'template' => '<div class="col-lg-2">{label}</div><div class="col-lg-10">{input}{error}</div>',
+                    'labelOptions' => ['class' => 'form-label'],
+                    'inputOptions' => ['class' => 'form-control'],
+                ],
+            ],
+            'usersClass'=>app\models\User::class,
         ],
     ],
     'params' => $params,
@@ -152,14 +199,14 @@ if (YII_ENV_DEV) {
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        'allowedIPs' => ['127.0.0.1','81.22.138.96', '::1'],
+        'allowedIPs' => ['127.0.0.1', '81.22.138.96', '::1'],
     ];
 
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        'allowedIPs' => ['127.0.0.1','81.22.138.96', '::1'],
+        'allowedIPs' => ['127.0.0.1', '81.22.138.96', '::1'],
     ];
 }
 
