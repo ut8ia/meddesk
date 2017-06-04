@@ -24,7 +24,7 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
+            'identityClass' => ut8ia\medicine\models\ExpertsIdentity::class,
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
@@ -53,14 +53,14 @@ $config = [
             'enableStrictParsing' => false,
             'rules' => [
                 '/' => 'site/index',
-            ],
+            ]
         ],
         'adminmenu' => [
             'class' => ut8ia\adminmenu\Adminmenu::class,
             'items' => [
 
                 [
-                    'name' => 'Прийом',
+                    'name' => 'Мій кабінет',
                     'items' => [
                         [
                             'module' => 'desk',
@@ -79,6 +79,12 @@ $config = [
                             'controller' => 'myschedule',
                             'url' => 'index',
                             'name' => 'Розклад прийому'
+                        ],
+                        [
+                            'module' => 'desk',
+                            'controller' => 'mystatistics',
+                            'url' => 'index',
+                            'name' => 'Моя статистика'
                         ],
                         [
                             'module' => 'desk',
@@ -113,7 +119,7 @@ $config = [
                             'module' => 'desk',
                             'controller' => 'scheduletemplates',
                             'url' => 'index',
-                            'name' => 'Шаблони'
+                            'name' => 'Шаблони розкладу'
                         ],
                     ]
                 ],
@@ -141,14 +147,26 @@ $config = [
                     ]
                 ],
                 [
-                    'name' => 'Налаштування',
+                    'name' => 'Адміністратор',
                     'items' => [
+
+                        [
+                            'module' => 'desk',
+                            'controller' => 'experts',
+                            'url' => 'index',
+                            'name' => 'Фахівці'
+                        ],
                         [
                             'module' => 'desk',
                             'controller' => 'scheduleexceptiondays',
                             'url' => 'index',
-                            'name' => 'Дні-виключення'
+                            'name' => 'Нерабочі дні'
                         ],
+                    ]
+                ],
+                [
+                    'name' => 'Налаштування',
+                    'items' => [
                         [
                             'module' => 'desk',
                             'controller' => 'expertgroups',
@@ -167,6 +185,30 @@ $config = [
                             'url' => 'index',
                             'name' => 'Типи прийому'
                         ],
+                    ]
+                ],
+                [
+                    'name' => 'Статистика',
+                    'items' => [
+                        [
+                            'module' => 'desk',
+                            'controller' => 'statсommon',
+                            'url' => 'index',
+                            'name' => 'Загальна'
+                        ],
+                        [
+                            'module' => 'desk',
+                            'controller' => 'statexperts',
+                            'url' => 'index',
+                            'name' => 'По Фахівціям'
+                        ],
+                        [
+                            'module' => 'desk',
+                            'controller' => 'statpatients',
+                            'url' => 'index',
+                            'name' => 'По Пацієнтам'
+                        ],
+
                     ]
                 ],
 

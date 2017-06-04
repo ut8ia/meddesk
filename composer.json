@@ -20,7 +20,8 @@
         "yiisoft/yii2-swiftmailer": "~2.0.0",
         "ut8ia/yii2-adminmenu": "*",
         "ut8ia/yii2-medicine": "*",
-        "ut8ia/yii2-content-module":"*"
+        "ut8ia/yii2-content-module":"*",
+        "dektrium/yii2-user":"*"
 
     },
     "require-dev": {

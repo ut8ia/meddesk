@@ -7,7 +7,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
-use app\models\LoginForm;
+use ut8ia\medicine\models\forms\LoginForm;
 use app\models\ContactForm;
 
 class SiteController extends Controller
@@ -64,6 +64,7 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+
     /**
      * Login action.
      *
@@ -77,7 +78,7 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            return $this->redirect('/desk/start');
         }
         return $this->render('login', [
             'model' => $model,
