@@ -88,7 +88,7 @@ $config = [
                         ],
                         [
                             'module' => 'desk',
-                            'controller' => 'myprofile',
+                            'controller' => 'profile',
                             'url' => 'index',
                             'name' => 'Мої налаштування'
                         ],
@@ -175,6 +175,12 @@ $config = [
                         ],
                         [
                             'module' => 'desk',
+                            'controller' => 'diagnoses',
+                            'url' => 'index',
+                            'name' => 'Діагнози'
+                        ],
+                        [
+                            'module' => 'desk',
                             'controller' => 'places',
                             'url' => 'index',
                             'name' => 'Місця прийому'
@@ -185,6 +191,12 @@ $config = [
                             'url' => 'index',
                             'name' => 'Типи прийому'
                         ],
+                        [
+                            'module' => 'desk',
+                            'controller' => 'dev',
+                            'url' => 'index',
+                            'name' => 'Розробнику'
+                        ],
                     ]
                 ],
                 [
@@ -192,7 +204,7 @@ $config = [
                     'items' => [
                         [
                             'module' => 'desk',
-                            'controller' => 'statсommon',
+                            'controller' => 'statcommon',
                             'url' => 'index',
                             'name' => 'Загальна'
                         ],

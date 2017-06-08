@@ -35,8 +35,8 @@ $this->title .= ' - Admin zone' . $this->title;
     <div class="wrap">
         <?php
         NavBar::begin([
-            'brandLabel' => 'Admin zone',
-            'brandUrl' => '/an',
+            'brandLabel' => '<img class="mainLogo" src="/img/design/logo.png">Ukrainian Child Rehabilitation Desk  ',
+            'brandUrl' => '/desk/start',
             'options' => [
                 'class' => 'navbar-inverse navbar-fixed-top',
             ],
