@@ -3,7 +3,6 @@
 $params = require(__DIR__ . '/params.php');
 
 $config = [
-    'id' => 'meddesk',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
@@ -187,6 +186,12 @@ $config = [
                         ],
                         [
                             'module' => 'desk',
+                            'controller' => 'buildings',
+                            'url' => 'index',
+                            'name' => 'Будівлі'
+                        ],
+                        [
+                            'module' => 'desk',
                             'controller' => 'meettypes',
                             'url' => 'index',
                             'name' => 'Типи прийому'
@@ -231,8 +236,9 @@ $config = [
         'desk' => [
             'class' => 'ut8ia\medicine\MedicineModule',
             'layoutPath' => '@app/views/layouts',
+            'partialsPath'=>'@vendor/ut8ia/yii2-medicine/views/partials/',
             'layout' => 'admin',
-            'formsConfig'=>[
+            'formsConfig' => [
                 'enableClientValidation' => true,
                 'options' => ['class' => 'form-horizontal', 'style' => 'padding-left:0px;'],
                 'fieldConfig' => [
@@ -241,7 +247,7 @@ $config = [
                     'inputOptions' => ['class' => 'form-control'],
                 ],
             ],
-            'usersClass'=>app\models\User::class,
+            'usersClass' => app\models\User::class,
         ],
     ],
     'params' => $params,
