@@ -10,10 +10,12 @@ use yii\widgets\Breadcrumbs;
 use ut8ia\adminmenu\Adminmenu;
 use ut8ia\adminmenu\AdminmenuAsset;
 use ut8ia\medicine\assets\CommonFormsAsset;
+use ut8ia\medicine\assets\JsonRpcAsset;
 
 AdminAppAsset::register($this);
 AdminmenuAsset::register($this);
 CommonFormsAsset::register($this);
+JsonRpcAsset::register($this);
 
 $this->title .= ' - Admin zone' . $this->title;
 
