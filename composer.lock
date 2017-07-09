@@ -2154,6 +2154,51 @@
             "time": "2015-12-05 10:37:16"
         },
         {
+            "name": "nizsheanez/yii2-json-rpc",
+            "version": "dev-master",
+            "target-dir": "nizsheanez/jsonRpc",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nizsheanez/yii2-json-rpc.git",
+                "reference": "d336381fb79f50a031e08016c2e4d7f0db12334d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nizsheanez/yii2-json-rpc/zipball/d336381fb79f50a031e08016c2e4d7f0db12334d",
+                "reference": "d336381fb79f50a031e08016c2e4d7f0db12334d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-0": {
+                    "nizsheanez\\jsonRpc\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Sharov",
+                    "email": "www.pismeco@gmail.com"
+                }
+            ],
+            "description": "A lightweight JsonRpc Server and Client for PHP",
+            "keywords": [
+                "json",
+                "jsonrpc",
+                "rpc",
+                "yii",
+                "yii2"
+            ],
+            "time": "2017-05-12 04:09:40"
+        },
+        {
             "name": "pendalf89/yii2-tinymce",
             "version": "dev-master",
             "source": {
@@ -2417,16 +2462,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ut8ia/yii2-medicine.git",
-                "reference": "1b802c1865136d115e7f612cd47ef4e9152616d7"
+                "reference": "465d7e2b52582e08c6fdd4c9976197232394db16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ut8ia/yii2-medicine/zipball/1b802c1865136d115e7f612cd47ef4e9152616d7",
-                "reference": "1b802c1865136d115e7f612cd47ef4e9152616d7",
+                "url": "https://api.github.com/repos/ut8ia/yii2-medicine/zipball/465d7e2b52582e08c6fdd4c9976197232394db16",
+                "reference": "465d7e2b52582e08c6fdd4c9976197232394db16",
                 "shasum": ""
             },
             "require": {
                 "kartik-v/yii2-widgets": "*",
+                "nizsheanez/yii2-json-rpc": "dev-master",
                 "php": ">5.3.4",
                 "ut8ia/yii2-content-module": "*",
                 "ut8ia/yii2-filemanager": "*",
@@ -2450,7 +2496,7 @@
                 }
             ],
             "description": "module for medical organisations ",
-            "time": "2017-07-06 20:29:19"
+            "time": "2017-07-07 12:51:29"
         },
         {
             "name": "ut8ia/yii2-multylang",
@@ -2495,12 +2541,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "77a5e9310fb35fbf64ff1a84bfd2de70258c84f6"
+                "reference": "771ebce23695bbf2f8f3f25260d9a2c767abbf4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/77a5e9310fb35fbf64ff1a84bfd2de70258c84f6",
-                "reference": "77a5e9310fb35fbf64ff1a84bfd2de70258c84f6",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/771ebce23695bbf2f8f3f25260d9a2c767abbf4f",
+                "reference": "771ebce23695bbf2f8f3f25260d9a2c767abbf4f",
                 "shasum": ""
             },
             "require": {
@@ -2587,7 +2633,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2017-07-06 11:51:36"
+            "time": "2017-07-07 11:30:19"
         },
         {
             "name": "yiisoft/yii2-authclient",
