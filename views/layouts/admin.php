@@ -17,7 +17,7 @@ AdminmenuAsset::register($this);
 CommonFormsAsset::register($this);
 JsonRpcAsset::register($this);
 
-$this->title .= ' - Admin zone' . $this->title;
+$this->title .= ' - ' . Yii::t('app', 'rehabilitation desk') . $this->title;
 
 ?>
 <?php $this->beginPage() ?>
@@ -37,7 +37,7 @@ $this->title .= ' - Admin zone' . $this->title;
     <div class="wrap">
         <?php
         NavBar::begin([
-            'brandLabel' => '<img class="mainLogo" src="/img/design/logo.png">Ukrainian Child Rehabilitation Desk  ',
+            'brandLabel' => '<img class="mainLogo" src="/img/design/logo.png"><span class="brandName">Ukrainian Child Rehabilitation Desk</span>',
             'brandUrl' => '/desk/start',
             'options' => [
                 'class' => 'navbar-inverse navbar-fixed-top',
@@ -46,7 +46,10 @@ $this->title .= ' - Admin zone' . $this->title;
         if (Yii::$app->user->isGuest) {
             $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
         } else {
-            $menuItems = [['label' => 'Home', 'url' => ['/site/index']],
+            $menuItems = [
+                ['label' => 'Home', 'url' => ['/site/index']],
+                ['label' => 'Help', 'url' => ['/site/help']],
+                ['label' => 'Desk', 'url' => ['/desk/start']],
                 [
                     'label' => Yii::t('app', 'Logout') . ' (' . Yii::$app->user->identity->username . ')',
                     'url' => ['/site/logout'],
@@ -84,7 +87,7 @@ $this->title .= ' - Admin zone' . $this->title;
 
     <footer class="footer">
         <div class="container">
-            <p class="pull-left">&copy; uran <?= date('Y') ?></p>
+            <p class="pull-left">&copy; Child Neuro Rehabilitation Desk <?= date('Y') ?></p>
             <p class="pull-right"></p>
         </div>
     </footer>

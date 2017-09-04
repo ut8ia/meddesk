@@ -2,52 +2,43 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Home';
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
+        <h1>Вітаємо !</h1>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+        <p class="lead">Система автоматизації реабілітаційного процесу допоможе у вашій важливій місії.</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+        <p><a class="btn btn-lg btn-success" href="desk/start">Почніть роботу</a></p>
     </div>
 
     <div class="body-content">
 
         <div class="row">
             <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+                <h2>Для дітей</h2>
+                <p>Накопичення реальних данних та доступна форма дасть більш якісне бачення фахівцям, а отже допоможе дитині.</p>
+                <p>Складання та корегування розкладу для дитини більш явне та зручне, отже меньше компромісів в реальній ситуації для батьків.</p>
+                <p>Електронний бігунок - це зручна форма наглядно бачити свій розклад.</p>
             </div>
             <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
+                <h2>Фахівцям</h2>
+                <p>Швидкий та зручний доступ до історії пацієнта це ліпше бачення картини.</p>
+                <p>Зручна форма прийому дає економію часу для дійсно медичної місії.</p>
+                <p>Електронна карта розкладу дозволяє ефективно планувати свій час.</p>
+                <p>Аналіз реальних накопиченних данних дозволяє бачити не явні на перший перший погляд залежності. А отже бути фахівцями ще більшого рівня.</p>
             </div>
             <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+                <h2>Чому це гарно</h2>
+                <p>Система розробляється з урахуванням досвіду центра реабілітації вже отриманному у цьому напрямку.</p>
+                <p>Враховується практичний досвід із сторони родини пацієнта. Тобто це - робиться якісно із метою зробити найкращу систему з усіх боків. Дійсно ефективну.</p>
+                <p>До участі в розвитку може долучитися кожен фахівець.</p>
+<p>Для розуміння як і що робити, є розділ допомоги </p>
+                <p><a class="btn btn-default" href="/help"><?= Yii::t('app', 'Help') ?></a></p>
             </div>
+
         </div>
-
     </div>
 </div>

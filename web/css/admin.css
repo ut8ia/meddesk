@@ -106,13 +106,16 @@ a.desc:after {
     width: 100%;
 }
 
-.navbar-brand{
-    font-size: 20px;
-}
-
 .navbar-brand img{
     position:relative;
     display:inline-block;
     height:45px;
     bottom:13px;
+}
+
+.brandName{
+    position: relative;
+    font-size: 14px;
+    bottom: 13px;
+    padding-left: 4px;
 }

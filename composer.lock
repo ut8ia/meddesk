@@ -2462,12 +2462,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ut8ia/yii2-medicine.git",
-                "reference": "465d7e2b52582e08c6fdd4c9976197232394db16"
+                "reference": "3396d4fbddd0478c3f1d20a9996474a227a0357c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ut8ia/yii2-medicine/zipball/465d7e2b52582e08c6fdd4c9976197232394db16",
-                "reference": "465d7e2b52582e08c6fdd4c9976197232394db16",
+                "url": "https://api.github.com/repos/ut8ia/yii2-medicine/zipball/3396d4fbddd0478c3f1d20a9996474a227a0357c",
+                "reference": "3396d4fbddd0478c3f1d20a9996474a227a0357c",
                 "shasum": ""
             },
             "require": {
@@ -2496,7 +2496,7 @@
                 }
             ],
             "description": "module for medical organisations ",
-            "time": "2017-07-07 12:51:29"
+            "time": "2017-07-09 20:54:58"
         },
         {
             "name": "ut8ia/yii2-multylang",
@@ -2541,12 +2541,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "771ebce23695bbf2f8f3f25260d9a2c767abbf4f"
+                "reference": "f41241ea732f66b8fe13cf17ccd170f589ba1721"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/771ebce23695bbf2f8f3f25260d9a2c767abbf4f",
-                "reference": "771ebce23695bbf2f8f3f25260d9a2c767abbf4f",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/f41241ea732f66b8fe13cf17ccd170f589ba1721",
+                "reference": "f41241ea732f66b8fe13cf17ccd170f589ba1721",
                 "shasum": ""
             },
             "require": {
@@ -2633,7 +2633,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2017-07-07 11:30:19"
+            "time": "2017-07-08 22:39:22"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -3298,12 +3298,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "2226f71a3f8644267c2d6588ade9b5fa6f832c23"
+                "reference": "83ade5f05d0a7dcfc7c38c7b5fbcaca8863436b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/2226f71a3f8644267c2d6588ade9b5fa6f832c23",
-                "reference": "2226f71a3f8644267c2d6588ade9b5fa6f832c23",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/83ade5f05d0a7dcfc7c38c7b5fbcaca8863436b5",
+                "reference": "83ade5f05d0a7dcfc7c38c7b5fbcaca8863436b5",
                 "shasum": ""
             },
             "require": {
@@ -3340,7 +3340,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2017-07-05 13:44:57"
+            "time": "2017-07-07 15:11:58"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -4054,12 +4054,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "8db730130cbb9c97b04d621e59cfd4678814b2fc"
+                "reference": "2221f4486c6f232cb93aed59487042116f3bd5d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/8db730130cbb9c97b04d621e59cfd4678814b2fc",
-                "reference": "8db730130cbb9c97b04d621e59cfd4678814b2fc",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2221f4486c6f232cb93aed59487042116f3bd5d4",
+                "reference": "2221f4486c6f232cb93aed59487042116f3bd5d4",
                 "shasum": ""
             },
             "require": {
@@ -4130,7 +4130,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-07-04 09:28:10"
+            "time": "2017-07-09 09:35:02"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
