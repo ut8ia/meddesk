@@ -21,7 +21,8 @@
         "ut8ia/yii2-adminmenu": "*",
         "ut8ia/yii2-medicine": "*",
         "ut8ia/yii2-content-module":"*",
-        "dektrium/yii2-user":"*"
+        "dektrium/yii2-user":"*",
+        "yii2tech/ar-softdelete": "*"
 
     },
     "require-dev": {

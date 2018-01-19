@@ -189,19 +189,7 @@ $config = [
                             'controller' => 'buildings',
                             'url' => 'index',
                             'name' => 'Будівлі'
-                        ],
-                        [
-                            'module' => 'desk',
-                            'controller' => 'meettypes',
-                            'url' => 'index',
-                            'name' => 'Типи прийому'
-                        ],
-                        [
-                            'module' => 'desk',
-                            'controller' => 'dev',
-                            'url' => 'index',
-                            'name' => 'Розробнику'
-                        ],
+                        ]
                     ]
                 ],
                 [
@@ -226,6 +214,23 @@ $config = [
                             'name' => 'По Пацієнтам'
                         ],
 
+                    ]
+                ],
+                [
+                    'name' => 'Технічний розділ',
+                    'items' => [
+                        [
+                            'module' => 'desk',
+                            'controller' => 'dev',
+                            'url' => 'index',
+                            'name' => 'Debug page'
+                        ],
+                        [
+                            'module' => 'desk',
+                            'controller' => 'techmeets',
+                            'url' => 'index',
+                            'name' => 'Приймання'
+                        ],
                     ]
                 ],
 
