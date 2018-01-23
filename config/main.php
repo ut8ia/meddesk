@@ -65,7 +65,9 @@ $config = [
                 ],
             ],
         ],
-
+        'expert' => [
+            'class' => 'ut8ia\medicine\components\Expert'
+        ],
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
