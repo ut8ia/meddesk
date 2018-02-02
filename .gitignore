@@ -15,9 +15,10 @@ Thumbs.db
 # composer vendor dir
 /vendor
 /web/assets
-/config/main-local.php
-/config/db-local.php
-/config/console-local.php
+config/main-local.php
+config/db-local.php
+config/console-local.php
+
 /runtime
 
 # composer itself is not needed

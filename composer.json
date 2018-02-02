@@ -26,7 +26,8 @@
         "yii2tech/ar-softdelete": "*",
         "yii2tech/ar-file": "*",
         "yiisoft/yii2-imagine": "~2.1.0",
-        "navatech/yii2-migration-generator": "*"
+        "navatech/yii2-migration-generator": "*",
+        "dmstr/yii2-adminlte-asset": "^2.1"
 
     },
     "require-dev": {
