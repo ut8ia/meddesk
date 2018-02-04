@@ -12,6 +12,7 @@ use ut8ia\medicine\models\forms\LoginForm;
 class SiteController extends Controller
 {
 
+//    public $layout ='main';
     /**
      * @inheritdoc
      */

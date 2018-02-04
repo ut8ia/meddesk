@@ -20,7 +20,6 @@ $config = [
 //            ],
 //        ],
 
-
         'fileStorage' => [
             'class' => 'yii2tech\filestorage\hub\Storage',
             'storages' => [
@@ -30,10 +29,10 @@ $config = [
                     'baseUrl' => '@storageUrl/storage',
                     'filePermission' => 0775,
                     'buckets' => [
-                        'certificates_categories' => [
-                            'baseSubPath' => 'experts',
-                            'fileSubDirTemplate' => '{ext}/{^name}/{^^name}',
-                        ],
+//                        'expert_images' => [
+//                            'baseSubPath' => 'experts',
+//                            'fileSubDirTemplate' => '{ext}/{^name}/{^^name}',
+//                        ],
                     ]
                 ]
             ]
@@ -265,9 +264,9 @@ $config = [
     'modules' => [
         'desk' => [
             'class' => 'ut8ia\medicine\MedicineModule',
-            'layoutPath' => '@app/views/layouts',
+            'layoutPath' => '@vendor/ut8ia/yii2-medicine/views/layouts',
             'partialsPath' => '@vendor/ut8ia/yii2-medicine/views/partials/',
-            'layout' => 'admin',
+            'layout' => 'adminlte',
             'formsConfig' => [
                 'enableClientValidation' => true,
                 'options' => ['class' => 'form-horizontal', 'style' => 'padding-left:0px;'],
