@@ -1,0 +1,31 @@
+{
+  "name": "ut8ia/yii2-medicine",
+  "description": "module for medical organisations ",
+  "type": "library",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Eugene Anufriev",
+      "email": "eugene.anufriev@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "ut8ia\\medicine\\": "/"
+    }
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">5.3.4",
+    "yiisoft/yii2-jui": "*",
+    "nizsheanez/yii2-json-rpc": "dev-master",
+    "kartik-v/yii2-widgets": "*",
+    "ut8ia/yii2-filemanager":"*",
+    "ut8ia/yii2-content-module":"*",
+    "yii2tech/ar-softdelete": "*",
+    "yii2tech/ar-file": "*",
+    "yiisoft/yii2-imagine": "~2.1.0",
+    "dmstr/yii2-adminlte-asset": "^2.1"
+  }
+}

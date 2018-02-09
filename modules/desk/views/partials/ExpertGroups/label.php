@@ -1,0 +1,1 @@
+<div class="label" style="background-color:<?= $model->display_color ?>;"><?= $model->name ?></div>

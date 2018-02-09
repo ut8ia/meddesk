@@ -1,0 +1,1 @@
+<?= ucfirst($model->surname) . " " . ucfirst($model->name) . " " . ucfirst($model->patronymic) ?>

@@ -1,6 +1,6 @@
 {
     "name": "ut8ia/meddesk",
-    "description": "mediacl desk web application",
+    "description": "medical desk web application",
     "keywords": ["yii2", "medical"],
     "homepage": "http://www.yiiframework.com/",
     "type": "project",
@@ -19,11 +19,16 @@
         "yiisoft/yii2": "~2.0.5",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
-        "ut8ia/yii2-adminmenu": "*",
-        "ut8ia/yii2-medicine": "*",
         "ut8ia/yii2-content-module":"*",
-        "dektrium/yii2-user":"*",
-        "navatech/yii2-migration-generator": "*"
+        "navatech/yii2-migration-generator": "*",
+        "yiisoft/yii2-jui": "*",
+        "nizsheanez/yii2-json-rpc": "dev-master",
+        "kartik-v/yii2-widgets": "*",
+        "ut8ia/yii2-filemanager":"*",
+        "yii2tech/ar-softdelete": "*",
+        "yii2tech/ar-file": "*",
+        "yiisoft/yii2-imagine": "~2.1.0",
+        "dmstr/yii2-adminlte-asset": "^2.1"
 
     },
     "require-dev": {

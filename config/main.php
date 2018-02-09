@@ -263,9 +263,12 @@ $config = [
     ],
     'modules' => [
         'desk' => [
-            'class' => 'ut8ia\medicine\MedicineModule',
-            'layoutPath' => '@vendor/ut8ia/yii2-medicine/views/layouts',
-            'partialsPath' => '@vendor/ut8ia/yii2-medicine/views/partials/',
+//            'class' => 'ut8ia\medicine\MedicineModule',
+            'class' => 'app\modules\desk\MedicineModule',
+//            'layoutPath' => '@vendor/ut8ia/yii2-medicine/views/layouts',
+            'layoutPath' => '@app/modules/desk/views/layouts',
+//            'partialsPath' => '@vendor/ut8ia/yii2-medicine/views/partials/',
+            'partialsPath' => '@app/modules/desk/views/partials/',
             'layout' => 'adminlte',
             'formsConfig' => [
                 'enableClientValidation' => true,
