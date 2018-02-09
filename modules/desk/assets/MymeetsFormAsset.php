@@ -6,7 +6,7 @@ use yii\web\AssetBundle;
 
 class MymeetsFormAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/ut8ia/yii2-medicine/assets';
+    public $sourcePath = '@app/modules/desk/assets';
     public $css = [];
     public $js = ['js/MymeetsForm.js'];
     public $depends = [

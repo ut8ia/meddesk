@@ -16,7 +16,7 @@ class Formatter extends \yii\i18n\Formatter
 
     const DEFAULT_VIEW = 'default';
 
-    public $partialsPath = '@vendor/ut8ia/yii2-medicine/views/partials/';
+    public $partialsPath = '@app/modules/desk/views/partials/';
 
 
     /**

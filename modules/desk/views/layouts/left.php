@@ -57,7 +57,7 @@
                             ['label' => 'Пацієнти', 'icon' => 'child', 'url' => ['/desk/patients'],],
                             ['label' => 'Приймання', 'icon' => 'heartbeat', 'url' => ['/desk/meets'],],
                             ['label' => 'Розклад прийому', 'icon' => 'calendar', 'url' => ['/desk/schedule'],],
-                            ['label' => 'Шаблони розкладу', 'icon' => 'calendar-check-o', 'url' => ['/desk/statistics'],]
+                            ['label' => 'Шаблони розкладу', 'icon' => 'calendar-check-o', 'url' => ['/desk/scheduletemplates'],]
                         ]
                     ],
                     [

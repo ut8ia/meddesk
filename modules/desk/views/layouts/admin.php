@@ -2,18 +2,14 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use app\assets\AdminAppAsset;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
-use ut8ia\adminmenu\Adminmenu;
-use ut8ia\adminmenu\AdminmenuAsset;
+
 use app\modules\desk\assets\CommonFormsAsset;
 use app\modules\desk\assets\JsonRpcAsset;
 
-AdminAppAsset::register($this);
-AdminmenuAsset::register($this);
 CommonFormsAsset::register($this);
 JsonRpcAsset::register($this);
 

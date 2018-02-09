@@ -6,7 +6,7 @@ use yii\web\AssetBundle;
 
 class ExpertSearchAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/ut8ia/yii2-medicine/widgets/expertSearch/assets';
+    public $sourcePath = '@app/modules/desk/widgets/expertSearch/assets';
 
     public $css = [
     ];

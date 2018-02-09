@@ -42,7 +42,7 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => ut8ia\medicine\models\ExpertsIdentity::class,
+            'identityClass' => app\modules\desk\models\ExpertsIdentity::class,
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
@@ -65,7 +65,7 @@ $config = [
             ],
         ],
         'expert' => [
-            'class' => 'ut8ia\medicine\components\Expert'
+            'class' => 'app\modules\desk\components\Expert'
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,
@@ -76,7 +76,7 @@ $config = [
             ]
         ],
         'formatter' => [
-            'class' => 'ut8ia\medicine\components\Formatter'
+            'class' => 'app\modules\desk\components\Formatter'
         ],
         'adminmenu' => [
             'class' => ut8ia\adminmenu\Adminmenu::class,

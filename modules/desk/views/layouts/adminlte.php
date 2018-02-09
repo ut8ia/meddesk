@@ -4,22 +4,15 @@
 
 use app\assets\AdminAppAsset;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
-use ut8ia\adminmenu\Adminmenu;
-use ut8ia\adminmenu\AdminmenuAsset;
 use app\modules\desk\assets\CommonFormsAsset;
 use app\modules\desk\assets\JsonRpcAsset;
 use dmstr\web\AdminLteAsset;
 
 
 AdminAppAsset::register($this);
-AdminmenuAsset::register($this);
 CommonFormsAsset::register($this);
 JsonRpcAsset::register($this);
 AdminLteAsset::register($this);
-
 
 $this->title .= ' - ' . Yii::t('app', 'rehabilitation desk') . $this->title;
 $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
