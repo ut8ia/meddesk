@@ -12,7 +12,6 @@ use app\modules\desk\models\forms\LoginForm;
 class SiteController extends Controller
 {
 
-//    public $layout ='main';
     /**
      * @inheritdoc
      */
@@ -31,7 +30,7 @@ class SiteController extends Controller
                 ],
             ],
             'verbs' => [
-                'class' => VerbFilter::className(),
+                'class' => VerbFilter::class,
                 'actions' => [
                     'logout' => ['post'],
                 ],
