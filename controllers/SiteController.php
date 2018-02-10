@@ -7,7 +7,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
-use ut8ia\medicine\models\forms\LoginForm;
+use app\modules\desk\models\forms\LoginForm;
 
 class SiteController extends Controller
 {
