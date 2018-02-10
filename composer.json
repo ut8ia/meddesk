@@ -16,7 +16,7 @@
     "require": {
 
         "php": ">=5.4.0",
-        "yiisoft/yii2": "~2.0.5",
+        "yiisoft/yii2": "~2.0.13",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
         "ut8ia/yii2-content-module":"*",
@@ -25,6 +25,8 @@
         "nizsheanez/yii2-json-rpc": "dev-master",
         "kartik-v/yii2-widgets": "*",
         "ut8ia/yii2-filemanager":"*",
+        "ut8ia/yii2-slacklog": "*",
+        "nikosid/globals": "dev-master",
         "yii2tech/ar-softdelete": "*",
         "yii2tech/ar-file": "*",
         "yiisoft/yii2-imagine": "~2.1.0",
