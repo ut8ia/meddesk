@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use Yii;
+use yii\base\InvalidParamException;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
@@ -69,9 +70,11 @@ class SiteController extends Controller
      * Login action.
      *
      * @return Response|string
+     * @throws InvalidParamException
      */
     public function actionLogin()
     {
+        dd(Yii::$app->security->generatePasswordHash('recfxfz2'));
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
