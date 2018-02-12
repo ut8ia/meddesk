@@ -74,7 +74,7 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-        dd(Yii::$app->security->generatePasswordHash('recfxfz2'));
+
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
