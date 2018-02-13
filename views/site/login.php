@@ -2,43 +2,88 @@
 
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
-/* @var $model app\models\LoginForm */
+/* @var $model app\modules\desk\models\forms\LoginForm */
 
-use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to login:</p>
 
-    <?php $form = ActiveForm::begin([
-        'id' => 'login-form',
-        'layout' => 'horizontal',
-        'fieldConfig' => [
-            'template' => "{label}\n<div class=\"col-lg-3\">{input}</div>\n<div class=\"col-lg-8\">{error}</div>",
-            'labelOptions' => ['class' => 'col-lg-1 control-label'],
-        ],
-    ]); ?>
+<div class="login-box">
+    <div class="login-logo">
+        <a href="https://adminlte.io/themes/AdminLTE/index2.html"><b>Med</b>DESK</a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+        <p class="login-box-msg"><?= Yii::t('app', 'Sign in to start your session'); ?></p>
 
-        <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
 
-        <?= $form->field($model, 'password')->passwordInput() ?>
+        <?php $form = ActiveForm::begin([
+            'id' => 'login-form',
+            'fieldConfig' => [
+                'template' => "{input}",
+            ],
+        ]); ?>
 
-        <?= $form->field($model, 'rememberMe')->checkbox([
-            'template' => "<div class=\"col-lg-offset-1 col-lg-3\">{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",
-        ]) ?>
-
-        <div class="form-group">
-            <div class="col-lg-offset-1 col-lg-11">
-                <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
-            </div>
+        <div class="form-group has-feedback">
+            <?=
+            $form->field($model, 'username')
+                ->textInput([
+                    'placeholder' => 'email',
+                    'class' => 'form-control',
+                    'type' => 'email'
+                ]) ?>
+            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
         </div>
 
-    <?php ActiveForm::end(); ?>
+        <div class="form-group has-feedback">
+            <?=
+            $form->field($model, 'password')
+                ->textInput([
+                    'class' => 'form-control',
+                    'placeholder' => 'password',
+                    'type' => 'password'
+                ]) ?>
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+        <div class="row">
+            <div class="col-xs-8">
+                <div class="checkbox icheck">
+                    <label class="">
+                        <div class="icheckbox_square-blue" style="position: relative;" aria-checked="false"
+                             aria-disabled="false">
 
-    <div class="col-lg-offset-1" style="color:#999;"></div>
+                            <?= $form->field($model, 'rememberMe')->input(
+                                'checkbox',
+                                [
+                                    'style' => "position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"
+                                ]
+                            ) ?>
+
+                            <ins class="iCheck-helper"
+                                 style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins>
+                        </div>
+                        <?= Yii::t('app', 'Remember Me'); ?>
+                    </label>
+                </div>
+            </div>
+            <!-- /.col -->
+            <div class="col-xs-4">
+                <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+            </div>
+            <!-- /.col -->
+        </div>
+
+
+        <?php ActiveForm::end(); ?>
+
+        <!-- /.social-auth-links -->
+        <!--        <a href="#">I forgot my password</a><br>-->
+        <!--        <a href="https://adminlte.io/themes/AdminLTE/pages/examples/register.html" class="text-center">Register a newmembership</a>-->
+
+    </div>
+    <!-- /.login-box-body -->
 </div>
+

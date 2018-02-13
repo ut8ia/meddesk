@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d202495d4a45ec2357043eecf9f19bd",
+    "content-hash": "392e62ab1c140cf2399ed1ff91d9c4ef",
     "packages": [
         {
             "name": "2amigos/yii2-date-time-picker-widget",
@@ -2765,6 +2765,54 @@
             "time": "2015-12-05T10:37:16+00:00"
         },
         {
+            "name": "lajax/yii2-translate-manager",
+            "version": "1.7.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lajax/yii2-translate-manager.git",
+                "reference": "f2acb66224fe73fd0aefb38b28883a7815f8e464"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lajax/yii2-translate-manager/zipball/f2acb66224fe73fd0aefb38b28883a7815f8e464",
+                "reference": "f2acb66224fe73fd0aefb38b28883a7815f8e464",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*",
+                "yiisoft/yii2-bootstrap": "*",
+                "yiisoft/yii2-jui": "*"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.1"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "lajax\\translatemanager\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lajos Molnar",
+                    "email": "lajax.m@gmail.com"
+                }
+            ],
+            "description": "Online Translate",
+            "keywords": [
+                "extension",
+                "language",
+                "module",
+                "translate",
+                "yii2"
+            ],
+            "time": "2017-10-30T20:27:23+00:00"
+        },
+        {
             "name": "navatech/yii2-migration-generator",
             "version": "dev-master",
             "source": {
@@ -3541,12 +3589,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "59cfebdd1ce2d83a551427356ce5f699c53aa9d1"
+                "reference": "c567965fc8f556460e74e81207d4df62b2daf6cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/59cfebdd1ce2d83a551427356ce5f699c53aa9d1",
-                "reference": "59cfebdd1ce2d83a551427356ce5f699c53aa9d1",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/c567965fc8f556460e74e81207d4df62b2daf6cf",
+                "reference": "c567965fc8f556460e74e81207d4df62b2daf6cf",
                 "shasum": ""
             },
             "require": {
@@ -3633,7 +3681,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2018-02-12T09:01:21+00:00"
+            "time": "2018-02-13T12:38:35+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -3804,12 +3852,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-httpclient.git",
-                "reference": "529d8e9cec9f7e362f584d1030576bb7977c2ab6"
+                "reference": "232d0ec4caf06ae01ebf2ee91d24e778e9664403"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-httpclient/zipball/529d8e9cec9f7e362f584d1030576bb7977c2ab6",
-                "reference": "529d8e9cec9f7e362f584d1030576bb7977c2ab6",
+                "url": "https://api.github.com/repos/yiisoft/yii2-httpclient/zipball/232d0ec4caf06ae01ebf2ee91d24e778e9664403",
+                "reference": "232d0ec4caf06ae01ebf2ee91d24e778e9664403",
                 "shasum": ""
             },
             "require": {
@@ -3843,7 +3891,7 @@
                 "httpclient",
                 "yii2"
             ],
-            "time": "2018-02-02T16:13:21+00:00"
+            "time": "2018-02-13T15:12:07+00:00"
         },
         {
             "name": "yiisoft/yii2-imagine",

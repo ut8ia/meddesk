@@ -8,7 +8,6 @@ use yii\bootstrap\BootstrapPluginAsset;
 use yii\web\JqueryAsset;
 use yii\helpers\Html;
 use hiqdev\assets\icheck\iCheckAsset;
-use yii\bootstrap\ActiveForm;
 
 JqueryAsset::register($this);
 AdminLteAsset::register($this);
