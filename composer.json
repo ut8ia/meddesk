@@ -30,7 +30,8 @@
         "yii2tech/ar-softdelete": "*",
         "yii2tech/ar-file": "*",
         "yiisoft/yii2-imagine": "~2.1.0",
-        "dmstr/yii2-adminlte-asset": "^2.1"
+        "dmstr/yii2-adminlte-asset": "^2.1",
+        "hiqdev/yii2-asset-icheck": "*"
 
     },
     "require-dev": {

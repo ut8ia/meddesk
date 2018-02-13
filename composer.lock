@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0de7cdd9a786f5f72c88d90732d1d1d5",
+    "content-hash": "5d202495d4a45ec2357043eecf9f19bd",
     "packages": [
         {
             "name": "2amigos/yii2-date-time-picker-widget",
@@ -489,6 +489,57 @@
                 ]
             },
             "time": "2017-08-22T13:26:31+00:00"
+        },
+        {
+            "name": "bower-asset/icheck",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fronteed/icheck.git",
+                "reference": "8a6eb37bd7dab1e843c1b630c91c6398ff409d05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fronteed/icheck/zipball/8a6eb37bd7dab1e843c1b630c91c6398ff409d05",
+                "reference": "8a6eb37bd7dab1e843c1b630c91c6398ff409d05",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.7"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "./icheck.min.js"
+                ],
+                "bower-asset-ignore": [
+                    ".gitignore",
+                    "CHANGELOG.md",
+                    "README.md",
+                    "demo/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Highly customizable checkboxes and radio buttons (jQuery & Zepto)",
+            "keywords": [
+                "accessibility",
+                "checkbox",
+                "checked",
+                "custom",
+                "disabled",
+                "field",
+                "form",
+                "icheck",
+                "indeterminate",
+                "input",
+                "radio",
+                "replacement",
+                "skins",
+                "ui"
+            ],
+            "time": "2014-03-03T17:36:28+00:00"
         },
         {
             "name": "bower-asset/inputmask",
@@ -1398,6 +1449,78 @@
                 "url"
             ],
             "time": "2017-10-07T03:19:56+00:00"
+        },
+        {
+            "name": "hiqdev/yii2-asset-icheck",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/yii2-asset-icheck.git",
+                "reference": "9dc8ea8e854f27bcff59198f8815da80dd696d18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/yii2-asset-icheck/zipball/9dc8ea8e854f27bcff59198f8815da80dd696d18",
+                "reference": "9dc8ea8e854f27bcff59198f8815da80dd696d18",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/icheck": "1.0.2",
+                "yiisoft/yii2": "~2.0"
+            },
+            "require-dev": {
+                "hiqdev/composer-asset-plugin": "*@dev"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "bower-dependencies": {
+                    "icheck": "1.0.2"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hiqdev\\assets\\icheck\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "silverfire@hiqdev.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "tafid@hiqdev.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@hiqdev.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "Yii2 asset for bower iCheck",
+            "homepage": "https://github.com/hiqdev/yii2-asset-icheck",
+            "keywords": [
+                "asset",
+                "extension",
+                "iCheck",
+                "yii2"
+            ],
+            "time": "2016-03-30T10:59:26+00:00"
         },
         {
             "name": "imagine/imagine",
@@ -3418,12 +3541,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "e6959f4903de42ccd28e796f2872f4a37a798bff"
+                "reference": "59cfebdd1ce2d83a551427356ce5f699c53aa9d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/e6959f4903de42ccd28e796f2872f4a37a798bff",
-                "reference": "e6959f4903de42ccd28e796f2872f4a37a798bff",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/59cfebdd1ce2d83a551427356ce5f699c53aa9d1",
+                "reference": "59cfebdd1ce2d83a551427356ce5f699c53aa9d1",
                 "shasum": ""
             },
             "require": {
@@ -3510,7 +3633,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2018-02-10T12:10:14+00:00"
+            "time": "2018-02-12T09:01:21+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -4549,12 +4672,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "9a84d1c09fbf7918e9d3cf998b83ecbf7555261d"
+                "reference": "9f901e29c93dae4aa77c0bb161df4276f9c9a1be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/9a84d1c09fbf7918e9d3cf998b83ecbf7555261d",
-                "reference": "9a84d1c09fbf7918e9d3cf998b83ecbf7555261d",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/9f901e29c93dae4aa77c0bb161df4276f9c9a1be",
+                "reference": "9f901e29c93dae4aa77c0bb161df4276f9c9a1be",
                 "shasum": ""
             },
             "require": {
@@ -4604,7 +4727,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2017-12-21T16:59:48+00:00"
+            "time": "2018-02-11T18:49:29+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -5965,12 +6088,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "613e26310776f49a1773b6737c6bd554b8bc8c6f"
+                "reference": "6a615613745cef820d807443f32076bb9f5d0a38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/613e26310776f49a1773b6737c6bd554b8bc8c6f",
-                "reference": "613e26310776f49a1773b6737c6bd554b8bc8c6f",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/6a615613745cef820d807443f32076bb9f5d0a38",
+                "reference": "6a615613745cef820d807443f32076bb9f5d0a38",
                 "shasum": ""
             },
             "require": {
@@ -6006,7 +6129,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-03T07:37:34+00:00"
+            "time": "2018-02-11T17:15:12+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -6073,12 +6196,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "eab73b6c21d27ae4cd037c417618dfd4befb0bfe"
+                "reference": "f44c40e9eb06da59bdaf83309e9a1312eb6eaf84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/eab73b6c21d27ae4cd037c417618dfd4befb0bfe",
-                "reference": "eab73b6c21d27ae4cd037c417618dfd4befb0bfe",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/f44c40e9eb06da59bdaf83309e9a1312eb6eaf84",
+                "reference": "f44c40e9eb06da59bdaf83309e9a1312eb6eaf84",
                 "shasum": ""
             },
             "require": {
@@ -6123,7 +6246,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-21T19:05:02+00:00"
+            "time": "2018-02-11T15:00:48+00:00"
         },
         {
             "name": "theseer/tokenizer",
