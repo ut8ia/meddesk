@@ -35,7 +35,7 @@ class Formatter extends \yii\i18n\Formatter
      * @param null $where
      * @param null $keyName
      * @param null $options
-     * @return array|null
+     * @return array
      */
     public function asPairs($className, $where = null, $keyName = null, $options = null)
     {
@@ -46,7 +46,7 @@ class Formatter extends \yii\i18n\Formatter
         $records = $query->all();
 
         if (!$records) {
-            return null;
+            return [];
         }
 
         return $this->asObjectPairs($records, $keyName = null, $options = null);

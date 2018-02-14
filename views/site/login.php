@@ -77,7 +77,6 @@ $this->params['breadcrumbs'][] = $this->title;
             <!-- /.col -->
         </div>
 
-
         <?php ActiveForm::end(); ?>
 
         <!-- /.social-auth-links -->
