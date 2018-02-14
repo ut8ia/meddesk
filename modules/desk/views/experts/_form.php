@@ -54,7 +54,7 @@ use kartik\widgets\FileInput;
         'language' => 'en',
         'options' => [
             'multiple' => true,
-            'placeholder' => Yii::t('app','Places of expert')
+            'placeholder' => Yii::t('desk','Places of expert')
         ],
         'pluginOptions' => [
             'allowClear' => true
@@ -67,7 +67,7 @@ use kartik\widgets\FileInput;
         'language' => 'en',
         'options' => [
             'multiple' => true,
-            'placeholder' => Yii::t('app','Related to expert groups')
+            'placeholder' => Yii::t('desk','Related to expert groups')
         ],
         'pluginOptions' => [
             'allowClear' => true
@@ -88,7 +88,7 @@ use kartik\widgets\FileInput;
     <hr>
 
     <div class="form-group">
-        <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton(Yii::t('desk', 'Save'), ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

@@ -20,6 +20,6 @@ PatientSearchAsset::register($this);
         'readonly' => false,
         'value' => $model->patient_name,
         'class' => 'form-control',
-        'placeholder' => Yii::t('app', 'Search patient name'),
+        'placeholder' => Yii::t('desk', 'Search patient name'),
     ],
 ]) ?>

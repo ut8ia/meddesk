@@ -8,7 +8,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\modules\desk\models\search\ExcertGroupsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Expert Groups');
+$this->title = Yii::t('desk', 'Expert Groups');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="expert-groups-index">
@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php Pjax::begin(); ?>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
     <p>
-        <?= Html::a(Yii::t('app', 'Create Expert Groups'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('desk', 'Create Expert Groups'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-2'],
                 'attribute' => 'name',
-                'label' => Yii::t('app', 'Group name'),
+                'label' => Yii::t('desk', 'Group name'),
                 'format' => 'html',
                 'value' => function($model) {
                     return $model->name;
@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-7'],
                 'attribute' => 'name',
-                'label' => Yii::t('app', 'Description'),
+                'label' => Yii::t('desk', 'Description'),
                 'format' => 'html',
                 'value' => function($model) {
                     return $model->description;
@@ -50,7 +50,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-2'],
                 'attribute' => 'name',
-                'label' => Yii::t('app', 'Experts'),
+                'label' => Yii::t('desk', 'Experts'),
                 'format' => 'html',
                 'value' => function($model) {
                     return count($model->experts);
@@ -59,7 +59,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-1'],
                 'attribute' => 'name',
-                'label' => Yii::t('app', 'Display color'),
+                'label' => Yii::t('desk', 'Display color'),
                 'format' => 'object',
                 'value' => function($model) {
                     return ['object' => $model, 'view' => 'label'];

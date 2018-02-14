@@ -44,11 +44,11 @@ class Places extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'name' => Yii::t('app', 'Name'),
-            'building_id' => Yii::t('app', 'Building'),
-            'floor' => Yii::t('app', 'Floor'),
-            'description' => Yii::t('app', 'Description'),
+            'id' => Yii::t('desk', 'ID'),
+            'name' => Yii::t('desk', 'Name'),
+            'building_id' => Yii::t('desk', 'Building'),
+            'floor' => Yii::t('desk', 'Floor'),
+            'description' => Yii::t('desk', 'Description'),
         ];
     }
 

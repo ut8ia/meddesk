@@ -6,20 +6,20 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
-        'language' => 'uk_UA',
-//        'i18n' => [
-//            'translations' => [
-//                '*' => [
-//                    'class' => 'yii\i18n\PhpMessageSource',
-//                    'basePath' => '@app/messages',
-//                    'sourceLanguage' => 'en',
-//                    'fileMap' => [
-//                        //'main' => 'main.php',
-//                    ],
-//                ],
-//            ],
-//        ],
-
+        'language' => 'uk-UA',
+        'i18n' => [
+            'translations' => [
+                '*' => [
+                    'class' => 'yii\i18n\DbMessageSource',
+                    'db' => 'db',
+                    'sourceLanguage' => 'en-US', // Developer language
+                    'sourceMessageTable' => '{{%language_source}}',
+                    'messageTable' => '{{%language_translate}}',
+//                'cachingDuration' => 86400,
+                'enableCaching' => false,
+                ]
+            ],
+        ],
         'fileStorage' => [
             'class' => 'yii2tech\filestorage\hub\Storage',
             'storages' => [
@@ -78,196 +78,11 @@ $config = [
         'formatter' => [
             'class' => 'app\modules\desk\components\Formatter'
         ],
-        'adminmenu' => [
-            'class' => ut8ia\adminmenu\Adminmenu::class,
-            'items' => [
-
-                [
-                    'name' => 'Мій кабінет',
-                    'items' => [
-                        [
-                            'module' => 'desk',
-                            'controller' => 'mypatients',
-                            'url' => 'index',
-                            'name' => 'Мої пацієнти'
-                        ],
-                        [
-                            'module' => 'desk',
-                            'controller' => 'mymeets',
-                            'url' => 'index',
-                            'name' => 'Приймання'
-                        ],
-                        [
-                            'module' => 'desk',
-                            'controller' => 'myschedule',
-                            'url' => 'index',
-                            'name' => 'Розклад прийому'
-                        ],
-                        [
-                            'module' => 'desk',
-                            'controller' => 'mystatistics',
-                            'url' => 'index',
-                            'name' => 'Моя статистика'
-                        ],
-                        [
-                            'module' => 'desk',
-                            'controller' => 'profile',
-                            'url' => 'index',
-                            'name' => 'Мої налаштування'
-                        ],
-                    ]
-                ],
-                [
-                    'name' => 'Реєстратура',
-                    'items' => [
-                        [
-                            'module' => 'desk',
-                            'controller' => 'patients',
-                            'url' => 'index',
-                            'name' => 'Пацієнти'
-                        ],
-                        [
-                            'module' => 'desk',
-                            'controller' => 'meets',
-                            'url' => 'index',
-                            'name' => 'Приймання'
-                        ],
-                        [
-                            'module' => 'desk',
-                            'controller' => 'schedule',
-                            'url' => 'index',
-                            'name' => 'Розклад прийому'
-                        ],
-                        [
-                            'module' => 'desk',
-                            'controller' => 'scheduletemplates',
-                            'url' => 'index',
-                            'name' => 'Шаблони розкладу'
-                        ],
-                    ]
-                ],
-                [
-                    'name' => 'Курси реабілітації',
-                    'items' => [
-                        [
-                            'module' => 'desk',
-                            'controller' => 'courses',
-                            'url' => 'index',
-                            'name' => 'Курси реабілатції'
-                        ],
-                        [
-                            'module' => 'desk',
-                            'controller' => 'courseslist',
-                            'url' => 'index',
-                            'name' => 'Записи на курс'
-                        ],
-                        [
-                            'module' => 'desk',
-                            'controller' => 'excerpts',
-                            'url' => 'index',
-                            'name' => 'Виписки'
-                        ],
-                    ]
-                ],
-                [
-                    'name' => 'Адміністратор',
-                    'items' => [
-
-                        [
-                            'module' => 'desk',
-                            'controller' => 'experts',
-                            'url' => 'index',
-                            'name' => 'Фахівці'
-                        ],
-                        [
-                            'module' => 'desk',
-                            'controller' => 'scheduleexceptiondays',
-                            'url' => 'index',
-                            'name' => 'Нерабочі дні'
-                        ],
-                    ]
-                ],
-                [
-                    'name' => 'Налаштування',
-                    'items' => [
-                        [
-                            'module' => 'desk',
-                            'controller' => 'expertgroups',
-                            'url' => 'index',
-                            'name' => 'Групи фахівців'
-                        ],
-                        [
-                            'module' => 'desk',
-                            'controller' => 'diagnoses',
-                            'url' => 'index',
-                            'name' => 'Діагнози'
-                        ],
-                        [
-                            'module' => 'desk',
-                            'controller' => 'places',
-                            'url' => 'index',
-                            'name' => 'Місця прийому'
-                        ],
-                        [
-                            'module' => 'desk',
-                            'controller' => 'buildings',
-                            'url' => 'index',
-                            'name' => 'Будівлі'
-                        ]
-                    ]
-                ],
-                [
-                    'name' => 'Статистика',
-                    'items' => [
-                        [
-                            'module' => 'desk',
-                            'controller' => 'statcommon',
-                            'url' => 'index',
-                            'name' => 'Загальна'
-                        ],
-                        [
-                            'module' => 'desk',
-                            'controller' => 'statexperts',
-                            'url' => 'index',
-                            'name' => 'По Фахівціям'
-                        ],
-                        [
-                            'module' => 'desk',
-                            'controller' => 'statpatients',
-                            'url' => 'index',
-                            'name' => 'По Пацієнтам'
-                        ],
-
-                    ]
-                ],
-                [
-                    'name' => 'Технічний розділ',
-                    'items' => [
-                        [
-                            'module' => 'desk',
-                            'controller' => 'dev',
-                            'url' => 'index',
-                            'name' => 'Debug page'
-                        ],
-                        [
-                            'module' => 'desk',
-                            'controller' => 'techmeets',
-                            'url' => 'index',
-                            'name' => 'Приймання'
-                        ],
-                    ]
-                ],
-
-            ]
-        ],
     ],
     'modules' => [
         'desk' => [
-//            'class' => 'ut8ia\medicine\MedicineModule',
             'class' => 'app\modules\desk\MedicineModule',
-//            'layoutPath' => '@vendor/ut8ia/yii2-medicine/views/layouts',
             'layoutPath' => '@app/modules/desk/views/layouts',
-//            'partialsPath' => '@vendor/ut8ia/yii2-medicine/views/partials/',
             'partialsPath' => '@app/modules/desk/views/partials/',
             'layout' => 'adminlte',
             'formsConfig' => [
@@ -279,7 +94,17 @@ $config = [
                     'inputOptions' => ['class' => 'form-control'],
                 ],
             ],
-            'usersClass' => app\models\User::class,
+            'usersClass' => app\modules\desk\models\Experts::class,
+        ],
+        'translatemanager' => [
+            'class' => 'lajax\translatemanager\Module',
+            'roles' => ['@'],
+            'root' => '@app',
+            'scanRootParentDirectory' => false,
+            'layout' => '@app/modules/desk/views/layouts/adminlte',
+            'ignoredCategories' => ['yii'],
+//            'allowedIPs' => ['127.0.0.1', '::1', '192.168.0.*', '192.168.83.1'],
+            'allowedIPs' => ['*']
         ],
     ],
     'params' => $params,

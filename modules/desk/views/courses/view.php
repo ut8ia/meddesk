@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model app\modules\desk\models\Courses */
 
 $this->title = $model->number;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Courses'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('desk', 'Courses'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="courses-view">
@@ -15,11 +15,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
     <p>
-        <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id], [
+        <?= Html::a(Yii::t('desk', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('desk', 'Delete'), ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                'confirm' => Yii::t('desk', 'Are you sure you want to delete this item?'),
                 'method' => 'post',
             ],
         ]) ?>
@@ -30,12 +30,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'number',
             [
-                'label' => Yii::t('app', 'Date start'),
+                'label' => Yii::t('desk', 'Date start'),
                 'format' => 'html',
                 'value' => Yii::$app->time->date2front($model->date_start)
             ],
             [
-                'label' => Yii::t('app', 'Date end'),
+                'label' => Yii::t('desk', 'Date end'),
                 'format' => 'html',
                 'value' => Yii::$app->time->date2front($model->date_end)
             ],

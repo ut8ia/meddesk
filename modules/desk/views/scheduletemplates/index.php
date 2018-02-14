@@ -7,7 +7,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\modules\desk\models\search\ScheduleTemplatesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Schedule Templates');
+$this->title = Yii::t('desk', 'Schedule Templates');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="schedule-templates-index">
@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Schedule Templates'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('desk', 'Create Schedule Templates'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

@@ -37,8 +37,8 @@ class MeetTypes extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'name' => Yii::t('app', 'Name'),
+            'id' => Yii::t('desk', 'ID'),
+            'name' => Yii::t('desk', 'Name'),
         ];
     }
 

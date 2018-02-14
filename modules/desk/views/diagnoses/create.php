@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\modules\desk\models\Diagnoses */
 
-$this->title = Yii::t('app', 'Create Diagnoses');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Diagnoses'), 'url' => ['index']];
+$this->title = Yii::t('desk', 'Create Diagnoses');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('desk', 'Diagnoses'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="diagnoses-create">

@@ -8,7 +8,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\modules\desk\models\search\CoursesListSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Courses Lists');
+$this->title = Yii::t('desk', 'Courses Lists');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="courses-list-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Courses List'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('desk', 'Create Courses List'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'update' => function($url, $model) {
                         if ($model->canUpdate()) {
                             return Html::a('<span class="glyphicon glyphicon-pencil"></span>', $url, [
-                                'title' => Yii::t('app', 'Edit'),
+                                'title' => Yii::t('desk', 'Edit'),
                                 'data-pjax' => 1,
                                 'class' => 'grid-edit-action'
                             ]);
@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                 'attribute' => 'course_id',
-                'label' => Yii::t('app', 'Course'),
+                'label' => Yii::t('desk', 'Course'),
                 'format' => 'object',
                 'value' => function($model) {
                     return $model->courses;
@@ -50,7 +50,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-3'],
                 'attribute' => 'patient',
-                'label' => Yii::t('app', 'Patient'),
+                'label' => Yii::t('desk', 'Patient'),
                 'format' => 'object',
                 'value' => function($model) {
                     return $model->patients;
@@ -59,7 +59,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-2'],
                 'attribute' => 'date_from',
-                'label' => Yii::t('app', 'Date from'),
+                'label' => Yii::t('desk', 'Date from'),
                 'format' => 'html',
                 'value' => function($model) {
                     return Yii::$app->time->date2front($model->date_from);
@@ -68,7 +68,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-2'],
                 'attribute' => 'date_to',
-                'label' => Yii::t('app', 'Date to'),
+                'label' => Yii::t('desk', 'Date to'),
                 'format' => 'html',
                 'value' => function($model) {
                     return Yii::$app->time->date2front($model->date_to);
@@ -77,7 +77,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-2'],
                 'attribute' => 'status',
-                'label' => Yii::t('app', 'Status'),
+                'label' => Yii::t('desk', 'Status'),
                 'format' => 'object',
                 'value' => function($model) {
                     return ['object' => $model, 'view' => 'status_label'];
@@ -86,7 +86,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-2'],
                 'attribute' => 'comment',
-                'label' => Yii::t('app', 'Comment'),
+                'label' => Yii::t('desk', 'Comment'),
                 'format' => 'html',
                 'value' => function($model) {
                     return $model->comment;

@@ -9,7 +9,7 @@ use Yii;
 /* @var $searchModel app\modules\desk\models\search\ExpertsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Experts');
+$this->title = Yii::t('desk', 'Experts');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="experts-index">
@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Experts'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('desk', 'Create Experts'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                 'contentOptions' => ['class' => 'col-lg-8 '],
-                'label' => Yii::t('app', 'Expert'),
+                'label' => Yii::t('desk', 'Expert'),
                 'attribute' => 'surname',
                 'format' => 'object',
                 'value' => function($model) {
@@ -43,7 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                 'contentOptions' => ['class' => 'col-lg-8 '],
-                'label' => Yii::t('app', 'Expert'),
+                'label' => Yii::t('desk', 'Expert'),
                 'attribute' => 'expertGroups',
                 'format' => 'object',
                 'value' => function($model) {

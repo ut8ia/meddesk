@@ -33,8 +33,8 @@ class Patients extends \yii\db\ActiveRecord
     public static function getStatuses()
     {
         return [
-            self::SEX_FEMALE => Yii::t('app', 'female'),
-            self::SEX_MALE => Yii::t('app', 'male'),
+            self::SEX_FEMALE => Yii::t('desk', 'female'),
+            self::SEX_MALE => Yii::t('desk', 'male'),
         ];
     }
 
@@ -71,19 +71,19 @@ class Patients extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'name' => Yii::t('app', 'Name'),
-            'surname' => Yii::t('app', 'Surname'),
-            'patronymic' => Yii::t('app', 'Patronymic'),
-            'card_number' => Yii::t('app', 'Card Number'),
-            'sex' => Yii::t('app', 'Sex'),
-            'birthdate' => Yii::t('app', 'Birthdate'),
-            'region_id' => Yii::t('app', 'Region ID'),
-            'city' => Yii::t('app', 'City'),
-            'city_id' => Yii::t('app', 'City ID'),
-            'district' => Yii::t('app', 'District'),
-            'district_a' => Yii::t('app', 'District A'),
-            'user_id' => Yii::t('app', 'User ID'),
+            'id' => Yii::t('desk', 'ID'),
+            'name' => Yii::t('desk', 'Name'),
+            'surname' => Yii::t('desk', 'Surname'),
+            'patronymic' => Yii::t('desk', 'Patronymic'),
+            'card_number' => Yii::t('desk', 'Card Number'),
+            'sex' => Yii::t('desk', 'Sex'),
+            'birthdate' => Yii::t('desk', 'Birthdate'),
+            'region_id' => Yii::t('desk', 'Region ID'),
+            'city' => Yii::t('desk', 'City'),
+            'city_id' => Yii::t('desk', 'City ID'),
+            'district' => Yii::t('desk', 'District'),
+            'district_a' => Yii::t('desk', 'District A'),
+            'user_id' => Yii::t('desk', 'User ID'),
         ];
     }
 

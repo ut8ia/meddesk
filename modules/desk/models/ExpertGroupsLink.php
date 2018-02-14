@@ -38,9 +38,9 @@ class ExpertGroupsLink extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'expert_group_id' => Yii::t('app', 'Expert group ID'),
-            'expert_id' => Yii::t('app', 'Expert ID'),
+            'id' => Yii::t('desk', 'ID'),
+            'expert_group_id' => Yii::t('desk', 'Expert group ID'),
+            'expert_id' => Yii::t('desk', 'Expert ID'),
         ];
     }
 

@@ -29,9 +29,9 @@ class DiagnosesAppointments extends \yii\db\ActiveRecord
     public static function getTypes()
     {
         return [
-            self::TYPE_MAIN => Yii::t('app', 'main'),
-            self::TYPE_ADDITIONAL => Yii::t('app', 'additional'),
-            self::TYPE_SUPPOSED => Yii::t('app', 'supposed')
+            self::TYPE_MAIN => Yii::t('desk', 'main'),
+            self::TYPE_ADDITIONAL => Yii::t('desk', 'additional'),
+            self::TYPE_SUPPOSED => Yii::t('desk', 'supposed')
         ];
     }
 
@@ -63,14 +63,14 @@ class DiagnosesAppointments extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'patient_id' => Yii::t('app', 'Patient ID'),
-            'expert_id' => Yii::t('app', 'Expert ID'),
-            'expert_group_id' => Yii::t('app', 'Expert Group ID'),
-            'diagnoses_id' => Yii::t('app', 'Diagnoses ID'),
-            'appointment_type' => Yii::t('app', 'Appointment Type'),
-            'date' => Yii::t('app', 'Date'),
-            'text' => Yii::t('app', 'Text'),
+            'id' => Yii::t('desk', 'ID'),
+            'patient_id' => Yii::t('desk', 'Patient ID'),
+            'expert_id' => Yii::t('desk', 'Expert ID'),
+            'expert_group_id' => Yii::t('desk', 'Expert Group ID'),
+            'diagnoses_id' => Yii::t('desk', 'Diagnoses ID'),
+            'appointment_type' => Yii::t('desk', 'Appointment Type'),
+            'date' => Yii::t('desk', 'Date'),
+            'text' => Yii::t('desk', 'Text'),
         ];
     }
 

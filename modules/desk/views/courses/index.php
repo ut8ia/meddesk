@@ -8,14 +8,14 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\modules\desk\models\search\CoursesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Courses');
+$this->title = Yii::t('desk', 'Courses');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="courses-index">
     <?php Pjax::begin(); ?>
     <?php //echo $this->render('_search', ['model' => $searchModel]); ?>
     <p>
-        <?= Html::a(Yii::t('app', 'Create Courses'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('desk', 'Create Courses'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-1'],
                 'attribute' => 'number',
-                'label' => Yii::t('app', 'Course'),
+                'label' => Yii::t('desk', 'Course'),
                 'format' => 'html',
                 'value' => function($model) {
                     return $model->number;
@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-2'],
                 'attribute' => 'date_start',
-                'label' => Yii::t('app', 'Date start'),
+                'label' => Yii::t('desk', 'Date start'),
                 'format' => 'html',
                 'value' => function($model) {
                     return Yii::$app->time->date2front($model->date_start);
@@ -48,7 +48,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-2'],
                 'attribute' => 'date_end',
-                'label' => Yii::t('app', 'Date end'),
+                'label' => Yii::t('desk', 'Date end'),
                 'format' => 'html',
                 'value' => function($model) {
                     return Yii::$app->time->date2front($model->date_end);
@@ -57,7 +57,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-2'],
                 'attribute' => 'status',
-                'label' => Yii::t('app', 'Status'),
+                'label' => Yii::t('desk', 'Status'),
                 'format' => 'html',
                 'value' => function($model) {
                     return $model->status;
@@ -66,7 +66,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-2'],
                 'attribute' => 'patients',
-                'label' => Yii::t('app', 'Patients'),
+                'label' => Yii::t('desk', 'Patients'),
                 'format' => 'html',
                 'value' => function($model) {
                     return count($model->patients);
@@ -75,7 +75,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-2'],
                 'attribute' => 'excerpts',
-                'label' => Yii::t('app', 'Excerpts'),
+                'label' => Yii::t('desk', 'Excerpts'),
                 'format' => 'html',
                 'value' => function($model) {
                     return count($model->excerpts);

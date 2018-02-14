@@ -43,9 +43,9 @@ class Experts extends ActiveRecord
     public static function getStatuses()
     {
         return [
-            self::STATUS_NEW => Yii::t('app', 'new'),
-            self::STATUS_ACTIVE => Yii::t('app', 'active'),
-            self::STATUS_BLOCKED => Yii::t('app', 'blocked'),
+            self::STATUS_NEW => Yii::t('desk', 'new'),
+            self::STATUS_ACTIVE => Yii::t('desk', 'active'),
+            self::STATUS_BLOCKED => Yii::t('desk', 'blocked'),
         ];
     }
 
@@ -77,22 +77,22 @@ class Experts extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'username' => Yii::t('app', 'Username'),
-            'auth_key' => Yii::t('app', 'Auth Key'),
-            'password_hash' => Yii::t('app', 'Password Hash'),
-            'password_reset_token' => Yii::t('app', 'Password Reset Token'),
-            'email' => Yii::t('app', 'Email'),
-            'status' => Yii::t('app', 'Status'),
-            'created_at' => Yii::t('app', 'Created At'),
-            'updated_at' => Yii::t('app', 'Updated At'),
-            'surname' => Yii::t('app', 'Surname'),
-            'name' => Yii::t('app', 'Name'),
-            'patronymic' => Yii::t('app', 'Patronymic'),
-            'short_info' => Yii::t('app', 'Short Info'),
-            'info' => Yii::t('app', 'Info'),
-            'specialization' => Yii::t('app', 'Specialization'),
-            'slug' => Yii::t('app', 'Slug'),
+            'id' => Yii::t('desk', 'ID'),
+            'username' => Yii::t('desk', 'Username'),
+            'auth_key' => Yii::t('desk', 'Auth Key'),
+            'password_hash' => Yii::t('desk', 'Password Hash'),
+            'password_reset_token' => Yii::t('desk', 'Password Reset Token'),
+            'email' => Yii::t('desk', 'Email'),
+            'status' => Yii::t('desk', 'Status'),
+            'created_at' => Yii::t('desk', 'Created At'),
+            'updated_at' => Yii::t('desk', 'Updated At'),
+            'surname' => Yii::t('desk', 'Surname'),
+            'name' => Yii::t('desk', 'Name'),
+            'patronymic' => Yii::t('desk', 'Patronymic'),
+            'short_info' => Yii::t('desk', 'Short Info'),
+            'info' => Yii::t('desk', 'Info'),
+            'specialization' => Yii::t('desk', 'Specialization'),
+            'slug' => Yii::t('desk', 'Slug'),
         ];
     }
 

@@ -39,10 +39,10 @@ class ExpertPatientsLink extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'expert_id' => Yii::t('app', 'Expert ID'),
-            'expert_group_id' => Yii::t('app', 'Expert Group ID'),
-            'patient_id' => Yii::t('app', 'Patient ID'),
+            'id' => Yii::t('desk', 'ID'),
+            'expert_id' => Yii::t('desk', 'Expert ID'),
+            'expert_group_id' => Yii::t('desk', 'Expert Group ID'),
+            'patient_id' => Yii::t('desk', 'Patient ID'),
         ];
     }
 

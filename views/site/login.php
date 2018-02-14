@@ -8,6 +8,7 @@ use yii\bootstrap\ActiveForm;
 
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
+
 ?>
 
 
@@ -17,8 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg"><?= Yii::t('app', 'Sign in to start your session'); ?></p>
-
+        <p class="login-box-msg"><?= Yii::t('desk', 'Sign in to start your session'); ?></p>
 
         <?php $form = ActiveForm::begin([
             'id' => 'login-form',
@@ -65,13 +65,14 @@ $this->params['breadcrumbs'][] = $this->title;
                             <ins class="iCheck-helper"
                                  style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins>
                         </div>
-                        <?= Yii::t('app', 'Remember Me'); ?>
+                        <?= Yii::t('desk', 'Remember Me'); ?>
                     </label>
                 </div>
             </div>
             <!-- /.col -->
             <div class="col-xs-4">
-                <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                <button type="submit"
+                        class="btn btn-primary btn-block btn-flat"><?= Yii::t('desk', 'Sign In') ?></button>
             </div>
             <!-- /.col -->
         </div>

@@ -14,7 +14,7 @@ CommonFormsAsset::register($this);
 JsonRpcAsset::register($this);
 AdminLteAsset::register($this);
 
-$this->title .= ' - ' . Yii::t('app', 'rehabilitation desk') . $this->title;
+$this->title .= ' - ' . Yii::t('desk', 'rehabilitation desk') . $this->title;
 $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
 
 ?>

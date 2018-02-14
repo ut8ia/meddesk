@@ -42,11 +42,11 @@ class Excerpts extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'course_id' => Yii::t('app', 'Course ID'),
-            'patient_id' => Yii::t('app', 'Patient ID'),
-            'text' => Yii::t('app', 'Text'),
-            'date' => Yii::t('app', 'Date'),
+            'id' => Yii::t('desk', 'ID'),
+            'course_id' => Yii::t('desk', 'Course ID'),
+            'patient_id' => Yii::t('desk', 'Patient ID'),
+            'text' => Yii::t('desk', 'Text'),
+            'date' => Yii::t('desk', 'Date'),
         ];
     }
 

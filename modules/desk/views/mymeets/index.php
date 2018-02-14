@@ -8,7 +8,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\modules\desk\models\search\MeetsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Meets');
+$this->title = Yii::t('desk', 'Meets');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="meets-index">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Meets'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('desk', 'Create Meets'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'update' => function($url, $model) {
                         if ($model->canUpdate()) {
                             return Html::a('<span class="glyphicon glyphicon-pencil"></span>', $url, [
-                                'title' => Yii::t('app', 'Edit'),
+                                'title' => Yii::t('desk', 'Edit'),
                                 'data-pjax' => 1,
                                 'class' => 'grid-edit-action'
                             ]);
@@ -45,7 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-3'],
                 'attribute' => 'patient_id',
-                'label' => Yii::t('app', 'Patient'),
+                'label' => Yii::t('desk', 'Patient'),
                 'format' => 'object',
                 'value' => function($model) {
                     return $model->patients;
@@ -54,7 +54,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-2'],
                 'attribute' => 'meet_type',
-                'label' => Yii::t('app', 'Meet type'),
+                'label' => Yii::t('desk', 'Meet type'),
                 'format' => 'html',
                 'value' => function($model) {
                     return $model->meet_type;
@@ -62,7 +62,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             ['contentOptions' => ['class' => 'col-lg-1'],
                 'attribute' => 'expertGroup',
-                'label' => Yii::t('app', 'Expert group'),
+                'label' => Yii::t('desk', 'Expert group'),
                 'format' => 'object',
                 'value' => function($model) {
                     return ['object' => $model->expertGroups, 'view' => 'label'];
@@ -71,7 +71,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-2'],
                 'attribute' => 'place_id',
-                'label' => Yii::t('app', 'Place'),
+                'label' => Yii::t('desk', 'Place'),
                 'format' => 'object',
                 'value' => function($model) {
                     return $model->places;
@@ -80,7 +80,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-2'],
                 'attribute' => 'status',
-                'label' => Yii::t('app', 'From'),
+                'label' => Yii::t('desk', 'From'),
                 'format' => 'html',
                 'value' => function($model) {
                     return Yii::$app->time->datetime2front($model->time_from);
@@ -89,7 +89,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-1'],
                 'attribute' => 'status',
-                'label' => Yii::t('app', 'Status'),
+                'label' => Yii::t('desk', 'Status'),
                 'format' => 'html',
                 'value' => function($model) {
                     return $model->status;

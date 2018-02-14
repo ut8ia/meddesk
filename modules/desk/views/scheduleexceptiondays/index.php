@@ -8,7 +8,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\modules\desk\models\search\ScheduleExceptionDaysSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Schedule Exception Days');
+$this->title = Yii::t('desk', 'Schedule Exception Days');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="schedule-exception-days-index">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Schedule Exception Days'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('desk', 'Create Schedule Exception Days'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-2'],
                 'attribute' => 'date',
-                'label' => Yii::t('app', 'Date'),
+                'label' => Yii::t('desk', 'Date'),
                 'format' => 'html',
                 'value' => function($model) {
                     return Yii::$app->time->date2front($model->date);
@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-10'],
                 'attribute' => 'comment',
-                'label' => Yii::t('app', 'Comment'),
+                'label' => Yii::t('desk', 'Comment'),
                 'format' => 'html',
                 'value' => function($model) {
                     return $model->comment;

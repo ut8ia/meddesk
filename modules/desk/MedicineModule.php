@@ -2,9 +2,12 @@
 
 namespace app\modules\desk;
 
-use Yii;
 use \yii\base\Module;
 
+/**
+ * Class MedicineModule
+ * @package app\modules\desk
+ */
 class MedicineModule extends Module
 {
 

@@ -39,9 +39,9 @@ class Diagnoses extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'code' => Yii::t('app', 'Code'),
-            'name' => Yii::t('app', 'Name'),
+            'id' => Yii::t('desk', 'ID'),
+            'code' => Yii::t('desk', 'Code'),
+            'name' => Yii::t('desk', 'Name'),
         ];
     }
 

@@ -20,6 +20,6 @@ ExpertSearchAsset::register($this);
         'readonly' => false,
         'value' => $model->expert_name,
         'class' => 'form-control',
-        'placeholder' => Yii::t('app', 'Search expert name'),
+        'placeholder' => Yii::t('desk', 'Search expert name'),
     ],
 ]) ?>

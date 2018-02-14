@@ -39,9 +39,9 @@ class ScheduleExceptionDays extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'date' => Yii::t('app', 'Date'),
-            'comment' => Yii::t('app', 'Comment'),
+            'id' => Yii::t('desk', 'ID'),
+            'date' => Yii::t('desk', 'Date'),
+            'comment' => Yii::t('desk', 'Comment'),
         ];
     }
 }

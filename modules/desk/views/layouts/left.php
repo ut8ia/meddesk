@@ -20,15 +20,15 @@
         </div>
 
         <!-- search form -->
-<!--        <form action="#" method="get" class="sidebar-form">-->
-<!--            <div class="input-group">-->
-<!--                <input type="text" name="q" class="form-control" placeholder="Search..."/>-->
-<!--                <span class="input-group-btn">-->
-<!--                <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i>-->
-<!--                </button>-->
-<!--              </span>-->
-<!--            </div>-->
-<!--        </form>-->
+        <!--        <form action="#" method="get" class="sidebar-form">-->
+        <!--            <div class="input-group">-->
+        <!--                <input type="text" name="q" class="form-control" placeholder="Search..."/>-->
+        <!--                <span class="input-group-btn">-->
+        <!--                <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i>-->
+        <!--                </button>-->
+        <!--              </span>-->
+        <!--            </div>-->
+        <!--        </form>-->
         <!-- /.search form -->
 
         <?= dmstr\widgets\Menu::widget(
@@ -98,6 +98,7 @@
                             ['label' => 'Діагнози', 'icon' => 'dashboard', 'url' => ['/desk/diagnoses'],],
                             ['label' => 'Місця прийому', 'icon' => 'map-pin', 'url' => ['/desk/places'],],
                             ['label' => 'Будівлі', 'icon' => 'building', 'url' => ['/desk/buildings'],],
+                            ['label' => 'Переклади', 'icon' => 'language', 'url' => ['/translatemanager/language/translate?LanguageSourceSearch[category]=desk&LanguageSourceSearch[message]=&LanguageSourceSearch[translation]=&language_id=' . Yii::$app->language],],
                         ]
                     ],
                     [
@@ -109,8 +110,19 @@
                             ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug'],],
                             ['label' => 'Debug page', 'icon' => 'dashboard', 'url' => ['/desk/dev'],],
                             ['label' => 'Techmeets', 'icon' => 'dashboard', 'url' => ['/desk/techmeets'],],
+                            ['label' => 'Переклади', 'icon' => 'language', 'url' => ['/translatemanager'],
+                                'items' => [
+                                    ['label' => 'Поточна мова', 'icon' => 'circle-o', 'url' => ['/translatemanager/language/translate?language_id=' . Yii::$app->language],],
+                                    ['label' => 'Мови', 'icon' => 'circle-o', 'url' => ['/translatemanager/language/list'],],
+                                    ['label' => 'Скан', 'icon' => 'circle-o', 'url' => ['/translatemanager/language/scan'],],
+                                    ['label' => 'Оптимізація', 'icon' => 'circle-o', 'url' => ['/translatemanager/language/optimizer'],],
+                                    ['label' => 'Імпорт', 'icon' => 'circle-o', 'url' => ['/translatemanager/language/import'],],
+                                    ['label' => 'Експорт', 'icon' => 'circle-o', 'url' => ['/translatemanager/language/export'],],
+                                ]
+                            ],
                         ]
                     ],
+
 //                    [
 //                        'label' => 'Some tools',
 //                        'icon' => 'share',

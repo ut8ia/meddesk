@@ -8,7 +8,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\modules\desk\models\search\DiagnosesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Diagnoses');
+$this->title = Yii::t('desk', 'Diagnoses');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="diagnoses-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Diagnoses'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('desk', 'Create Diagnoses'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-2'],
                 'attribute' => 'code',
-                'label' => Yii::t('app', 'Diagnose code'),
+                'label' => Yii::t('desk', 'Diagnose code'),
                 'format' => 'html',
                 'value' => function($model) {
                     return $model->code;
@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'contentOptions' => ['class' => 'col-lg-10'],
                 'attribute' => 'name',
-                'label' => Yii::t('app', 'Diagnose name'),
+                'label' => Yii::t('desk', 'Diagnose name'),
                 'format' => 'html',
                 'value' => function($model) {
                     return $model->name;

@@ -8,7 +8,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\modules\desk\models\search\PlacesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Places');
+$this->title = Yii::t('desk', 'Places');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="places-index">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Places'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('desk', 'Create Places'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                 'contentOptions' => ['class' => 'col-lg-1 '],
-                'label' => ucfirst(Yii::t('app', 'number')),
+                'label' => ucfirst(Yii::t('desk', 'number')),
                 'attribute' => 'number',
                 'format' => 'html',
                 'value' => function($model) {
@@ -42,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                 'contentOptions' => ['class' => 'col-lg-2 '],
-                'label' => ucfirst(Yii::t('app', 'name')),
+                'label' => ucfirst(Yii::t('desk', 'name')),
                 'attribute' => 'name',
                 'format' => 'html',
                 'value' => function($model) {
@@ -51,7 +51,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                 'contentOptions' => ['class' => 'col-lg-2 '],
-                'label' => ucfirst(Yii::t('app', 'building')),
+                'label' => ucfirst(Yii::t('desk', 'building')),
                 'attribute' => 'name',
                 'format' => 'object',
                 'value' => function($model) {
@@ -60,7 +60,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                 'contentOptions' => ['class' => 'col-lg-7 '],
-                'label' => ucfirst(Yii::t('app', 'experts')),
+                'label' => ucfirst(Yii::t('desk', 'experts')),
                 'attribute' => 'experts',
                 'format' => 'object',
                 'value' => function($model) {

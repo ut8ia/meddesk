@@ -44,12 +44,12 @@ class Buildings extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'name' => Yii::t('app', 'Name'),
-            'adress' => Yii::t('app', 'Adress'),
-            'lattitude' => Yii::t('app', 'Lattitude'),
-            'longitude' => Yii::t('app', 'Longitude'),
-            'floors' => Yii::t('app', 'Floors'),
+            'id' => Yii::t('desk', 'ID'),
+            'name' => Yii::t('desk', 'Name'),
+            'adress' => Yii::t('desk', 'Adress'),
+            'lattitude' => Yii::t('desk', 'Lattitude'),
+            'longitude' => Yii::t('desk', 'Longitude'),
+            'floors' => Yii::t('desk', 'Floors'),
         ];
     }
 

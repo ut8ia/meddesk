@@ -30,11 +30,11 @@ class CoursesList extends \yii\db\ActiveRecord
     public static function getStatuses()
     {
         return [
-            self::STATUS_IN_LIST => Yii::t('app', 'in list'),
-            self::STATUS_RESERVE => Yii::t('app', 'reserved'),
-            self::STATUS_PLANNED => Yii::t('app', 'planned'),
-            self::STATUS_REQUEST => Yii::t('app', 'request'),
-            self::STATUS_REJECTED => Yii::t('app', 'rejected')
+            self::STATUS_IN_LIST => Yii::t('desk', 'in list'),
+            self::STATUS_RESERVE => Yii::t('desk', 'reserved'),
+            self::STATUS_PLANNED => Yii::t('desk', 'planned'),
+            self::STATUS_REQUEST => Yii::t('desk', 'request'),
+            self::STATUS_REJECTED => Yii::t('desk', 'rejected')
         ];
     }
 
@@ -66,13 +66,13 @@ class CoursesList extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'course_id' => Yii::t('app', 'Course ID'),
-            'patient_id' => Yii::t('app', 'Patient ID'),
-            'status' => Yii::t('app', 'Status'),
-            'date_from' => Yii::t('app', 'Date From'),
-            'date_to' => Yii::t('app', 'Date To'),
-            'comment' => Yii::t('app', 'Comment'),
+            'id' => Yii::t('desk', 'ID'),
+            'course_id' => Yii::t('desk', 'Course ID'),
+            'patient_id' => Yii::t('desk', 'Patient ID'),
+            'status' => Yii::t('desk', 'Status'),
+            'date_from' => Yii::t('desk', 'Date From'),
+            'date_to' => Yii::t('desk', 'Date To'),
+            'comment' => Yii::t('desk', 'Comment'),
         ];
     }
 

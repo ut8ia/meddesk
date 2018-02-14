@@ -13,7 +13,7 @@ use app\modules\desk\assets\JsonRpcAsset;
 CommonFormsAsset::register($this);
 JsonRpcAsset::register($this);
 
-$this->title .= ' - ' . Yii::t('app', 'rehabilitation desk') . $this->title;
+$this->title .= ' - ' . Yii::t('desk', 'rehabilitation desk') . $this->title;
 
 ?>
 <?php $this->beginPage() ?>
@@ -47,7 +47,7 @@ $this->title .= ' - ' . Yii::t('app', 'rehabilitation desk') . $this->title;
                 ['label' => 'Help', 'url' => ['/site/help']],
                 ['label' => 'Desk', 'url' => ['/desk/start']],
                 [
-                    'label' => Yii::t('app', 'Logout') . ' (' . Yii::$app->user->identity->username . ')',
+                    'label' => Yii::t('desk', 'Logout') . ' (' . Yii::$app->user->identity->username . ')',
                     'url' => ['/site/logout'],
                     'linkOptions' => ['data-method' => 'post']
                 ]

@@ -66,19 +66,19 @@ class Meets extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'expert_id' => Yii::t('app', 'Expert ID'),
-            'expert_group_id' => Yii::t('app', 'Expert Group ID'),
-            'patient_id' => Yii::t('app', 'Patient ID'),
-            'place_id' => Yii::t('app', 'Place ID'),
-            'course_id' => Yii::t('app', 'Course ID'),
-            'status' => Yii::t('app', 'Status'),
-            'meet_type' => Yii::t('app', 'Meet Type'),
-            'for_excerpt' => Yii::t('app', 'For Excerpt'),
-            'text' => Yii::t('app', 'Text'),
-            'comment' => Yii::t('app', 'Comment'),
-            'time_from' => Yii::t('app', 'Time From'),
-            'time_to' => Yii::t('app', 'Time To'),
+            'id' => Yii::t('desk', 'ID'),
+            'expert_id' => Yii::t('desk', 'Expert ID'),
+            'expert_group_id' => Yii::t('desk', 'Expert Group ID'),
+            'patient_id' => Yii::t('desk', 'Patient ID'),
+            'place_id' => Yii::t('desk', 'Place ID'),
+            'course_id' => Yii::t('desk', 'Course ID'),
+            'status' => Yii::t('desk', 'Status'),
+            'meet_type' => Yii::t('desk', 'Meet Type'),
+            'for_excerpt' => Yii::t('desk', 'For Excerpt'),
+            'text' => Yii::t('desk', 'Text'),
+            'comment' => Yii::t('desk', 'Comment'),
+            'time_from' => Yii::t('desk', 'Time From'),
+            'time_to' => Yii::t('desk', 'Time To'),
         ];
     }
 
@@ -88,9 +88,9 @@ class Meets extends \yii\db\ActiveRecord
     public function getStatuses()
     {
         return [
-            self::STATUS_PLANNED => Yii::t('app', self::STATUS_PLANNED),
-            self::STATUS_DONE => Yii::t('app', self::STATUS_DONE),
-            self::STATUS_REJECTED => Yii::t('app', self::STATUS_REJECTED)
+            self::STATUS_PLANNED => Yii::t('desk', self::STATUS_PLANNED),
+            self::STATUS_DONE => Yii::t('desk', self::STATUS_DONE),
+            self::STATUS_REJECTED => Yii::t('desk', self::STATUS_REJECTED)
         ];
     }
 
@@ -101,9 +101,9 @@ class Meets extends \yii\db\ActiveRecord
     public function getMeetTypesSelector()
     {
         return [
-            self::TYPE_CONSULTATION => Yii::t('app', self::TYPE_CONSULTATION),
-            self::TYPE_COURSE => Yii::t('app', self::TYPE_COURSE),
-            self::TYPE_URGENT => Yii::t('app', self::TYPE_URGENT)
+            self::TYPE_CONSULTATION => Yii::t('desk', self::TYPE_CONSULTATION),
+            self::TYPE_COURSE => Yii::t('desk', self::TYPE_COURSE),
+            self::TYPE_URGENT => Yii::t('desk', self::TYPE_URGENT)
         ];
     }
 

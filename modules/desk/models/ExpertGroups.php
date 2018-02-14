@@ -47,13 +47,13 @@ class ExpertGroups extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'name' => Yii::t('app', 'Name'),
-            'description' => Yii::t('app', 'Description'),
-            'course_required' => Yii::t('app', 'Course Required'),
-            'excerpt_required' => Yii::t('app', 'Excerpt Required'),
-            'excerpt_order' => Yii::t('app', 'Excerpt Order'),
-            'display_color' => Yii::t('app', 'Dosplay color'),
+            'id' => Yii::t('desk', 'ID'),
+            'name' => Yii::t('desk', 'Name'),
+            'description' => Yii::t('desk', 'Description'),
+            'course_required' => Yii::t('desk', 'Course Required'),
+            'excerpt_required' => Yii::t('desk', 'Excerpt Required'),
+            'excerpt_order' => Yii::t('desk', 'Excerpt Order'),
+            'display_color' => Yii::t('desk', 'Dosplay color'),
         ];
     }
 

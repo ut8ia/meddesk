@@ -45,14 +45,14 @@ class ScheduleTemplates extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'expert_id' => Yii::t('app', 'Expert ID'),
-            'expert_group_id' => Yii::t('app', 'Expert Group ID'),
-            'place_id' => Yii::t('app', 'Place ID'),
-            'week_day' => Yii::t('app', 'Week Day'),
-            'time_from' => Yii::t('app', 'Time From'),
-            'time_to' => Yii::t('app', 'Time To'),
-            'comment' => Yii::t('app', 'Comment'),
+            'id' => Yii::t('desk', 'ID'),
+            'expert_id' => Yii::t('desk', 'Expert ID'),
+            'expert_group_id' => Yii::t('desk', 'Expert Group ID'),
+            'place_id' => Yii::t('desk', 'Place ID'),
+            'week_day' => Yii::t('desk', 'Week Day'),
+            'time_from' => Yii::t('desk', 'Time From'),
+            'time_to' => Yii::t('desk', 'Time To'),
+            'comment' => Yii::t('desk', 'Comment'),
         ];
     }
 
