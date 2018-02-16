@@ -5,14 +5,16 @@ use dmstr\widgets\Alert;
 ?>
 <div class="content-wrapper">
     <section class="content-header">
-   <h1>&nbsp </h1>
 
+
+            <h1><?= $this->blocks['content-header']?:'&nbsp' ?></h1>
         <?=
         Breadcrumbs::widget(
             [
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]
-        ) ?>
+        )
+        ?>
     </section>
 
     <section class="content">

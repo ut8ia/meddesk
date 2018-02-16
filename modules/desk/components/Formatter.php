@@ -67,9 +67,9 @@ class Formatter extends \yii\i18n\Formatter
         }
 
         foreach ($records as $record) {
-            $value = ($options) ? ['object' => $record] + $options : ['object' => $record];
 
-            $ans += $this->asPair($value, $keyName);
+            $value = $options ? ['object' => $record] + $options : ['object' => $record];
+            $ans = array_merge($ans, $this->asPair($value, $keyName));
         }
         return $ans;
     }

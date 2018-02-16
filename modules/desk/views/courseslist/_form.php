@@ -11,7 +11,7 @@ use app\modules\desk\models\Courses;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="courses-list-form">
+<div class="box-body">
 
     <?php $form = ActiveForm::begin(Yii::$app->controller->module->formsConfig); ?>
 
@@ -47,7 +47,8 @@ use app\modules\desk\models\Courses;
     ]) ?>
 
     <?= $form->field($model, 'comment')->textarea(['maxlength' => true]) ?>
-
+</div>
+<div class="box-footer clearfix no-border">
     <div class="form-group">
         <?= Html::submitButton(Yii::t('desk', 'Save'), ['class' => 'btn btn-success']) ?>
     </div>

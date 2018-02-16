@@ -13,7 +13,7 @@ use kartik\widgets\DepDrop;
 $floors = isset($model->buildings)?$model->buildings->findFloors():[];
 ?>
 
-<div class="places-form">
+<div class="box-body">
 
     <?php $form = ActiveForm::begin(Yii::$app->controller->module->formsConfig); ?>
 
@@ -39,6 +39,8 @@ $floors = isset($model->buildings)?$model->buildings->findFloors():[];
 
     <?= $form->field($model, 'description')->textarea(); ?>
 
+</div>
+<div class="box-footer clearfix no-border">
     <div class="form-group">
         <?= Html::submitButton(Yii::t('desk', 'Save'), ['class' => 'btn btn-success']) ?>
     </div>

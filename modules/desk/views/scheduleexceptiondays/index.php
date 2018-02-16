@@ -10,16 +10,15 @@ use yii\widgets\Pjax;
 
 $this->title = Yii::t('desk', 'Schedule Exception Days');
 $this->params['breadcrumbs'][] = $this->title;
+$this->blocks['content-header'] = Yii::t('desk', 'Schedule Exception Days');
 ?>
-<div class="schedule-exception-days-index">
 
-
+<div class="box box-info">
+    <div class="box-header with-border">
+        <?= Html::a(Yii::t('desk', 'Create schedule exception day'), ['create'], ['class' => 'btn btn-success']) ?>
+    </div>
     <?php Pjax::begin(); ?>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a(Yii::t('desk', 'Create Schedule Exception Days'), ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+    <?php //echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

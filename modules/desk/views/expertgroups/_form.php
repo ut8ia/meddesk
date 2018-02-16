@@ -9,7 +9,7 @@ use kartik\widgets\ColorInput;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="expert-groups-form">
+<div class="box-body">
 
     <?php $form = ActiveForm::begin(Yii::$app->controller->module->formsConfig); ?>
 
@@ -30,6 +30,9 @@ use kartik\widgets\ColorInput;
             'options' => ['placeholder' => 'Select color ...']
         ]) ?>
 
+
+</div>
+<div class="box-footer clearfix no-border">
     <div class="form-group">
         <?= Html::submitButton(Yii::t('desk', 'Save'), ['class' => 'btn btn-success']) ?>
     </div>

@@ -3,7 +3,6 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
-use Yii;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\modules\desk\models\search\ExpertsSearch */
@@ -11,16 +10,15 @@ use Yii;
 
 $this->title = Yii::t('desk', 'Experts');
 $this->params['breadcrumbs'][] = $this->title;
+$this->blocks['content-header'] = Yii::t('desk', 'Experts');
 ?>
-<div class="experts-index">
 
-
+<div class="box box-info">
+    <div class="box-header with-border">
+        <?= Html::a(Yii::t('desk', 'Create Expert'), ['create'], ['class' => 'btn btn-success']) ?>
+    </div>
     <?php Pjax::begin(); ?>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a(Yii::t('desk', 'Create Experts'), ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+    <?php //echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -50,23 +48,6 @@ $this->params['breadcrumbs'][] = $this->title;
                     return ['object' => $model->expertGroups, 'view' => 'ExpertGroups/label'];
                 },
             ],
-//            'id',
-//            'username',
-//            'auth_key',
-//            'password_hash',
-//            'password_reset_token',
-            // 'email:email',
-            // 'status',
-            // 'created_at',
-            // 'updated_at',
-            // 'surname',
-            // 'name',
-            // 'patronymic',
-            // 'short_info',
-            // 'info',
-            // 'images',
-            // 'specialization',
-            // 'slug',
         ],
     ]); ?>
     <?php Pjax::end(); ?>

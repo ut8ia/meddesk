@@ -18,7 +18,7 @@ MymeetsFormAsset::register($this);
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="meets-form">
+<div class="box-body">
 
     <?php $form = ActiveForm::begin(Yii::$app->controller->module->formsConfig); ?>
 
@@ -30,7 +30,7 @@ MymeetsFormAsset::register($this);
     ?>
     <hr>
 
-    <?= $form->field($model, 'plan_from')->Widget(DateTimePicker::class, [
+    <?= $form->field($model, 'plan_from')->widget(DateTimePicker::class, [
         'pluginOptions' => [
             'todayHighlight' => true,
             'todayBtn' => true,
@@ -55,7 +55,8 @@ MymeetsFormAsset::register($this);
 
     <?= $form->field($model, 'comment')->textInput(['maxlength' => true]) ?>
 
-
+</div>
+<div class="box-footer clearfix no-border">
     <div class="form-group">
         <?= Html::submitButton(Yii::t('desk', 'Save'), ['class' => 'btn btn-success']) ?>
     </div>

@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="schedule-form">
+<div class="box-body">
 
     <?php $form = ActiveForm::begin(Yii::$app->controller->module->formsConfig); ?>
 
@@ -26,6 +26,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'comment')->textInput(['maxlength' => true]) ?>
 
+</div>
+<div class="box-footer clearfix no-border">
     <div class="form-group">
         <?= Html::submitButton(Yii::t('desk', 'Save'), ['class' => 'btn btn-success']) ?>
     </div>

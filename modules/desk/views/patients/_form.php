@@ -9,7 +9,7 @@ use kartik\widgets\DatePicker;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="patients-form">
+<div class="box-body">
 
     <?php $form = ActiveForm::begin(Yii::$app->controller->module->formsConfig); ?>
 
@@ -23,7 +23,7 @@ use kartik\widgets\DatePicker;
 
     <?= $form->field($model, 'sex')->dropDownList(['female' => 'Female', 'male' => 'Male',], ['prompt' => '']) ?>
 
-    <?= $form->field($model, 'birthdate')->Widget(DatePicker::class, [
+    <?= $form->field($model, 'birthdate')->widget(DatePicker::class, [
         'type' => DatePicker::TYPE_INPUT,
         'pluginOptions' => [
             'format' => Yii::$app->time->dateJsFormat
@@ -42,6 +42,8 @@ use kartik\widgets\DatePicker;
 
     <?= $form->field($model, 'user_id')->textInput() ?>
 
+</div>
+<div class="box-footer clearfix no-border">
     <div class="form-group">
         <?= Html::submitButton(Yii::t('desk', 'Save'), ['class' => 'btn btn-success']) ?>
     </div>

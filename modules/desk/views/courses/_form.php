@@ -9,20 +9,20 @@ use kartik\widgets\DatePicker;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="courses-form">
+<div class="box-body">
 
     <?php $form = ActiveForm::begin(Yii::$app->controller->module->formsConfig); ?>
 
     <?= $form->field($model, 'number')->textInput() ?>
 
-    <?= $form->field($model, 'date_start')->Widget(DatePicker::class, [
+    <?= $form->field($model, 'date_start')->widget(DatePicker::class, [
         'type' => DatePicker::TYPE_INPUT,
         'pluginOptions' => [
             'format' => Yii::$app->time->dateJsFormat
         ]
     ]) ?>
 
-    <?= $form->field($model, 'date_end')->Widget(DatePicker::class, [
+    <?= $form->field($model, 'date_end')->widget(DatePicker::class, [
         'type' => DatePicker::TYPE_INPUT,
         'pluginOptions' => [
             'format' => Yii::$app->time->dateJsFormat
@@ -31,6 +31,8 @@ use kartik\widgets\DatePicker;
 
     <?= $form->field($model, 'status')->dropDownList($model->getStatuses()); ?>
 
+</div>
+<div class="box-footer clearfix no-border">
     <div class="form-group">
         <?= Html::submitButton(Yii::t('desk', 'Save'), ['class' => 'btn btn-success']) ?>
     </div>

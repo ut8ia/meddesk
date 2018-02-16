@@ -10,15 +10,15 @@ use yii\widgets\Pjax;
 
 $this->title = Yii::t('desk', 'Expert Groups');
 $this->params['breadcrumbs'][] = $this->title;
+$this->blocks['content-header'] =  Yii::t('desk', 'Expert Groups');
 ?>
-<div class="expert-groups-index">
 
-
+<div class="box box-info">
+    <div class="box-header with-border">
+        <?= Html::a(Yii::t('desk', 'Create Diagnoses'), ['create'], ['class' => 'btn btn-success']) ?>
+    </div>
     <?php Pjax::begin(); ?>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-    <p>
-        <?= Html::a(Yii::t('desk', 'Create Expert Groups'), ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+    <?php //echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
