@@ -25,7 +25,6 @@ use Yii;
  * @property string $patronymic
  * @property string $short_info
  * @property string $info
- * @property string $specialization
  * @property string $slug
  * @property int $deleted
  */
@@ -61,11 +60,11 @@ class Experts extends ActiveRecord
             [['status', 'surname', 'name', 'patronymic'], 'required'],
             [['status'], 'string'],
             [['password_change', 'deleted'], 'integer'],
-            [['created_at', 'updated_at'], 'integer'],
+            [['created_at', 'updated_at'], 'datetime','format' => 'php:Y-m-d H:i:s'],
             [['auth_key'], 'string', 'max' => 32],
             [['password_hash', 'password_reset_token', 'slug'], 'string', 'max' => 255],
-            [['email'], 'string', 'max' => 128],
-            [['surname', 'name', 'patronymic', 'specialization'], 'string', 'max' => 127],
+            [['email'], 'email'],
+            [['surname', 'name', 'patronymic'], 'string', 'max' => 127],
             [['short_info'], 'string', 'max' => 256],
             [['info'], 'string', 'max' => 2056],
         ];
@@ -88,7 +87,6 @@ class Experts extends ActiveRecord
             'patronymic' => Yii::t('desk', 'Patronymic'),
             'short_info' => Yii::t('desk', 'Short Info'),
             'info' => Yii::t('desk', 'Info'),
-            'specialization' => Yii::t('desk', 'Specialization'),
             'slug' => Yii::t('desk', 'Slug'),
         ];
     }
