@@ -15,7 +15,7 @@ $this->blocks['content-header'] =  Yii::t('desk', 'Buildings');
 
 <div class="box box-info">
     <div class="box-header with-border">
-        <?= Html::a(Yii::t('desk', 'Create Courses'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('desk', 'Create Building'), ['create'], ['class' => 'btn btn-success']) ?>
     </div>
     <?php Pjax::begin(); ?>
     <?php //echo $this->render('_search', ['model' => $searchModel]); ?>

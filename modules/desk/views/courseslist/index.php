@@ -13,25 +13,10 @@ $this->params['breadcrumbs'][] = $this->title;
 $this->blocks['content-header'] = Yii::t('desk', 'Courses Lists');
 ?>
 
-<!--<div class="row">-->
-<!--    <div class="col-md-3 col-sm-6 col-xs-12">-->
-<!--        <div class="info-box">-->
-<!--            <span class="info-box-icon bg-aqua"><i class="fa fa-indent"></i></span>-->
-<!---->
-<!--            <div class="info-box-content">-->
-<!--                <span > --><?php //echo Html::a(Yii::t('desk', 'Create Courses List'), ['create'], ['class' => 'btn btn-success']) ?><!--</span>-->
-<!--            </div>-->
-<!--            <!-- /.info-box-content -->
-<!--        </div>-->
-<!--        <!-- /.info-box -->
-<!--    </div>-->
-<!--</div>-->
 
 <div class="box box-info">
     <div class="box-header with-border">
-
         <span> <?= Html::a(Yii::t('desk', 'Create Courses List'), ['create'], ['class' => 'btn btn-success']) ?></span>
-
     </div>
 
     <?php Pjax::begin(); ?>
