@@ -11,7 +11,6 @@ class m180122_234012_experts extends Migration
         $this->createTable('{{%med_experts}}',
             [
                 'id' => Schema::TYPE_PK . '',
-                'username' => Schema::TYPE_STRING . '(64) NOT NULL',
                 'auth_key' => Schema::TYPE_STRING . '(32)',
                 'password_hash' => Schema::TYPE_STRING . '(255) NOT NULL',
                 'password_reset_token' => Schema::TYPE_STRING . '(255)',

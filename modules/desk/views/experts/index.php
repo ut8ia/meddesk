@@ -41,7 +41,7 @@ $this->blocks['content-header'] = Yii::t('desk', 'Experts');
             ],
             [
                 'contentOptions' => ['class' => 'col-lg-8 '],
-                'label' => Yii::t('desk', 'Expert'),
+                'label' => Yii::t('desk', 'Expert groups'),
                 'attribute' => 'expertGroups',
                 'format' => 'object',
                 'value' => function($model) {

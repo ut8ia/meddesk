@@ -47,7 +47,14 @@ $this->title .= ' - ' . Yii::t('desk', 'rehabilitation desk') . $this->title;
                 ['label' => 'Help', 'url' => ['/site/help']],
                 ['label' => 'Desk', 'url' => ['/desk/start']],
                 [
-                    'label' => Yii::t('desk', 'Logout') . ' (' . Yii::$app->user->identity->username . ')',
+                    'label' => Yii::t('desk', 'Logout')
+                        . ' ('
+                        . Yii::$app->formatter->asObject(
+                            [
+                                'object' => Yii::$app->user->identity,
+                                'view' => 'fullName'
+                            ])
+                        . ')',
                     'url' => ['/site/logout'],
                     'linkOptions' => ['data-method' => 'post']
                 ]

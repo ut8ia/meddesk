@@ -12,7 +12,6 @@ use Yii;
  * This is the model class for table "med_experts".
  *
  * @property int $id
- * @property string $username
  * @property string $auth_key
  * @property string $password_hash
  * @property string $password_reset_token
@@ -63,7 +62,6 @@ class Experts extends ActiveRecord
             [['status'], 'string'],
             [['password_change', 'deleted'], 'integer'],
             [['created_at', 'updated_at'], 'integer'],
-            [['username'], 'string', 'max' => 64],
             [['auth_key'], 'string', 'max' => 32],
             [['password_hash', 'password_reset_token', 'slug'], 'string', 'max' => 255],
             [['email'], 'string', 'max' => 128],
@@ -78,7 +76,6 @@ class Experts extends ActiveRecord
     {
         return [
             'id' => Yii::t('desk', 'ID'),
-            'username' => Yii::t('desk', 'Username'),
             'auth_key' => Yii::t('desk', 'Auth Key'),
             'password_hash' => Yii::t('desk', 'Password Hash'),
             'password_reset_token' => Yii::t('desk', 'Password Reset Token'),
