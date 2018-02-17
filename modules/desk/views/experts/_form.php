@@ -77,8 +77,6 @@ use kartik\widgets\FileInput;
 
     <hr>
 
-    <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'status')->dropDownList($model->getStatuses()) ?>
