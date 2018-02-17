@@ -12,7 +12,7 @@ class m180122_234012_experts extends Migration
             [
                 'id' => Schema::TYPE_PK . '',
                 'auth_key' => Schema::TYPE_STRING . '(32)',
-                'password_hash' => Schema::TYPE_STRING . '(255) NOT NULL',
+                'password_hash' => Schema::TYPE_STRING . '(255) NULL',
                 'password_reset_token' => Schema::TYPE_STRING . '(255)',
                 'password_change' => Schema::TYPE_BOOLEAN . '(1)',
                 'email' => Schema::TYPE_STRING . '(128)',

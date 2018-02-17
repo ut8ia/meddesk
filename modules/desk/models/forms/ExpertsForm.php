@@ -48,7 +48,7 @@ class ExpertsForm extends Experts
     {
         parent::afterSave($insert, $changedAttributes);
 
-        if($insert){
+        if($insert && !empty($this->newPassword)){
             $this->changePass();
         }
 
