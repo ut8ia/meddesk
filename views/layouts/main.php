@@ -44,7 +44,14 @@ AdminAppAsset::register($this);
                 ['label' => 'Login', 'url' => ['/site/login']]
                 ) : (
                 [
-                    'label' => Yii::t('app', 'Logout') . ' (' . Yii::$app->user->identity->username . ')',
+                    'label' => Yii::t('app', 'Logout')
+                        . ' ('
+                        . Yii::$app->formatter->asObject(
+                            [
+                                'object' => Yii::$app->user->identity,
+                                'view' => 'short'
+                            ])
+                        . ')',
                     'url' => ['/site/logout'],
                     'linkOptions' => ['data-method' => 'post']
                 ]
