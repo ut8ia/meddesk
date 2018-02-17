@@ -7,6 +7,7 @@ use app\modules\desk\models\forms\ExpertsForm;
 use app\modules\desk\models\Places;
 use Yii;
 use app\modules\desk\models\search\ExpertsSearch;
+use yii\base\InvalidArgumentException;
 use yii\base\InvalidParamException;
 use yii\db\StaleObjectException;
 use yii\web\Controller;
@@ -69,6 +70,7 @@ class ExpertsController extends Controller
      * @return mixed
      * @throws InvalidParamException
      * @throws NotFoundHttpException
+     * @throws InvalidArgumentException
      */
     public function actionView($id)
     {
@@ -86,11 +88,6 @@ class ExpertsController extends Controller
     public function actionCreate()
     {
         $model = new ExpertsForm();
-
-
-//        $model->load(Yii::$app->request->post());
-//        $model->validate();
-//        dd($model->errors);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['index']);
@@ -114,12 +111,6 @@ class ExpertsController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
-//        $model->load(Yii::$app->request->post());
-//        $model->validate();
-//        dd($model->errors);
-
-
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['index']);

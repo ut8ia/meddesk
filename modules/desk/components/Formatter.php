@@ -49,7 +49,7 @@ class Formatter extends \yii\i18n\Formatter
             return [];
         }
 
-        return $this->asObjectPairs($records, $keyName = null, $options = null);
+        return $this->asObjectPairs($records, $keyName, $options );
     }
 
 
@@ -69,7 +69,7 @@ class Formatter extends \yii\i18n\Formatter
         foreach ($records as $record) {
 
             $value = $options ? ['object' => $record] + $options : ['object' => $record];
-            $ans = array_merge($ans, $this->asPair($value, $keyName));
+            $ans += $this->asPair($value, $keyName);
         }
         return $ans;
     }
@@ -82,7 +82,7 @@ class Formatter extends \yii\i18n\Formatter
     public function asPair($value, $keyName = null)
     {
         $keyName = $keyName ?: 'id';
-        $key = (isset($value['object'])) ? $value['object']->$keyName : $value->$keyName;
+        $key = isset($value['object']) ? $value['object']->$keyName : $value->$keyName;
         return [$key => $this->asObject($value)];
     }
 
