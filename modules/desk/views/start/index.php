@@ -1,31 +1,44 @@
 <?php
 /* @var $this yii\web\View */
 
+use  yii2fullcalendar\yii2fullcalendar;
+$events=[];
 ?>
-<div class="jumbotron">
-    <h2><?= Yii::$app->time->date ?></h2>
-    <button class="btn btn-warning" type="button">Пацієнтів <span class="badge"><?= $patientsCount ?></span></button>
-    <button class="btn btn-primary" type="button">Хлопчиків <span class="badge"><?= $patientsMale ?></span></button>
-    <button class="btn btn-danger" type="button">Дівчат <span class="badge"><?= $patientsFemale ?></span></button>
-    <br><br>
-    <button class="btn btn-success" type="button">Прийомів <span class="badge"><?= $patientsMeets ?></span></button>
-    <button class="btn btn-success" type="button">Пройшли курс <span class="badge"><?= $patientsMeets ?></span>
-    </button>
-    <button class="btn btn-info" type="button">Записів на прийоми <span class="badge"><?= $patientsMeets ?></span>
-    </button>
-    <br>
-    <hr>
-    <button class="btn btn-default" type="button">До мене на сьогодні <span class="badge"><?= $myPatientsToday ?></span>
-    </button>
 
-    <button class="btn btn-default" type="button">До мене на завтра <span class="badge"><?= $myPatientsTomorrow ?></span>
-    </button>
-    <br>
-    <br>
-    <a href="/desk/mymeets/">
-        <button class="btn btn-success" type="button">Розпочати прийом зараз<span
-                class="badge"></span>
-        </button>
-    </a>
 
+<div class="row">
+    <div class="col-md-3">
+        <div class="box box-solid">
+            <div class="box-header with-border">
+                <h4 class="box-title">Draggable Events</h4>
+            </div>
+            <div class="box-body">
+                <!-- the events -->
+                <div id="external-events">
+                    <div class="external-event bg-green">До мене на сьогодні :<?= $myPatientsToday ?></div>
+                    <div class="external-event bg-yellow">До мене на завтра :<?= $myPatientsTomorrow ?></div>
+                    <div class="external-event bg-aqua"></div>
+                    <div class="external-event bg-light-blue"></div>
+                    <div class="external-event bg-red"></div>
+                </div>
+            </div>
+            <!-- /.box-body -->
+        </div>
+    </div>
+    <!-- /.col -->
+    <div class="col-md-9">
+        <div class="box box-primary">
+            <div class="box-body no-padding">
+                <?= yii2fullcalendar::widget([
+//                    'events' => $events,
+                    'options' => [
+                        'lang' => 'uk',
+                        //... more options to be defined here!
+                    ],
+                ]);
+
+                ?>
+            </div>
+        </div>
+    </div>
 </div>

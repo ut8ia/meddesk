@@ -4,9 +4,7 @@ namespace app\modules\desk\controllers;
 
 use app\modules\desk\models\forms\PatientsForm;
 use Yii;
-use app\modules\desk\models\Patients;
 use app\modules\desk\models\search\PatientsSearch;
-use yii\base\InvalidParamException;
 use yii\db\StaleObjectException;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

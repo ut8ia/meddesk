@@ -4,8 +4,66 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "392e62ab1c140cf2399ed1ff91d9c4ef",
+    "content-hash": "39d801da6ea0c09d1e8a04eb5701f745",
     "packages": [
+        {
+            "name": "2amigos/yii2-chartjs-widget",
+            "version": "2.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/2amigos/yii2-chartjs-widget.git",
+                "reference": "a5246d9bb491ef4ff82915dccc6980ed17ed0873"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/2amigos/yii2-chartjs-widget/zipball/a5246d9bb491ef4ff82915dccc6980ed17ed0873",
+                "reference": "a5246d9bb491ef4ff82915dccc6980ed17ed0873",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/chartjs": "~2.6",
+                "yiisoft/yii2": "~2.0.5"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "phpunit/phpunit": "~4.4"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "dosamigos\\chartjs\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "2amigOS! Consulting Group",
+                    "email": "hola@2amigos.us",
+                    "homepage": "http://2amigos.us",
+                    "role": "Developer"
+                }
+            ],
+            "description": "ChartJs widget for Yii2.",
+            "homepage": "http://yiiwheels.com/extension/chartjs-widget",
+            "keywords": [
+                "2amigos",
+                "chartjs",
+                "extension",
+                "widget",
+                "yii",
+                "yii 2",
+                "yii2"
+            ],
+            "time": "2017-07-26T09:24:16+00:00"
+        },
         {
             "name": "2amigos/yii2-date-time-picker-widget",
             "version": "dev-master",
@@ -292,16 +350,16 @@
         },
         {
             "name": "bower-asset/blueimp-file-upload",
-            "version": "v9.20.0",
+            "version": "v9.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/blueimp/jQuery-File-Upload.git",
-                "reference": "7d1d64e4d4e2a30cd087fe27355183db980aa785"
+                "reference": "e6f059023afdae3efe9ce66970745254caa80256"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/blueimp/jQuery-File-Upload/zipball/7d1d64e4d4e2a30cd087fe27355183db980aa785",
-                "reference": "7d1d64e4d4e2a30cd087fe27355183db980aa785",
+                "url": "https://api.github.com/repos/blueimp/jQuery-File-Upload/zipball/e6f059023afdae3efe9ce66970745254caa80256",
+                "reference": "e6f059023afdae3efe9ce66970745254caa80256",
                 "shasum": ""
             },
             "require": {
@@ -352,7 +410,7 @@
                 "upload",
                 "widget"
             ],
-            "time": "2018-01-23T11:31:33+00:00"
+            "time": "2018-02-19T12:12:29+00:00"
         },
         {
             "name": "bower-asset/blueimp-gallery",
@@ -455,6 +513,38 @@
             "time": "2016-07-25T15:51:55+00:00"
         },
         {
+            "name": "bower-asset/chartjs",
+            "version": "v2.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chartjs/Chart.js.git",
+                "reference": "0fead21939b92c15093c1b7d5ee2627fb5900fff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chartjs/Chart.js/zipball/0fead21939b92c15093c1b7d5ee2627fb5900fff",
+                "reference": "0fead21939b92c15093c1b7d5ee2627fb5900fff",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "./dist/Chart.js",
+                "bower-asset-ignore": [
+                    ".github",
+                    ".codeclimate.yml",
+                    ".gitignore",
+                    ".npmignore",
+                    ".travis.yml",
+                    "scripts"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Simple HTML5 charts using the canvas element.",
+            "time": "2017-10-28T15:01:52+00:00"
+        },
+        {
             "name": "bower-asset/codemirror",
             "version": "dev-master",
             "source": {
@@ -489,6 +579,52 @@
                 ]
             },
             "time": "2017-08-22T13:26:31+00:00"
+        },
+        {
+            "name": "bower-asset/fullcalendar",
+            "version": "v3.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fullcalendar/fullcalendar.git",
+                "reference": "2765b9fded569c5861d28251569e1e642723210b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fullcalendar/fullcalendar/zipball/2765b9fded569c5861d28251569e1e642723210b",
+                "reference": "2765b9fded569c5861d28251569e1e642723210b",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery": ">=2,<4.0",
+                "bower-asset/moment": ">=2.9.0,<3.0.0"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "dist/fullcalendar.js",
+                    "dist/fullcalendar.css"
+                ],
+                "bower-asset-ignore": [
+                    "*",
+                    "**/.*",
+                    "!/dist/**",
+                    "!/README.*",
+                    "!/LICENSE.*",
+                    "!/CHANGELOG.*",
+                    "!/CONTRIBUTING.*"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Full-sized drag & drop event calendar",
+            "keywords": [
+                "calendar",
+                "event",
+                "full-sized",
+                "jquery-plugin"
+            ],
+            "time": "2017-12-18T05:19:16+00:00"
         },
         {
             "name": "bower-asset/icheck",
@@ -661,6 +797,50 @@
                 "MIT"
             ],
             "time": "2016-09-16T05:47:55+00:00"
+        },
+        {
+            "name": "bower-asset/moment",
+            "version": "2.20.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/moment/moment.git",
+                "reference": "03073778ec18ee38e179208cd1af899e8d1848dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/moment/moment/zipball/03073778ec18ee38e179208cd1af899e8d1848dc",
+                "reference": "03073778ec18ee38e179208cd1af899e8d1848dc",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "moment.js",
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "benchmarks",
+                    "bower_components",
+                    "meteor",
+                    "node_modules",
+                    "scripts",
+                    "tasks",
+                    "test",
+                    "component.json",
+                    "composer.json",
+                    "CONTRIBUTING.md",
+                    "ender.js",
+                    "Gruntfile.js",
+                    "Moment.js.nuspec",
+                    "package.js",
+                    "package.json",
+                    "ISSUE_TEMPLATE.md",
+                    "typing-tests",
+                    "min/tests.js"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "time": "2017-12-19T04:36:30+00:00"
         },
         {
             "name": "bower-asset/punycode",
@@ -3024,6 +3204,55 @@
             "time": "2017-12-03T21:54:47+00:00"
         },
         {
+            "name": "philippfrenzel/yii2fullcalendar",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/philippfrenzel/yii2fullcalendar.git",
+                "reference": "623755b580ec3cbe38af5334341417cf9ff591ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/philippfrenzel/yii2fullcalendar/zipball/623755b580ec3cbe38af5334341417cf9ff591ff",
+                "reference": "623755b580ec3cbe38af5334341417cf9ff591ff",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/fullcalendar": "3.8.0@stable",
+                "yiisoft/yii2": "*",
+                "yiisoft/yii2-jui": "*"
+            },
+            "require-dev": {
+                "codeception/codeception": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "yii2fullcalendar\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Philipp Frenzel",
+                    "email": "philipp@frenzel.net",
+                    "homepage": "http://www.frenzel.net/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Yii2 fullcalendar Widgets",
+            "homepage": "http://www.frenzel.net/",
+            "keywords": [
+                "fullcalendar",
+                "widget",
+                "yii2"
+            ],
+            "time": "2018-01-10T12:31:40+00:00"
+        },
+        {
             "name": "phpspec/php-diff",
             "version": "dev-master",
             "source": {
@@ -3589,12 +3818,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "c567965fc8f556460e74e81207d4df62b2daf6cf"
+                "reference": "dec803dde21165636de30b43cc6e82e35b51aab7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/c567965fc8f556460e74e81207d4df62b2daf6cf",
-                "reference": "c567965fc8f556460e74e81207d4df62b2daf6cf",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/dec803dde21165636de30b43cc6e82e35b51aab7",
+                "reference": "dec803dde21165636de30b43cc6e82e35b51aab7",
                 "shasum": ""
             },
             "require": {
@@ -3681,7 +3910,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2018-02-13T12:38:35+00:00"
+            "time": "2018-02-19T11:24:55+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -3689,12 +3918,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-bootstrap.git",
-                "reference": "30eee2b651453df49773d568713f7c9f9aa88053"
+                "reference": "80f7a1681672257e5a5df33578e5df418336d745"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/30eee2b651453df49773d568713f7c9f9aa88053",
-                "reference": "30eee2b651453df49773d568713f7c9f9aa88053",
+                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/80f7a1681672257e5a5df33578e5df418336d745",
+                "reference": "80f7a1681672257e5a5df33578e5df418336d745",
                 "shasum": ""
             },
             "require": {
@@ -3741,7 +3970,7 @@
                 "bootstrap",
                 "yii2"
             ],
-            "time": "2018-02-05T12:12:44+00:00"
+            "time": "2018-02-16T10:42:23+00:00"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -3799,12 +4028,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "eff0d4f859b4dce7947dc9ec74ca963024c3c188"
+                "reference": "01883a8df21d0eedd64a5459454d6fc5e2d54bbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/eff0d4f859b4dce7947dc9ec74ca963024c3c188",
-                "reference": "eff0d4f859b4dce7947dc9ec74ca963024c3c188",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/01883a8df21d0eedd64a5459454d6fc5e2d54bbb",
+                "reference": "01883a8df21d0eedd64a5459454d6fc5e2d54bbb",
                 "shasum": ""
             },
             "require": {
@@ -3825,7 +4054,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "yii\\gii\\": ""
+                    "yii\\gii\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3844,7 +4073,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2018-01-23T11:15:52+00:00"
+            "time": "2018-02-16T16:04:04+00:00"
         },
         {
             "name": "yiisoft/yii2-httpclient",
@@ -3947,12 +4176,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-jui.git",
-                "reference": "0438b11090198e9bc8db415429f9bc306cd3f986"
+                "reference": "48b6746e13563843eec64d9e6084f0926ca9943d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-jui/zipball/0438b11090198e9bc8db415429f9bc306cd3f986",
-                "reference": "0438b11090198e9bc8db415429f9bc306cd3f986",
+                "url": "https://api.github.com/repos/yiisoft/yii2-jui/zipball/48b6746e13563843eec64d9e6084f0926ca9943d",
+                "reference": "48b6746e13563843eec64d9e6084f0926ca9943d",
                 "shasum": ""
             },
             "require": {
@@ -3997,7 +4226,7 @@
                 "jQuery UI",
                 "yii2"
             ],
-            "time": "2018-02-06T14:24:55+00:00"
+            "time": "2018-02-16T14:56:38+00:00"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -4244,23 +4473,23 @@
         },
         {
             "name": "codeception/stub",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Stub.git",
-                "reference": "673ea54cdd7141e0a5138ad78aaa60751912f573"
+                "reference": "95fb7a36b81890dd2e5163e7ab31310df6f1bb99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Stub/zipball/673ea54cdd7141e0a5138ad78aaa60751912f573",
-                "reference": "673ea54cdd7141e0a5138ad78aaa60751912f573",
+                "url": "https://api.github.com/repos/Codeception/Stub/zipball/95fb7a36b81890dd2e5163e7ab31310df6f1bb99",
+                "reference": "95fb7a36b81890dd2e5163e7ab31310df6f1bb99",
                 "shasum": ""
             },
             "require": {
-                "phpunit/phpunit-mock-objects": "^2.3|^3.0|^4.0|^5.0"
+                "phpunit/phpunit-mock-objects": ">2.3 <7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8|^5.0|^6.0|^7.0"
+                "phpunit/phpunit": ">=4.8 <8.0"
             },
             "type": "library",
             "autoload": {
@@ -4273,7 +4502,7 @@
                 "MIT"
             ],
             "description": "Flexible Stub wrapper for PHPUnit's Mock Builder",
-            "time": "2018-01-27T00:37:17+00:00"
+            "time": "2018-02-18T13:56:56+00:00"
         },
         {
             "name": "codeception/verify",
@@ -4371,12 +4600,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "c8db65327b73c8e0fa1c9e4d8d179d14a185b13a"
+                "reference": "5dce1159142a1ba0fcab4672cb295bf7d8f98824"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/c8db65327b73c8e0fa1c9e4d8d179d14a185b13a",
-                "reference": "c8db65327b73c8e0fa1c9e4d8d179d14a185b13a",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/5dce1159142a1ba0fcab4672cb295bf7d8f98824",
+                "reference": "5dce1159142a1ba0fcab4672cb295bf7d8f98824",
                 "shasum": ""
             },
             "require": {
@@ -4413,7 +4642,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2018-02-05T15:03:34+00:00"
+            "time": "2018-02-14T13:50:47+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -4720,12 +4949,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "9f901e29c93dae4aa77c0bb161df4276f9c9a1be"
+                "reference": "dfd6be44111a7c41c2e884a336cc4f461b3b2401"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/9f901e29c93dae4aa77c0bb161df4276f9c9a1be",
-                "reference": "9f901e29c93dae4aa77c0bb161df4276f9c9a1be",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/dfd6be44111a7c41c2e884a336cc4f461b3b2401",
+                "reference": "dfd6be44111a7c41c2e884a336cc4f461b3b2401",
                 "shasum": ""
             },
             "require": {
@@ -4775,7 +5004,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2018-02-11T18:49:29+00:00"
+            "time": "2018-02-19T10:16:54+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -5032,12 +5261,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "3330ef26ade05359d006041316ed0fa9e8e3cefe"
+                "reference": "80798b8043cb3b4e770c21e64d4fbc2efdda7942"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3330ef26ade05359d006041316ed0fa9e8e3cefe",
-                "reference": "3330ef26ade05359d006041316ed0fa9e8e3cefe",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/80798b8043cb3b4e770c21e64d4fbc2efdda7942",
+                "reference": "80798b8043cb3b4e770c21e64d4fbc2efdda7942",
                 "shasum": ""
             },
             "require": {
@@ -5108,7 +5337,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-02-01T05:57:37+00:00"
+            "time": "2018-02-16T06:05:42+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -6073,12 +6302,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "9e34a7af34870675f2ca2378ec667ec8b16e514d"
+                "reference": "58990682ac3fdc1f563b7e705452921372aad11d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/9e34a7af34870675f2ca2378ec667ec8b16e514d",
-                "reference": "9e34a7af34870675f2ca2378ec667ec8b16e514d",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/58990682ac3fdc1f563b7e705452921372aad11d",
+                "reference": "58990682ac3fdc1f563b7e705452921372aad11d",
                 "shasum": ""
             },
             "require": {
@@ -6128,7 +6357,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-31T10:49:53+00:00"
+            "time": "2018-02-14T10:03:57+00:00"
         },
         {
             "name": "symfony/finder",
@@ -6244,12 +6473,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "f44c40e9eb06da59bdaf83309e9a1312eb6eaf84"
+                "reference": "6af42631dcf89e9c616242c900d6c52bd53bd1bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/f44c40e9eb06da59bdaf83309e9a1312eb6eaf84",
-                "reference": "f44c40e9eb06da59bdaf83309e9a1312eb6eaf84",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/6af42631dcf89e9c616242c900d6c52bd53bd1bb",
+                "reference": "6af42631dcf89e9c616242c900d6c52bd53bd1bb",
                 "shasum": ""
             },
             "require": {
@@ -6294,7 +6523,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2018-02-11T15:00:48+00:00"
+            "time": "2018-02-16T09:50:28+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -6392,12 +6621,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "7311e6b0aeaf3eb59084300dd323e2c7dd81596d"
+                "reference": "f7d51457c7c59f02aca9bbaabcded00e81800adb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/7311e6b0aeaf3eb59084300dd323e2c7dd81596d",
-                "reference": "7311e6b0aeaf3eb59084300dd323e2c7dd81596d",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/f7d51457c7c59f02aca9bbaabcded00e81800adb",
+                "reference": "f7d51457c7c59f02aca9bbaabcded00e81800adb",
                 "shasum": ""
             },
             "require": {
@@ -6412,7 +6641,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "yii\\debug\\": ""
+                    "yii\\debug\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -6431,7 +6660,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2018-02-07T14:46:34+00:00"
+            "time": "2018-02-18T20:12:50+00:00"
         },
         {
             "name": "yiisoft/yii2-faker",

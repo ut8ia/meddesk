@@ -32,7 +32,9 @@
         "yiisoft/yii2-imagine": "~2.1.0",
         "dmstr/yii2-adminlte-asset": "^2.1",
         "hiqdev/yii2-asset-icheck": "*",
-        "lajax/yii2-translate-manager": "^1.7.1"
+        "lajax/yii2-translate-manager": "^1.7.1",
+        "philippfrenzel/yii2fullcalendar":"*",
+        "2amigos/yii2-chartjs-widget" : "~2.0"
 
     },
     "require-dev": {
