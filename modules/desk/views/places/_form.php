@@ -37,8 +37,6 @@ $floors = isset($model->buildings)?$model->buildings->findFloors():[];
 
     ?>
 
-    <?= $form->field($model, 'description')->textarea(); ?>
-
 </div>
 <div class="box-footer clearfix no-border">
     <div class="form-group">

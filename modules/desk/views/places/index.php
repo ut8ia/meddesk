@@ -51,7 +51,16 @@ $this->blocks['content-header'] = Yii::t('desk', 'Places');
             [
                 'contentOptions' => ['class' => 'col-lg-2 '],
                 'label' => ucfirst(Yii::t('desk', 'building')),
-                'attribute' => 'name',
+                'attribute' => 'building_id',
+                'format' => 'object',
+                'value' => function($model) {
+                    return $model->buildings;
+                },
+            ],
+            [
+                'contentOptions' => ['class' => 'col-lg-1 '],
+                'label' => ucfirst(Yii::t('desk', 'floor')),
+                'attribute' => 'floor',
                 'format' => 'object',
                 'value' => function($model) {
                     return $model->buildings;
