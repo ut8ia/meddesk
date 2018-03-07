@@ -61,7 +61,7 @@ $this->blocks['content-header'] = Yii::t('desk', 'Places');
                 'contentOptions' => ['class' => 'col-lg-1 '],
                 'label' => ucfirst(Yii::t('desk', 'floor')),
                 'attribute' => 'floor',
-                'format' => 'object',
+                'format' => 'html',
                 'value' => function($model) {
                     return $model->floor;
                 },
