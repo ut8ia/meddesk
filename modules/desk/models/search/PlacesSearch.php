@@ -41,12 +41,14 @@ class PlacesSearch extends Places
      */
     public function search($params)
     {
-        $query = Places::find()->with('buildings');
+        $query = Places::find()
+            ->with('buildings');
 
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'sort'=> ['defaultOrder' => ['number'=>SORT_ASC]]
         ]);
 
         $this->load($params);

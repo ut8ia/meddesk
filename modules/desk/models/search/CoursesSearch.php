@@ -47,6 +47,7 @@ class CoursesSearch extends Courses
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'sort'=> ['defaultOrder' => ['date_start'=>SORT_ASC]]
         ]);
 
         $this->load($params);

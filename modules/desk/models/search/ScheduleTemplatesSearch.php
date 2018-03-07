@@ -47,6 +47,7 @@ class ScheduleTemplatesSearch extends ScheduleTemplates
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'sort'=> ['defaultOrder' => ['time_from'=>SORT_ASC]]
         ]);
 
         $this->load($params);

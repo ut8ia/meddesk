@@ -47,6 +47,7 @@ class PatientsSearch extends Patients
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'sort' => ['defaultOrder' => ['surname' => SORT_ASC]]
         ]);
 
         $this->load($params);

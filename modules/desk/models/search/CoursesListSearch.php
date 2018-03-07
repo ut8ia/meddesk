@@ -46,6 +46,7 @@ class CoursesListSearch extends CoursesList
         // add conditions that should always apply here
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'sort'=> ['defaultOrder' => ['course_id'=>SORT_ASC]]
         ]);
 
         $this->load($params);

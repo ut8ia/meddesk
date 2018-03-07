@@ -47,6 +47,7 @@ class ExcerptsSearch extends Excerpts
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'sort'=> ['defaultOrder' => ['date'=>SORT_ASC]]
         ]);
 
         $this->load($params);

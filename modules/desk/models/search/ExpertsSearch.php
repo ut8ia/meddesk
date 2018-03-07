@@ -19,7 +19,7 @@ class ExpertsSearch extends Experts
     {
         return [
             [['id', 'created_at', 'updated_at'], 'integer'],
-            [[ 'auth_key', 'password_hash', 'password_reset_token', 'email', 'status', 'surname', 'name', 'patronymic', 'short_info', 'info',  'slug'], 'safe'],
+            [['auth_key', 'password_hash', 'password_reset_token', 'email', 'status', 'surname', 'name', 'patronymic', 'short_info', 'info', 'slug'], 'safe'],
         ];
     }
 
@@ -47,6 +47,7 @@ class ExpertsSearch extends Experts
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'sort' => ['defaultOrder' => ['surname' => SORT_ASC]]
         ]);
 
         $this->load($params);

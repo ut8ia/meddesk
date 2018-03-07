@@ -47,6 +47,7 @@ class ScheduleExceptionDaysSearch extends ScheduleExceptionDays
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'sort'=> ['defaultOrder' => ['date'=>SORT_ASC]]
         ]);
 
         $this->load($params);
