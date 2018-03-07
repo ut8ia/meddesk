@@ -8,7 +8,7 @@ use Yii;
  * This is the model class for table "med_places".
  *
  * @property int $id
- * @property integer $number
+ * @property string $number // because number can be like 7A not only 7
  * @property string $name
  * @property integer $building_id
  * @property integer $floor
@@ -30,8 +30,8 @@ class Places extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'floor', 'building_id'], 'required'],
-            ['number', 'integer'],
+            [['number', 'name', 'floor', 'building_id'], 'required'],
+            ['number', 'string', 'max' => 6],
             [['name'], 'string', 'max' => 255],
             [['floor', 'building_id', 'id'], 'integer'],
             [['description'], 'string', 'max' => 512],

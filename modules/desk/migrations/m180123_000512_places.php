@@ -12,7 +12,7 @@ class m180123_000512_places extends Migration
             [
                 'id' => Schema::TYPE_PK . '',
                 'name' => Schema::TYPE_STRING . '(255) NOT NULL',
-                'number' => Schema::TYPE_SMALLINT . '(6)',
+                'number' => Schema::TYPE_STRING . '(6) NOT NULL',
                 'description' => Schema::TYPE_STRING . '(512)',
                 'building_id' => Schema::TYPE_INTEGER . '(11) NOT NULL',
                 'floor' => Schema::TYPE_SMALLINT . '(4) NOT NULL',
