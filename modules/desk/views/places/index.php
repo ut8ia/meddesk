@@ -63,7 +63,7 @@ $this->blocks['content-header'] = Yii::t('desk', 'Places');
                 'attribute' => 'floor',
                 'format' => 'object',
                 'value' => function($model) {
-                    return $model->buildings;
+                    return $model->floor;
                 },
             ],
             [
