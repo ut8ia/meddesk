@@ -31,7 +31,7 @@ $this->blocks['content-header'] = Yii::t('desk', 'Experts');
                 ],
             ],
             [
-                'contentOptions' => ['class' => 'col-lg-8 '],
+                'contentOptions' => ['class' => 'col-lg-6 '],
                 'label' => Yii::t('desk', 'Expert'),
                 'attribute' => 'surname',
                 'format' => 'object',
@@ -40,12 +40,21 @@ $this->blocks['content-header'] = Yii::t('desk', 'Experts');
                 },
             ],
             [
-                'contentOptions' => ['class' => 'col-lg-8 '],
+                'contentOptions' => ['class' => 'col-lg-4 '],
                 'label' => Yii::t('desk', 'Expert groups'),
                 'attribute' => 'expertGroups',
                 'format' => 'object',
                 'value' => function($model) {
                     return ['object' => $model->expertGroups, 'view' => 'ExpertGroups/label'];
+                },
+            ],
+            [
+                'contentOptions' => ['class' => 'col-lg-2 '],
+                'label' => Yii::t('desk', 'Expert places'),
+                'attribute' => 'places',
+                'format' => 'object',
+                'value' => function($model) {
+                    return ['object' => $model->places, 'view' => 'Places/label'];
                 },
             ],
         ],

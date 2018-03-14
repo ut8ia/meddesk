@@ -1,0 +1,1 @@
+<div class="label label-info"><?= $model->number . ' ' . $model->name ?></div>
