@@ -1,1 +1,1 @@
-<?= $model->name ?>
+<?= $model->number.' '.$model->name ?>
