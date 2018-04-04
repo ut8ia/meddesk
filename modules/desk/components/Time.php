@@ -72,7 +72,7 @@ class Time extends Component
     public function makeDatetimeDb($timestamp = null)
     {
         $timestamp = $timestamp ?: $this->timestamp;
-        return date($this->datetimeFormat, $timestamp);
+        return date($this->datetimeFormatDb, $timestamp);
     }
 
     /**

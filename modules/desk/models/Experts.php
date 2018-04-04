@@ -180,7 +180,7 @@ class Experts extends ActiveRecord
     /** @return \yii\db\ActiveQuery */
     public function getMeets()
     {
-        return $this->hasMany(ExpertGroupsLink::class, ['expert_id' => 'id']);
+        return $this->hasMany(Meets::class, ['expert_id' => 'id']);
     }
 
     /** @return \yii\db\ActiveQuery */

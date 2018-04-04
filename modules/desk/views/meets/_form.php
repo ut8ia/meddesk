@@ -28,15 +28,7 @@ MeetsFormAsset::register($this);
         'form' => $form
     ])
     ?>
-    <hr>
 
-    <?= $form->field($model, 'plan_from')->widget(DateTimePicker::class, [
-        'pluginOptions' => [
-            'todayHighlight' => true,
-            'todayBtn' => true,
-            'format' => Yii::$app->time->datetimeJsFormat
-        ]
-    ]) ?>
     <hr>
 
     <?= ExpertSearchWidget::widget([
@@ -49,10 +41,21 @@ MeetsFormAsset::register($this);
 
     <?= $form->field($model, 'place_id')->dropDownList($expertPlaces); ?>
 
+    <hr>
+
+    <?= $form->field($model, 'plan_from')->widget(DateTimePicker::class, [
+        'pluginOptions' => [
+            'todayHighlight' => true,
+            'todayBtn' => true,
+            'format' => Yii::$app->time->datetimeJsFormat
+        ]
+    ]) ?>
+
     <?= $form->field($model, 'status')->dropDownList($model->getStatuses()) ?>
 
     <?= $form->field($model, 'meet_type')->dropDownList($model->getMeetTypesSelector()) ?>
 
+    <hr>
     <?= $form->field($model, 'comment')->textInput(['maxlength' => true]) ?>
 
 </div>

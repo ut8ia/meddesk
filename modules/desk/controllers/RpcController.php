@@ -4,6 +4,8 @@ namespace app\modules\desk\controllers;
 
 use app\modules\desk\services\autocomplete\Autocomplete;
 use app\modules\desk\services\datasource\ExpertsData;
+use app\modules\desk\services\datasource\meets\ExpertMeets;
+use app\modules\desk\services\datasource\meets\PatientMeets;
 use yii\web\Controller;
 use nizsheanez\jsonRpc\Action;
 use yii\filters\AccessControl;
@@ -66,6 +68,17 @@ class RpcController extends Controller
     }
 
     /**
+     * @param integer $patientId
+     * @return array
+     */
+    public function patientMeets($patientId)
+    {
+        $meets = new PatientMeets();
+        return $meets->findCalendarMeets($patientId);
+    }
+
+
+    /**
      * @param $request
      * @return array
      */
@@ -81,10 +94,13 @@ class RpcController extends Controller
      */
     public function meetsExpert($expertId)
     {
+        $meets = new ExpertMeets();
         return [
             'places' => ExpertsData::rpcPlaces($expertId),
-            'expertGroups' => ExpertsData::rpcExpertGroups($expertId)
+            'expertGroups' => ExpertsData::rpcExpertGroups($expertId),
+            'expertMeets' => $meets->findCalendarMeets($expertId)
         ];
     }
+
 
 }

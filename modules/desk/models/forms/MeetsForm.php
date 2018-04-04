@@ -45,8 +45,8 @@ class MeetsForm extends Meets
     public function beforeSave($insert)
     {
         if (parent::beforeSave($insert)) {
-            $this->plan_from = Yii::$app->time->date2db($this->plan_from);
-            $this->plan_to = Yii::$app->time->date2db($this->plan_to);
+            $this->plan_from = Yii::$app->time->datetime2db($this->plan_from);
+            $this->plan_to = Yii::$app->time->datetime2db($this->plan_to);
             return true;
         }
         return false;
