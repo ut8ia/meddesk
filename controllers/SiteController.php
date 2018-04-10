@@ -2,8 +2,8 @@
 
 namespace app\controllers;
 
+use Psr\Log\InvalidArgumentException;
 use Yii;
-use yii\base\InvalidParamException;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
@@ -20,7 +20,7 @@ class SiteController extends Controller
     {
         return [
             'access' => [
-                'class' => AccessControl::className(),
+                'class' => AccessControl::class,
                 'only' => ['logout'],
                 'rules' => [
                     [
@@ -69,7 +69,7 @@ class SiteController extends Controller
      * Login action.
      *
      * @return Response|string
-     * @throws InvalidParamException
+     * @throws InvalidArgumentException
      */
     public function actionLogin()
     {
