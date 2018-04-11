@@ -89,7 +89,7 @@ class Experts extends ActiveRecord
             'short_info' => Yii::t('desk', 'Short Info'),
             'info' => Yii::t('desk', 'Info'),
             'slug' => Yii::t('desk', 'Slug'),
-            'expert_name' => Yii::t('desk', 'Experts Name'),
+            'expert_name' => Yii::t('desk', 'Expert Name'),
         ];
     }
 
