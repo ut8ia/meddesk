@@ -79,6 +79,7 @@ class Meets extends \yii\db\ActiveRecord
             'comment' => Yii::t('desk', 'Comment'),
             'time_from' => Yii::t('desk', 'Time From'),
             'time_to' => Yii::t('desk', 'Time To'),
+            'patient_name'=> Yii::t('desk', 'Patient Name'),
         ];
     }
 
