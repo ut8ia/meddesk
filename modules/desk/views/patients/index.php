@@ -25,7 +25,7 @@ $this->blocks['content-header'] = Yii::t('desk', 'Patients');
 //        'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
-                'template' => '{update} {delete} {view}',
+                'template' => '{update} {delete} {view} {calendar}',
                 'contentOptions' => [
                     'nowrap' => 'nowrap'
                 ],
@@ -38,6 +38,13 @@ $this->blocks['content-header'] = Yii::t('desk', 'Patients');
                                 'class' => 'grid-edit-action'
                             ]);
                         }
+                    },
+                    'calendar' => function($url, $model) {
+                        return Html::a('<span class="glyphicon glyphicon-calendar"></span>', $url, [
+                            'title' => Yii::t('desk', 'Calendar'),
+                            'data-pjax' => 1,
+                            'class' => 'grid-calendar-action'
+                        ]);
                     }
                 ]
             ],

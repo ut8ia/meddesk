@@ -18,7 +18,7 @@ class m180122_235812_meets extends Migration
                 'course_id' => Schema::TYPE_INTEGER . '(11)',
                 'status' => "enum('planned','done','rejected')" . ' NOT NULL',
                 'meet_type' => "enum('initial','consultation','consilium','course','urgent')" . ' NOT NULL',
-                'for_excerpt' => Schema::TYPE_BOOLEAN . '(1) NOT NULL',
+                'for_excerpt' => Schema::TYPE_BOOLEAN . '(1) NOT NULL DEFAULT `0`',
                 'text' => Schema::TYPE_STRING . '(1024)',
                 'comment' => Schema::TYPE_STRING . '(512)',
                 'plan_from' => Schema::TYPE_DATETIME . '',

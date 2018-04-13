@@ -87,6 +87,22 @@ class PatientsController extends Controller
         ]);
     }
 
+
+    /**
+     * Displays a single Patients model.
+     * @param integer $id
+     * @return mixed
+     * @throws InvalidParamException
+     * @throws NotFoundHttpException
+     */
+    public function actionCalendar($id)
+    {
+        return $this->render('calendar', [
+            'model' => $this->findModel($id),
+        ]);
+    }
+
+
     /**
      * Creates a new Patients model.
      * If creation is successful, the browser will be redirected to the 'view' page.
