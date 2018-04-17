@@ -22,5 +22,5 @@ $this->blocks['content-header'] = Yii::t('desk', 'Calendar').' : '.$patientData;
 
 
 <?= PatientScheduleCalendar::widget([
-    'patient' => $model
+    'patientId' => $model->id
 ]) ?>
