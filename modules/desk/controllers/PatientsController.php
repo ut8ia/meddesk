@@ -3,6 +3,7 @@
 namespace app\modules\desk\controllers;
 
 use app\modules\desk\models\forms\PatientsForm;
+use app\modules\desk\models\Patients;
 use Yii;
 use app\modules\desk\models\search\PatientsSearch;
 use yii\db\StaleObjectException;
@@ -98,7 +99,7 @@ class PatientsController extends Controller
     public function actionCalendar($id)
     {
         return $this->render('calendar', [
-            'model' => $this->findModel($id),
+            'model' => $this->findOriginModel($id),
         ]);
     }
 
@@ -173,4 +174,12 @@ class PatientsController extends Controller
 
     }
 
+    protected function findOriginModel($id)
+    {
+        if (($model = Patients::findOne($id)) !== null) {
+            return $model;
+        }
+        throw new NotFoundHttpException('The requested page does not exist.');
+
+    }
 }

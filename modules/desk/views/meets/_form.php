@@ -18,53 +18,55 @@ MeetsFormAsset::register($this);
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
+<?php $form = ActiveForm::begin(Yii::$app->controller->module->formsConfig); ?>
+
 <div class="box-body">
+    <div class="row">
+        <div class="col-lg-4">
 
-    <?php $form = ActiveForm::begin(Yii::$app->controller->module->formsConfig); ?>
-
-
-    <?= PatientSearchWidget::widget([
-        'model' => $model,
-        'form' => $form
-    ])
-    ?>
-
-    <hr>
-
-    <?= ExpertSearchWidget::widget([
-        'model' => $model,
-        'form' => $form
-    ])
-    ?>
-
-    <?= $form->field($model, 'expert_group_id')->dropDownList($expertGroups); ?>
-
-    <?= $form->field($model, 'place_id')->dropDownList($expertPlaces); ?>
-
-    <hr>
-
-    <?= $form->field($model, 'plan_from')->widget(DateTimePicker::class, [
-        'pluginOptions' => [
-            'todayHighlight' => true,
-            'todayBtn' => true,
-            'format' => Yii::$app->time->datetimeJsFormat
-        ]
-    ]) ?>
-
-    <?= $form->field($model, 'status')->dropDownList($model->getStatuses()) ?>
-
-    <?= $form->field($model, 'meet_type')->dropDownList($model->getMeetTypesSelector()) ?>
-
-    <hr>
-    <?= $form->field($model, 'comment')->textInput(['maxlength' => true]) ?>
-
-</div>
-<div class="box-footer clearfix no-border">
-    <div class="form-group">
-        <?= Html::submitButton(Yii::t('desk', 'Save'), ['class' => 'btn btn-success']) ?>
+            <?= PatientSearchWidget::widget([
+                'model' => $model,
+                'form' => $form
+            ])
+            ?>
+        </div>
+        <div class="col-lg-4">
+            <?= ExpertSearchWidget::widget([
+                'model' => $model,
+                'form' => $form
+            ])
+            ?>
+        </div>
+        <div class="col-lg-2">
+            <?= $form->field($model, 'expert_group_id')->dropDownList($expertGroups); ?>
+        </div>
+        <div class="col-lg-2">
+            <?= $form->field($model, 'place_id')->dropDownList($expertPlaces); ?>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-4">
+            <?= $form->field($model, 'plan_from')->widget(DateTimePicker::class, [
+                'pluginOptions' => [
+                    'todayHighlight' => true,
+                    'todayBtn' => true,
+                    'format' => Yii::$app->time->datetimeJsFormat
+                ]
+            ]) ?>
+        </div>
+        <div class="col-lg-4"><?= $form->field($model, 'meet_type')->dropDownList($model->getMeetTypesSelector()) ?></div>
+        <div class="col-lg-4"><?= $form->field($model, 'status')->dropDownList($model->getStatuses()) ?></div>
     </div>
 
-    <?php ActiveForm::end(); ?>
+    <div class="row">
+        <div class="col-lg-10"><?= $form->field($model, 'comment')->textInput(['maxlength' => true]) ?></div>
+        <div class="col-lg-2"><br><?= Html::submitButton(Yii::t('desk', 'Save'), ['class' => 'btn btn-success']) ?></div>
+    </div>
+
 
 </div>
+<?php ActiveForm::end(); ?>
+
+
 

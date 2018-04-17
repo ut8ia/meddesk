@@ -104,7 +104,7 @@ class Meets extends \yii\db\ActiveRecord
         return [
             self::TYPE_CONSULTATION => Yii::t('desk', self::TYPE_CONSULTATION),
             self::TYPE_COURSE => Yii::t('desk', self::TYPE_COURSE),
-            self::TYPE_URGENT => Yii::t('desk', self::TYPE_URGENT)
+//            self::TYPE_URGENT => Yii::t('desk', self::TYPE_URGENT)
         ];
     }
 

@@ -23,7 +23,7 @@ class ExpertScheduleCalendar extends Widget
     public $model;
     public $form;
     public $type = 'calendar';
-    public $expert;
+    public $expertId;
     public $meet;
 
     public function run()
@@ -43,15 +43,8 @@ class ExpertScheduleCalendar extends Widget
     private function findEvents()
     {
 
-        $meets = isset($this->expert->meets) ? $this->expert->meets : [];
-        $events = [];
         $meetProcessor = new ExpertMeets();
-
-        foreach ($meets as $meet) {
-            $events[] = $meetProcessor->meet2event($meet);
-        }
-
-        return $events;
+        return $meetProcessor->findCalendarMeets($this->expertId);
     }
 
 }

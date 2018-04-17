@@ -15,34 +15,22 @@ $this->params['breadcrumbs'][] = Yii::t('desk', 'Update');
 $this->blocks['content-header'] = Yii::t('desk', 'Meets');
 ?>
 
+<div class="box box-primary">
+
+    <?= $this->render('_form', [
+        'model' => $model,
+        'availablePlaces' => $availablePlaces,
+        'availableExpertGroups' => $availableExpertGroups
+    ]) ?>
+
+</div>
+
+
 <div class="row">
-    <div class="col-lg-7">
-
-        <div class="box box-success">
-            <div class="box-header with-border">
-                <h3 class="box-title"></h3>
-            </div>
-
-            <?= $this->render('_form', [
-                'model' => $model,
-                'availablePlaces' => $availablePlaces,
-                'availableExpertGroups' => $availableExpertGroups
-            ]) ?>
-
-        </div>
-
+    <div class="col-lg-6">
+        <?= PatientScheduleCalendar::widget(['model' => $model, 'patientId' => $model->patient_id]) ?>
     </div>
-    <div class="col-lg-5">
-
-        <?= PatientScheduleCalendar::widget([
-            'patient' => $model->patients,
-            'meet' => $model
-        ]) ?>
-
-        <?= ExpertScheduleCalendar::widget([
-            'expert' => $model->experts,
-            'meet' => $model
-        ]) ?>
-
+    <div class="col-lg-6">
+        <?= ExpertScheduleCalendar::widget(['model' => $model, 'expertId' => $model->expert_id]) ?>
     </div>
 </div>

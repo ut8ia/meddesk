@@ -90,6 +90,7 @@ class MeetsController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['index']);
         }
+
         return $this->render('create', [
             'model' => $model,
             'availablePlaces' => Yii::$app->formatter->asPairs(Places::class),
@@ -113,6 +114,7 @@ class MeetsController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['index']);
         }
+
 
         $model->formatParams();
         return $this->render('update', [

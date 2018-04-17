@@ -11,26 +11,24 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('desk', 'Meets'), 'url' => [
 $this->params['breadcrumbs'][] = $this->title;
 $this->blocks['content-header'] = Yii::t('desk', 'Create Meet');
 ?>
+<div class="box box-success">
+
+
+    <?= $this->render('_form', [
+        'model' => $model,
+        'availablePlaces' => $availablePlaces,
+        'availableExpertGroups' => $availableExpertGroups
+    ]) ?>
+
+</div>
+
+
 <div class="row">
-    <div class="col-lg-7">
-
-        <div class="box box-success">
-            <div class="box-header with-border">
-                <h3 class="box-title"></h3>
-            </div>
-
-            <?= $this->render('_form', [
-                'model' => $model,
-                'availablePlaces' => $availablePlaces,
-                'availableExpertGroups' => $availableExpertGroups
-            ]) ?>
-
-        </div>
-
-    </div>
-    <div class="col-lg-5">
+    <div class="col-lg-6">
 
         <?= PatientScheduleCalendar::widget(['model' => $model]) ?>
+    </div>
+    <div class="col-lg-6">
 
         <?= ExpertScheduleCalendar::widget(['model' => $model]) ?>
 

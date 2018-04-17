@@ -23,7 +23,7 @@ class PatientScheduleCalendar extends Widget
     public $model;
     public $form;
     public $type = 'calendar';
-    public $patient;
+    public $patientId;
     public $meet;
 
     public function run()
@@ -43,15 +43,9 @@ class PatientScheduleCalendar extends Widget
     private function findEvents()
     {
 
-        $meets = isset($this->patient->meets)?$this->patient->meets:[];
-        $events = [];
         $meetProcessor = new PatientMeets();
+        return $meetProcessor->findCalendarMeets($this->patientId);
 
-        foreach ($meets as $meet) {
-            $events[] = $meetProcessor->meet2event($meet);
-        }
-
-        return $events;
     }
 
 }

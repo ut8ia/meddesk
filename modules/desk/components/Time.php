@@ -10,8 +10,8 @@ class Time extends Component
 
     public $timeZone = 'UTC';
     public $dateFormat = 'Y-m-d';
-    public $dateJsFormat = 'dd-M-yyyy';
-    public $datetimeJsFormat = 'dd-M-yyyy hh:ii';
+    public $dateJsFormat = 'dd-m-yyyy';
+    public $datetimeJsFormat = 'dd-m-yyyy hh:ii';
     public $dateFormatDb = 'Y-m-d';
     public $datetimeFormat = 'Y-m-d H:i:s';
     public $datetimeFormatDb = 'Y-m-d H:i:s';
@@ -91,6 +91,7 @@ class Time extends Component
      */
     public function datetime2db($datetime)
     {
+
         return $this->makeDatetimeDb(strtotime($datetime));
     }
 

@@ -47,7 +47,7 @@ class MeetsSearch extends Meets
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-            'sort'=> ['defaultOrder' => ['time_from'=>SORT_ASC]]
+            'sort'=> ['defaultOrder' => ['id'=>SORT_DESC]]
         ]);
 
         $this->load($params);

@@ -86,13 +86,13 @@ $config = [
             'partialsPath' => '@app/modules/desk/views/partials/',
             'layout' => 'adminlte',
             'formsConfig' => [
-                'enableClientValidation' => true,
-                'options' => ['class' => 'form-horizontal', 'style' => 'padding-left:0px;'],
-                'fieldConfig' => [
-                    'template' => '<div class="col-lg-2">{label}</div><div class="col-lg-10">{input}{error}</div>',
-                    'labelOptions' => ['class' => 'form-label'],
-                    'inputOptions' => ['class' => 'form-control'],
-                ],
+//                'enableClientValidation' => true,
+//                'options' => ['class' => 'form-horizontal', 'style' => 'padding-left:0px;'],
+//                'fieldConfig' => [
+//                    'template' => '<div class="col-lg-2">{label}</div><div class="col-lg-10">{input}{error}</div>',
+//                    'labelOptions' => ['class' => 'form-label'],
+//                    'inputOptions' => ['class' => 'form-control'],
+//                ],
             ],
             'usersClass' => app\modules\desk\models\Experts::class,
         ],
