@@ -6,7 +6,7 @@ $config = [
     'id' => 'basic-console',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'controllerNamespace' => 'app\commands',
+    'controllerNamespace' => 'app\console\controllers',
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -18,7 +18,20 @@ $config = [
                     'levels' => ['error', 'warning'],
                 ],
             ],
-        ]
+        ],
+        'i18n' => [
+            'translations' => [
+                '*' => [
+                    'class' => 'yii\i18n\DbMessageSource',
+                    'db' => 'db',
+                    'sourceLanguage' => 'en-US', // Developer language
+                    'sourceMessageTable' => '{{%language_source}}',
+                    'messageTable' => '{{%language_translate}}',
+//                'cachingDuration' => 86400,
+                    'enableCaching' => false,
+                ]
+            ],
+        ],
     ],
     'params' => $params,
 ];

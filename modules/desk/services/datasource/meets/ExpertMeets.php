@@ -49,7 +49,7 @@ class ExpertMeets
             ]);
         $event->start = $meet->plan_from;
         $event->end = $meet->plan_to ?: null;
-        $event->backgroundColor = $meet->expertGroups->display_color;
+//        $event->backgroundColor = $meet->expertGroups->display_color;
         return $event;
     }
 

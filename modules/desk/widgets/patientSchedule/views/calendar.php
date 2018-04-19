@@ -1,7 +1,7 @@
 <?php
 
 use  yii2fullcalendar\yii2fullcalendar;
-
+use Yii;
 /**
  * @var $events array
  */
@@ -12,6 +12,7 @@ use  yii2fullcalendar\yii2fullcalendar;
     <div class="box-body no-padding">
         <?= yii2fullcalendar::widget([
             'events' => $events,
+            'themeSystem'=>'standard',
             'options' => [
                 'lang' => 'uk',
                 //... more options to be defined here!
@@ -21,7 +22,10 @@ use  yii2fullcalendar\yii2fullcalendar;
                 'weekends' => false,
                 'weekNumbers' => false,
                 'selectable' => false,
-                'defaultView' => 'month'
+                'defaultView' => 'month',
+                'eventBackgroundColor'=> Yii::$app->params['fc']['default']['bg'],
+                'eventBorderColor'=> Yii::$app->params['fc']['default']['border'],
+                'eventTextColor'=> Yii::$app->params['fc']['default']['text'],
             ],
             'header' => [
                 'center' => 'title',

@@ -20,6 +20,9 @@ use Yii;
  * @property string $district
  * @property string $district_a
  * @property int $user_id
+ * @property string $address
+ * @property string $phone
+ * @property string $email
  */
 class Patients extends \yii\db\ActiveRecord
 {
@@ -53,8 +56,14 @@ class Patients extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'surname', 'patronymic', 'card_number', 'sex', 'birthdate', 'region_id', 'city', 'city_id', 'district', 'district_a', 'user_id'], 'required'],
+//            [['name', 'surname', 'patronymic', 'card_number', 'sex', 'birthdate', 'region_id', 'city', 'city_id', 'district', 'district_a', 'user_id'], 'required'],
+
+            [['name', 'surname', 'patronymic', 'card_number', 'sex', 'birthdate', 'region_id', 'district_a', 'user_id'], 'required'],
+
             [['sex'], 'string'],
+            ['address', 'string', 'max' => 128],
+            ['phone', 'string', 'max' => 16],
+            ['email', 'email'],
             [['birthdate'], 'safe'],
             [['region_id', 'city_id', 'user_id'], 'integer'],
             [['name', 'surname', 'patronymic'], 'string', 'max' => 255],
@@ -84,6 +93,9 @@ class Patients extends \yii\db\ActiveRecord
             'district' => Yii::t('desk', 'District'),
             'district_a' => Yii::t('desk', 'District A'),
             'user_id' => Yii::t('desk', 'User ID'),
+            'address' => Yii::t('desk', 'Address'),
+            'phone' => Yii::t('desk', 'Phone'),
+            'email' => Yii::t('desk', 'Email')
         ];
     }
 
@@ -153,7 +165,8 @@ class Patients extends \yii\db\ActiveRecord
     /**
      * @return bool
      */
-    public function canUpdate(){
+    public function canUpdate()
+    {
         return true;
     }
 

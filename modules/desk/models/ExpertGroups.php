@@ -10,6 +10,7 @@ use Yii;
  *
  * @property int $id
  * @property string $name
+ * @property string $type
  * @property string $description
  * @property int $patient_required
  * @property int $course_required
@@ -20,6 +21,11 @@ use Yii;
  */
 class ExpertGroups extends \yii\db\ActiveRecord
 {
+
+
+    const TYPE_COMMON = 'common';
+    const TYPE_REHABILITATION = 'rehabilitation';
+
     /**
      * @inheritdoc
      */
@@ -37,6 +43,7 @@ class ExpertGroups extends \yii\db\ActiveRecord
             [['name'], 'required'],
             [['patient_required', 'course_required', 'excerpt_required', 'excerpt_order', 'deleted'], 'integer'],
             [['name', 'description'], 'string', 'max' => 255],
+            [['type'], 'string'],
             ['display_color', 'string', 'max' => 16],
         ];
     }
@@ -53,7 +60,8 @@ class ExpertGroups extends \yii\db\ActiveRecord
             'course_required' => Yii::t('desk', 'Course Required'),
             'excerpt_required' => Yii::t('desk', 'Excerpt Required'),
             'excerpt_order' => Yii::t('desk', 'Excerpt Order'),
-            'display_color' => Yii::t('desk', 'Dosplay color'),
+            'display_color' => Yii::t('desk', 'Display color'),
+            'type' => Yii::t('desk', 'Type'),
         ];
     }
 

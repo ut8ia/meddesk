@@ -18,11 +18,15 @@ class m180123_000112_patients extends Migration
                 'sex' => "enum('female','male')" . ' NOT NULL',
                 'birthdate' => Schema::TYPE_DATE . ' NOT NULL',
                 'region_id' => Schema::TYPE_SMALLINT . '(4) NOT NULL',
-                'city' => Schema::TYPE_STRING . '(64) NOT NULL',
-                'city_id' => Schema::TYPE_INTEGER . '(11) NOT NULL',
-                'district' => Schema::TYPE_STRING . '(40) NOT NULL',
+                'city' => Schema::TYPE_STRING . '(64) NULL',
+                'city_id' => Schema::TYPE_INTEGER . '(11) NOT NULL DEFAULT 0',
+                'district' => Schema::TYPE_STRING . '(40) NULL',
                 'district_a' => Schema::TYPE_STRING . '(2) NOT NULL',
                 'user_id' => Schema::TYPE_INTEGER . '(11) NOT NULL',
+                'address' => Schema::TYPE_STRING . '(128) NULL',
+                'phone' => Schema::TYPE_STRING . '(16) NULL',
+                'email' => Schema::TYPE_STRING . '(64) NULL',
+
             ], $tableOptions);
 
     }

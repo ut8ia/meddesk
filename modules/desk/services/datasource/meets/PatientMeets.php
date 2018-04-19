@@ -49,7 +49,9 @@ class PatientMeets
             ]);
         $event->start = $meet->plan_from;
         $event->end = $meet->plan_to ?: null;
-        $event->backgroundColor = $meet->expertGroups->display_color;
+//        $event->backgroundColor = '#fff';
+//        $event->borderColor = '#fff';
+//        $event->textColor = '#777';
         return $event;
     }
 
