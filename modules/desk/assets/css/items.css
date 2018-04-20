@@ -1,0 +1,16 @@
+.patient {
+    font-size: 16px;
+}
+
+.patient .surname {
+    color: #006688;
+    font-weight: 600;
+}
+
+.patient .name {
+    color: #004466;
+}
+
+.patient .patronymic {
+    color: #999;
+}

@@ -12,13 +12,10 @@ use yii\web\AssetBundle;
 
 class AdminAppAsset extends AssetBundle
 {
-    public $basePath = '@webroot';
-    public $baseUrl = '@web';
-    public $css = [
-        'css/admin.css',
-    ];
-    public $js = [
-    ];
+    public $sourcePath = '@app/modules/desk/assets';
+    public $css = ['css/admin.css'];
+    public $js = [];
+
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',

@@ -22,7 +22,7 @@ $this->blocks['content-header'] = Yii::t('desk', 'Patients');
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-//        'filterModel' => $searchModel,
+        'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
                 'template' => '{update} {delete} {view} {calendar}',
@@ -50,11 +50,14 @@ $this->blocks['content-header'] = Yii::t('desk', 'Patients');
             ],
             [
                 'contentOptions' => ['class' => 'col-lg-3'],
-                'attribute' => 'patient_id',
+                'attribute' => 'surname',
                 'label' => Yii::t('desk', 'Patient'),
-                'format' => 'object',
+                'format' => 'html',
                 'value' => function($model) {
-                    return $model;
+                    return  Yii::$app->formatter->asObject([
+                            'object' => $model,
+                            'view' => 'snp_styled'
+                        ]);
                 },
             ],
             [

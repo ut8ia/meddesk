@@ -78,6 +78,10 @@ $config = [
         'formatter' => [
             'class' => 'app\modules\desk\components\Formatter'
         ],
+        'assetManager' => [
+            'class' => 'yii\web\AssetManager',
+            'forceCopy' => true,
+        ],
     ],
     'modules' => [
         'desk' => [
