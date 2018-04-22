@@ -1,4 +1,4 @@
-.patient {
+.patient , .expert {
     font-size: 16px;
 }
 
@@ -12,5 +12,19 @@
 }
 
 .patient .patronymic {
+    color: #999;
+}
+
+
+.expert .surname {
+    color: #006688;
+    font-weight: 600;
+}
+
+.expert .name {
+    color: #004466;
+}
+
+.expert .patronymic {
     color: #999;
 }

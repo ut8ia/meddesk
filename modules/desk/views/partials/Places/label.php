@@ -1,1 +1,1 @@
-<div class="label label-info"><?= $model->number . ' ' . $model->name ?></div>
+<div class="label label-primary"><?= $model->number . ' ' . $model->name ?></div>

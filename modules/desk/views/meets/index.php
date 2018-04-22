@@ -22,7 +22,7 @@ $this->blocks['content-header'] = Yii::t('desk', 'Meets');
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-//        'filterModel' => $searchModel,
+        'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
                 'template' => '{update} {delete} {view}',
@@ -42,22 +42,22 @@ $this->blocks['content-header'] = Yii::t('desk', 'Meets');
                 ]
             ],
             [
-                'contentOptions' => ['class' => 'col-lg-2'],
+                'contentOptions' => ['class' => 'col-lg-3'],
                 'attribute' => 'expert_id',
                 'label' => Yii::t('desk', 'Expert'),
                 'format' => 'object',
                 'value' => function($model) {
-                    return $model->experts;
+                    return ['object' =>$model->experts, 'view' => 'snp_styled'];
                 },
             ],
-            ['contentOptions' => ['class' => 'col-lg-1'],
-                'attribute' => 'expertGroup',
-                'label' => Yii::t('desk', 'Expert group'),
-                'format' => 'object',
-                'value' => function($model) {
-                    return ['object' => $model->expertGroups, 'view' => 'label'];
-                },
-            ],
+//            ['contentOptions' => ['class' => 'col-lg-1'],
+//                'attribute' => 'expertGroup',
+//                'label' => Yii::t('desk', 'Expert group'),
+//                'format' => 'object',
+//                'value' => function($model) {
+//                    return ['object' => $model->expertGroups, 'view' => 'label'];
+//                },
+//            ],
             [
                 'contentOptions' => ['class' => 'col-lg-3'],
                 'attribute' => 'patient_id',

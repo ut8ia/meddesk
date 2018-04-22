@@ -5,17 +5,17 @@ use yii\grid\GridView;
 use yii\widgets\Pjax;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\modules\desk\models\search\ExcertGroupsSearch */
+/* @var $searchModel app\modules\desk\models\search\RehabilitationExpertGroupsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('desk', 'Expert Groups');
+$this->title = Yii::t('desk', 'Rehabilitation Methods');
 $this->params['breadcrumbs'][] = $this->title;
-$this->blocks['content-header'] =  Yii::t('desk', 'Expert Groups');
+$this->blocks['content-header'] =  Yii::t('desk', 'Rehabilitation Methods');
 ?>
 
 <div class="box box-info">
     <div class="box-header with-border">
-        <?= Html::a(Yii::t('desk', 'Create expert group'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('desk', 'Create Rehabilitation Method'), ['create'], ['class' => 'btn btn-success']) ?>
     </div>
     <?php Pjax::begin(); ?>
     <?php //echo $this->render('_search', ['model' => $searchModel]); ?>

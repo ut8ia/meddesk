@@ -2,10 +2,10 @@
 
 namespace app\modules\desk\controllers;
 
-use app\modules\desk\models\search\CommonExpertGroupsSearch;
+use app\modules\desk\models\forms\RehabilitationExpertGroupsForm;
+use app\modules\desk\models\search\RehabilitationExpertGroupsSearch;
 use Yii;
-use app\modules\desk\models\ExpertGroups;
-use app\modules\desk\models\search\ExpertGroupsSearch;
+
 use yii\base\InvalidParamException;
 use yii\db\StaleObjectException;
 use yii\web\Controller;
@@ -14,9 +14,9 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 
 /**
- * ExpertgroupsController implements the CRUD actions for ExpertGroups model.
+ * RehabilitationgroupsController implements the CRUD actions for RehabilitationExpertGroupsForm model.
  */
-class ExpertgroupsController extends Controller
+class RehabilitationgroupsController extends Controller
 {
     /**
      * @inheritdoc
@@ -53,7 +53,7 @@ class ExpertgroupsController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new CommonExpertGroupsSearch();
+        $searchModel = new RehabilitationExpertGroupsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -63,7 +63,7 @@ class ExpertgroupsController extends Controller
     }
 
     /**
-     * Displays a single ExpertGroups model.
+     * Displays a single RehabilitationExpertGroupsForm model.
      * @param integer $id
      * @return mixed
      * @throws InvalidParamException
@@ -84,7 +84,7 @@ class ExpertgroupsController extends Controller
      */
     public function actionCreate()
     {
-        $model = new ExpertGroups();
+        $model = new RehabilitationExpertGroupsForm();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['index']);
@@ -133,15 +133,15 @@ class ExpertgroupsController extends Controller
     }
 
     /**
-     * Finds the ExpertGroups model based on its primary key value.
+     * Finds the RehabilitationExpertGroupsForm model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return ExpertGroups the loaded model
+     * @return RehabilitationExpertGroupsForm the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = ExpertGroups::findOne($id)) !== null) {
+        if (($model = RehabilitationExpertGroupsForm::findOne($id)) !== null) {
             return $model;
         }
         throw new NotFoundHttpException('The requested page does not exist.');

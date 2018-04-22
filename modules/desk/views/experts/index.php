@@ -18,11 +18,11 @@ $this->blocks['content-header'] = Yii::t('desk', 'Experts');
         <?= Html::a(Yii::t('desk', 'Create Expert'), ['create'], ['class' => 'btn btn-success']) ?>
     </div>
     <?php Pjax::begin(); ?>
-    <?php //echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-//        'filterModel' => $searchModel,
+        'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
                 'template' => '{update} {delete} {view}',
@@ -36,7 +36,7 @@ $this->blocks['content-header'] = Yii::t('desk', 'Experts');
                 'attribute' => 'surname',
                 'format' => 'object',
                 'value' => function($model) {
-                    return ['object' => $model, 'view' => 'fullName'];
+                    return ['object' => $model, 'view' => 'snp_styled'];
                 },
             ],
             [

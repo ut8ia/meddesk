@@ -85,8 +85,8 @@
                         'url' => ['#'],
                         'items' => [
                             ['label' => 'Загальна', 'icon' => 'signal', 'url' => ['/desk/statcommon'],],
-                            ['label' => 'По Фахівціям', 'icon' => 'user-plus', 'url' => ['/desk/statexperts'],],
-                            ['label' => 'По Пацієнтам', 'icon' => 'child', 'url' => ['/desk/statpatients'],],
+//                            ['label' => 'По Фахівціям', 'icon' => 'user-plus', 'url' => ['/desk/statexperts'],],
+//                            ['label' => 'По Пацієнтам', 'icon' => 'child', 'url' => ['/desk/statpatients'],],
                         ]
                     ],
                     [
@@ -95,6 +95,7 @@
                         'url' => ['#'],
                         'items' => [
                             ['label' => 'Групи фахівців', 'icon' => 'users', 'url' => ['/desk/expertgroups'],],
+                            ['label' => 'Методи реабілітації', 'icon' => 'tasks', 'url' => ['/desk/rehabilitationgroups'],],
                             ['label' => 'Діагнози', 'icon' => 'dashboard', 'url' => ['/desk/diagnoses'],],
                             ['label' => 'Місця прийому', 'icon' => 'map-pin', 'url' => ['/desk/places'],],
                             ['label' => 'Будівлі', 'icon' => 'building', 'url' => ['/desk/buildings'],],

@@ -1,1 +1,1 @@
-<div class="label" style="background-color:<?= $model->display_color ?>;"><?= $model->name ?></div>
+<div class="label label-primary" ><?= $model->name ?></div>

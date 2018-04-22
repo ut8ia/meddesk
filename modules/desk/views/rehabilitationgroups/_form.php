@@ -17,23 +17,6 @@ use kartik\widgets\ColorInput;
 
     <?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'patient_required')->checkbox() ?>
-
-    <?= $form->field($model, 'course_required')->checkbox() ?>
-
-    <?= $form->field($model, 'excerpt_required')->checkbox() ?>
-
-    <?= $form->field($model, 'excerpt_order')->textInput() ?>
-
-    <?php
-
-//    $form->field($model, 'display_color')->widget(ColorInput::class,
-//        [
-//            'options' => ['placeholder' => 'Select color ...']
-//        ])
-//
-    ?>
-
 
 </div>
 <div class="box-footer clearfix no-border">
