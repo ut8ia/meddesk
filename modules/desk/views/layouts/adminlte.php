@@ -2,7 +2,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use app\assets\AdminAppAsset;
+use app\modules\desk\assets\AdminAppAsset;
 use yii\helpers\Html;
 use app\modules\desk\assets\CommonFormsAsset;
 use app\modules\desk\assets\JsonRpcAsset;

@@ -1,13 +1,13 @@
 <?php
 /* @var $this \yii\web\View */
 /* @var $content string */
-use app\assets\AdminAppAsset;
+use app\assets\AppAsset;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 
-AdminAppAsset::register($this);
+AppAsset::register($this);
 
 ?>
 <?php $this->beginPage() ?>
