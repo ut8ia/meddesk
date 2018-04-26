@@ -94,8 +94,10 @@
                         'icon' => 'wrench',
                         'url' => ['#'],
                         'items' => [
-                            ['label' => 'Групи фахівців', 'icon' => 'users', 'url' => ['/desk/expertgroups'],],
+                            ['label' => 'Групи консультації', 'icon' => 'tasks', 'url' => ['/desk/consultationgroups'],],
+                            ['label' => 'Методи діагностики', 'icon' => 'tasks', 'url' => ['/desk/diagnosticgroups'],],
                             ['label' => 'Методи реабілітації', 'icon' => 'tasks', 'url' => ['/desk/rehabilitationgroups'],],
+                            ['label' => 'Загалні групи фахівців', 'icon' => 'users', 'url' => ['/desk/expertgroups'],],
                             ['label' => 'Діагнози', 'icon' => 'dashboard', 'url' => ['/desk/diagnoses'],],
                             ['label' => 'Місця прийому', 'icon' => 'map-pin', 'url' => ['/desk/places'],],
                             ['label' => 'Будівлі', 'icon' => 'building', 'url' => ['/desk/buildings'],],

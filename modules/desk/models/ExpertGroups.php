@@ -22,9 +22,11 @@ use Yii;
 class ExpertGroups extends \yii\db\ActiveRecord
 {
 
-
     const TYPE_COMMON = 'common';
     const TYPE_REHABILITATION = 'rehabilitation';
+    const TYPE_CONSULTATION = 'consultation';
+    const TYPE_DIAGNOSTIC = 'diagnostic';
+
 
     /**
      * @inheritdoc
