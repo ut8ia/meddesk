@@ -11,6 +11,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+
 /**
  * CoursesController implements the CRUD actions for Courses model.
  */
@@ -86,7 +87,7 @@ class CoursesController extends Controller
         $model = new CoursesForm();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         }
         return $this->render('create', ['model' => $model]);
     }
@@ -104,7 +105,7 @@ class CoursesController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         }
         $model->formatParams();
         return $this->render('update', ['model' => $model]);

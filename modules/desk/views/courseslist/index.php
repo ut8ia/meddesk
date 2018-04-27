@@ -24,6 +24,7 @@ $this->blocks['content-header'] = Yii::t('desk', 'Courses Lists');
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
                 'template' => '{update} {delete} {view}',
@@ -51,7 +52,7 @@ $this->blocks['content-header'] = Yii::t('desk', 'Courses Lists');
                 },
             ],
             [
-                'contentOptions' => ['class' => 'col-lg-3'],
+                'contentOptions' => ['class' => 'col-lg-4'],
                 'attribute' => 'patient',
                 'label' => Yii::t('desk', 'Patient'),
                 'format' => 'object',
@@ -86,15 +87,15 @@ $this->blocks['content-header'] = Yii::t('desk', 'Courses Lists');
                     return ['object' => $model, 'view' => 'status_label'];
                 },
             ],
-            [
-                'contentOptions' => ['class' => 'col-lg-2'],
-                'attribute' => 'comment',
-                'label' => Yii::t('desk', 'Comment'),
-                'format' => 'html',
-                'value' => function($model) {
-                    return $model->comment;
-                },
-            ],
+//            [
+//                'contentOptions' => ['class' => 'col-lg-2'],
+//                'attribute' => 'comment',
+//                'label' => Yii::t('desk', 'Comment'),
+//                'format' => 'html',
+//                'value' => function($model) {
+//                    return $model->comment;
+//                },
+//            ],
 
         ],
     ]); ?>
