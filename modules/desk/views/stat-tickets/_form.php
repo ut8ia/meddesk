@@ -6,13 +6,13 @@ use app\modules\desk\widgets\patientSearch\PatientSearchWidget;
 use app\modules\desk\widgets\expertSearch\ExpertSearchWidget;
 use kartik\widgets\DateTimePicker;
 use app\modules\desk\helpers\Converter;
-use app\modules\desk\assets\MeetsFormAsset;
+use app\modules\desk\assets\StatTicketsFormAsset;
 use kartik\widgets\DatePicker;
 
 $expertGroups = isset($model->experts->expertGroups) ? Converter::formatSelector($model->experts->expertGroups) : [];
 $expertPlaces = isset($model->experts->places) ? Converter::formatSelector($model->experts->places) : [];
 
-MeetsFormAsset::register($this);
+StatTicketsFormAsset::register($this);
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\desk\models\forms\MeetsForm */
@@ -69,7 +69,7 @@ MeetsFormAsset::register($this);
                         ]
                     ]) ?>
                     <?= $form->field($model, 'sex')->dropDownList(['female' => 'Female', 'male' => 'Male',], ['prompt' => '']) ?>
-
+                    <?= $form->field($model, 'address')->textInput(); ?>
                 </div>
             </div>
 
@@ -86,6 +86,3 @@ MeetsFormAsset::register($this);
     </div>
 </div>
 <?php ActiveForm::end(); ?>
-
-
-

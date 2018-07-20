@@ -23,9 +23,9 @@ class StatTicketForm extends Model
     public $card_number;
     public $birthdate;
     public $sex;
-    public $address;
-    public $city;
 
+    public $city;
+    public $address;
 //    public $city_id;
 
 
