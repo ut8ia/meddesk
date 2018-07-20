@@ -48,7 +48,7 @@ class ScheduletemplatesController extends Controller
     /**
      * Lists all ScheduleTemplates models.
      * @return mixed
-     * @throws InvalidParamException
+     *
      */
     public function actionIndex()
     {
@@ -65,7 +65,7 @@ class ScheduletemplatesController extends Controller
      * Displays a single ScheduleTemplates model.
      * @param integer $id
      * @return mixed
-     * @throws InvalidParamException
+     *
      * @throws NotFoundHttpException
      */
     public function actionView($id)
@@ -79,7 +79,7 @@ class ScheduletemplatesController extends Controller
      * Creates a new ScheduleTemplates model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
-     * @throws InvalidParamException
+     *
      */
     public function actionCreate()
     {
@@ -99,7 +99,7 @@ class ScheduletemplatesController extends Controller
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
-     * @throws InvalidParamException
+     *
      * @throws NotFoundHttpException
      */
     public function actionUpdate($id)

@@ -49,7 +49,7 @@ class CourseslistController extends Controller
      * Lists all CoursesList models.
      * @return mixed
      * @throws NotFoundHttpException
-     * @throws InvalidParamException
+     *
      */
     public function actionIndex()
     {
@@ -66,7 +66,7 @@ class CourseslistController extends Controller
      * Displays a single CoursesList model.
      * @param integer $id
      * @return mixed
-     * @throws InvalidParamException
+     *
      * @throws NotFoundHttpException
      */
     public function actionView($id)
@@ -80,7 +80,7 @@ class CourseslistController extends Controller
      * Creates a new CoursesList model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
-     * @throws InvalidParamException
+     *
      */
     public function actionCreate()
     {
@@ -99,7 +99,7 @@ class CourseslistController extends Controller
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
-     * @throws InvalidParamException
+     *
      * @throws NotFoundHttpException
      */
     public function actionUpdate($id)

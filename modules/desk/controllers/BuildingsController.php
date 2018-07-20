@@ -50,7 +50,7 @@ class BuildingsController extends Controller
     /**
      * Lists all Buildings models.
      * @return mixed
-     * @throws InvalidParamException
+     *
      */
     public function actionIndex()
     {
@@ -67,7 +67,7 @@ class BuildingsController extends Controller
      * Displays a single Buildings model.
      * @param integer $id
      * @return mixed
-     * @throws InvalidParamException
+     *
      * @throws NotFoundHttpException
      */
     public function actionView($id)
@@ -81,7 +81,7 @@ class BuildingsController extends Controller
      * Creates a new Buildings model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
-     * @throws InvalidParamException
+     *
      */
     public function actionCreate()
     {
@@ -101,7 +101,7 @@ class BuildingsController extends Controller
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
-     * @throws InvalidParamException
+     *
      * @throws NotFoundHttpException
      */
     public function actionUpdate($id)
@@ -135,7 +135,7 @@ class BuildingsController extends Controller
 
     /**
      * @return string
-     * @throws InvalidParamException
+     *
      */
     public function actionFloors()
     {

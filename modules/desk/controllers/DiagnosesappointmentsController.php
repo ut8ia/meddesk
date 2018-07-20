@@ -47,7 +47,7 @@ class DiagnosesappointmentsController extends Controller
     /**
      * Lists all DiagnosesAppointments models.
      * @return mixed
-     * @throws InvalidParamException
+     *
      */
     public function actionIndex()
     {
@@ -64,7 +64,7 @@ class DiagnosesappointmentsController extends Controller
      * Displays a single DiagnosesAppointments model.
      * @param integer $id
      * @return mixed
-     * @throws InvalidParamException
+     *
      * @throws NotFoundHttpException
      */
     public function actionView($id)
@@ -78,7 +78,7 @@ class DiagnosesappointmentsController extends Controller
      * Creates a new DiagnosesAppointments model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
-     * @throws InvalidParamException
+     *
      */
     public function actionCreate()
     {
@@ -98,7 +98,7 @@ class DiagnosesappointmentsController extends Controller
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
-     * @throws InvalidParamException
+     *
      * @throws NotFoundHttpException
      */
     public function actionUpdate($id)
@@ -120,7 +120,7 @@ class DiagnosesappointmentsController extends Controller
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException
-     * @throws InvalidParamException
+     *
      * @throws StaleObjectException
      * @throws  \Exception
      */

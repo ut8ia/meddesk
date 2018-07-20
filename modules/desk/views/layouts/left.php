@@ -57,8 +57,9 @@
                             ['label' => 'Пацієнти', 'icon' => 'child', 'url' => ['/desk/patients'],],
                             ['label' => 'Приймання', 'icon' => 'heartbeat', 'url' => ['/desk/meets'],],
                             ['label' => 'Розклад прийому', 'icon' => 'calendar', 'url' => ['/desk/schedule'],],
-                            ['label' => 'Шаблони розкладу', 'icon' => 'calendar-check-o', 'url' => ['/desk/scheduletemplates'],]
-                        ]
+                            ['label' => 'Шаблони розкладу', 'icon' => 'calendar-check-o', 'url' => ['/desk/scheduletemplates'],],
+                            ['label' => 'Стат талони', 'icon' => 'calendar', 'url' => ['/desk/stat-tickets'],],
+                    ]
                     ],
                     [
                         'label' => 'Курси реабілітації',

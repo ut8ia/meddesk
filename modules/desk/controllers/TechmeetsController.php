@@ -51,7 +51,7 @@ class TechmeetsController extends Controller
     /**
      * Lists all Meets models.
      * @return mixed
-     * @throws InvalidParamException
+     *
      */
     public function actionIndex()
     {
@@ -68,7 +68,7 @@ class TechmeetsController extends Controller
      * Displays a single Meets model.
      * @param integer $id
      * @return mixed
-     * @throws InvalidParamException
+     *
      * @throws NotFoundHttpException
      */
     public function actionView($id)
@@ -82,7 +82,7 @@ class TechmeetsController extends Controller
      * Creates a new Meets model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
-     * @throws InvalidParamException
+     *
      */
     public function actionCreate()
     {
@@ -104,7 +104,7 @@ class TechmeetsController extends Controller
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
-     * @throws InvalidParamException
+     *
      * @throws NotFoundHttpException
      */
     public function actionUpdate($id)

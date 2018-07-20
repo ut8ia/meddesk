@@ -49,7 +49,7 @@ class RehabilitationgroupsController extends Controller
     /**
      * Lists all ExpertGroups models.
      * @return mixed
-     * @throws InvalidParamException
+     *
      */
     public function actionIndex()
     {
@@ -66,7 +66,7 @@ class RehabilitationgroupsController extends Controller
      * Displays a single RehabilitationExpertGroupsForm model.
      * @param integer $id
      * @return mixed
-     * @throws InvalidParamException
+     *
      * @throws NotFoundHttpException
      */
     public function actionView($id)
@@ -80,7 +80,7 @@ class RehabilitationgroupsController extends Controller
      * Creates a new ExpertGroups model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
-     * @throws InvalidParamException
+     *
      */
     public function actionCreate()
     {
@@ -100,7 +100,7 @@ class RehabilitationgroupsController extends Controller
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
-     * @throws InvalidParamException
+     *
      * @throws NotFoundHttpException
      */
     public function actionUpdate($id)

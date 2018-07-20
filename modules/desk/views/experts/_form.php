@@ -15,7 +15,6 @@ use kartik\widgets\FileInput;
 
     <?php $form = ActiveForm::begin(Yii::$app->controller->module->formsConfig); ?>
 
-
     <?= $form->field($model, 'surname')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>

@@ -51,7 +51,7 @@ class ExpertsController extends Controller
     /**
      * Lists all Experts models.
      * @return mixed
-     * @throws InvalidParamException
+     *
      */
     public function actionIndex()
     {
@@ -68,7 +68,7 @@ class ExpertsController extends Controller
      * Displays a single Experts model.
      * @param integer $id
      * @return mixed
-     * @throws InvalidParamException
+     *
      * @throws NotFoundHttpException
      * @throws InvalidArgumentException
      */
@@ -83,7 +83,7 @@ class ExpertsController extends Controller
      * Creates a new Experts model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
-     * @throws InvalidParamException
+     *
      */
     public function actionCreate()
     {
@@ -105,7 +105,7 @@ class ExpertsController extends Controller
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
-     * @throws InvalidParamException
+     *
      * @throws NotFoundHttpException
      */
     public function actionUpdate($id)
