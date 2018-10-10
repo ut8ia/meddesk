@@ -19,7 +19,7 @@ use app\modules\desk\models\Courses;
         Yii::$app->formatter->asPairs(
             Courses::class,
             ['status' => [Courses::STATUS_OPEN, Courses::STATUS_PENDING]],
-            'id',
+            null,
             ['view' => 'selector'])
     );
     ?>

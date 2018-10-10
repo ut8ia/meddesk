@@ -1,5 +1,6 @@
 <?php
 
+use app\models\AuthItem;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use ut8ia\filemanager\widgets\TinyMce;
@@ -9,6 +10,9 @@ use kartik\widgets\FileInput;
 /* @var $this yii\web\View */
 /* @var $model app\modules\desk\models\Experts */
 /* @var $form yii\widgets\ActiveForm */
+
+
+//dd( AuthItem::primaryKey());
 ?>
 
 <div class="box-body">
@@ -79,6 +83,15 @@ use kartik\widgets\FileInput;
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'status')->dropDownList($model->getStatuses()) ?>
+
+    <?= $form->field($model, 'role')->dropDownList(
+        Yii::$app->formatter->asPairs(
+            AuthItem::class,
+            ['type' => AuthItem::TYPE_ROLE],
+            'name',
+            ['view' => 'selector'])
+    );
+    ?>
 
     <?= $form->field($model, 'newPassword')->passwordInput(['maxlength' => true]) ?>
 

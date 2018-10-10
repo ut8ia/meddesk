@@ -92,6 +92,9 @@ class ExpertsController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['index']);
         }
+
+        $model->formatParams();
+
         return $this->render('create', [
             'model' => $model,
             'availablePlaces' => Yii::$app->formatter->asPairs(Places::class),
@@ -115,6 +118,8 @@ class ExpertsController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['index']);
         }
+
+        $model->formatParams();
 
         return $this->render('update', [
             'model' => $model,

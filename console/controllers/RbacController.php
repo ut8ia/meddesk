@@ -3,8 +3,8 @@
 
 namespace app\console\controllers;
 
-use app\modules\desk\services\rbac\Permissions;
-use app\modules\desk\services\rbac\Roles;
+use app\services\rbac\Permissions;
+use app\services\rbac\Roles;
 use Yii;
 use yii\console\Controller;
 

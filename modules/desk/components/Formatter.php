@@ -48,7 +48,6 @@ class Formatter extends \yii\i18n\Formatter
         if (!$records) {
             return [];
         }
-
         return $this->asObjectPairs($records, $keyName, $options );
     }
 

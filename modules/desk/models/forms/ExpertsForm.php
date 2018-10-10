@@ -18,6 +18,8 @@ class ExpertsForm extends Experts
 
     public $newPassword;
 
+    public $role;
+
     public function formName()
     {
         return "expertsForm";
@@ -26,11 +28,17 @@ class ExpertsForm extends Experts
     public function rules()
     {
         $rules = parent::rules();
-        $rules[] = ['newPassword', 'string'];
-//        $rules[] = ['password_hash', 'updatePass'];
+        $rules[] = [['newPassword', 'role'], 'string'];
         return $rules;
     }
 
+    public function formatParams()
+    {
+        $role = Yii::$app->authManager->getRolesByUser($this->id);
+        if (!empty($role)) {
+            $this->role = key($role);
+        };
+    }
 
     public function beforeSave($insert)
     {
@@ -48,10 +56,21 @@ class ExpertsForm extends Experts
     {
         parent::afterSave($insert, $changedAttributes);
 
-        if($insert && !empty($this->newPassword)){
+        //password
+        if ($insert && !empty($this->newPassword)) {
             $this->changePass();
         }
 
+        // rbac role change
+        $roleExist = Yii::$app->authManager->getRolesByUser($this->id);
+
+        if (empty($roleExist) || key($roleExist) !== $this->role) {
+            Yii::$app->authManager->revokeAll($this->id);
+            $role = Yii::$app->authManager->getRole($this->role);
+            Yii::$app->authManager->assign($role, $this->id);
+        }
+
+        //places
         $this->unlinkAll('places', true);
         $places = Yii::$app->request->post()[$this->formName()]['places'];
         if (!empty($places)) {
@@ -60,6 +79,7 @@ class ExpertsForm extends Experts
             }
         }
 
+        // expert groups
         $this->unlinkAll('expertGroups', true);
         $groups = Yii::$app->request->post()[$this->formName()]['expertGroups'];
         if (!empty($groups)) {

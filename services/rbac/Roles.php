@@ -1,11 +1,11 @@
 <?php
 
-namespace app\modules\desk\services\rbac;
+namespace app\services\rbac;
 
 
 /**
  * Class Roles
- * @package app\modules\desk\services\rbac
+ * @package app\services\rbac
  */
 class Roles
 {

@@ -1,8 +1,11 @@
 <?php
 
-namespace app\modules\desk\services\rbac;
+namespace app\services\rbac;
 
-
+/**
+ * Class Permissions
+ * @package app\services\rbac
+ */
 class Permissions
 {
 
