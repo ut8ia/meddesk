@@ -1,0 +1,41 @@
+version: "3"
+
+services:
+  app:
+    build: docker/php
+    volumes:
+      - ./:/app
+    depends_on:
+      - db
+    env_file:
+      - .env.dist
+    volumes:
+      - ./:/opt
+
+  console:
+    image: ubuntu:latest
+    volumes:
+          - ./:/opt
+
+  nginx:
+    image: nginx:1.12-alpine
+    ports:
+      - 80:80
+    volumes:
+      - ./:/opt
+      - ./docker/nginx/vhost.conf:/etc/nginx/conf.d/vhost.conf
+    depends_on:
+      - app
+
+  db:
+    image: mysql:5.7
+    volumes:
+      - /var/lib/mysql
+      - ./docker/mysql/config.cnf:/etc/mysql/conf.d/config.cnf
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: meddesk
+      MYSQL_USER: walker
+      MYSQL_PASSWORD: Djkrth#3

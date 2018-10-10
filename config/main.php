@@ -45,6 +45,9 @@ $config = [
             'identityClass' => app\modules\desk\models\ExpertsIdentity::class,
             'enableAutoLogin' => true,
         ],
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+        ],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],

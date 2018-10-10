@@ -4,7 +4,6 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use app\modules\desk\widgets\patientSearch\PatientSearchWidget;
 use app\modules\desk\widgets\expertSearch\ExpertSearchWidget;
-use kartik\widgets\DateTimePicker;
 use app\modules\desk\helpers\Converter;
 use app\modules\desk\assets\StatTicketsFormAsset;
 use kartik\widgets\DatePicker;
