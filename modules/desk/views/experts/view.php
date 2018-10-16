@@ -33,7 +33,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'surname',
             'name',
             'patronymic',
-            'specialization'
+            [
+                'label' => Yii::t('desk', 'Experts'),
+                'format' => 'object',
+                'value' => ['object' => $model->expertGroups, 'view' => 'ExpertGroups/label' ]
+            ],
         ],
     ]) ?>
 

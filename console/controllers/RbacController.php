@@ -3,6 +3,7 @@
 
 namespace app\console\controllers;
 
+use app\modules\desk\models\Experts;
 use app\services\rbac\Permissions;
 use app\services\rbac\Roles;
 use Yii;
@@ -78,5 +79,23 @@ class RbacController extends Controller
 
     }
 
+
+    /**
+     * make all user - stuff roles
+     */
+    public function actionAssign()
+    {
+
+        $auth = Yii::$app->authManager;
+        $exp = Experts::find()->all();
+
+        $role = $auth->getRole(Roles::ROLE_STUFF);
+
+        foreach ($exp as $item) {
+            $auth->assign($role, $item->id);
+        }
+
+
+    }
 
 }

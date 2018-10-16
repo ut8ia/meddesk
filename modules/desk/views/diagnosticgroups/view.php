@@ -26,11 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'course_required:boolean',
             'excerpt_required:boolean',
             'excerpt_order',
-            [
-                'label' => Yii::t('desk', 'Experts'),
-                'format' => 'object',
-                'value' => ['object' => $model->experts, 'view' => 'Experts/label' ]
-            ],
+
             [
                 'label' => Yii::t('desk', 'Display color'),
                 'format' => 'object',
