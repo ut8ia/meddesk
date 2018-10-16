@@ -1,3 +1,10 @@
+<?php
+
+use app\services\rbac\MenuHelper;
+use app\services\rbac\Permissions;
+use dmstr\widgets\Menu;
+
+?>
 <aside class="main-sidebar">
 
     <section class="sidebar">
@@ -31,14 +38,15 @@
         <!--        </form>-->
         <!-- /.search form -->
 
-        <?= dmstr\widgets\Menu::widget(
+        <?= Menu::widget(
             [
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget' => 'tree'],
-                'items' => [
+                'items' => MenuHelper::allow([
                     ['label' => 'Menu ', 'options' => ['class' => 'header']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     [
                         'label' => 'Мій кабінет',
+                        'permission' => Permissions::PERMISSION_ALL,
                         'icon' => 'star',
                         'url' => ['#'],
                         'items' => [
@@ -51,6 +59,7 @@
                     ],
                     [
                         'label' => 'Реєстратура',
+                        'permission' => Permissions::PERMISSION_SCHEDULE,
                         'icon' => 'book',
                         'url' => ['#'],
                         'items' => [
@@ -59,10 +68,11 @@
                             ['label' => 'Розклад прийому', 'icon' => 'calendar', 'url' => ['/desk/schedule'],],
                             ['label' => 'Шаблони розкладу', 'icon' => 'calendar-check-o', 'url' => ['/desk/scheduletemplates'],],
                             ['label' => 'Стат талони', 'icon' => 'calendar', 'url' => ['/desk/stat-tickets'],],
-                    ]
+                        ]
                     ],
                     [
                         'label' => 'Курси реабілітації',
+                        'permission' => Permissions::PERMISSION_MANAGE,
                         'icon' => 'th-list',
                         'url' => ['#'],
                         'items' => [
@@ -73,6 +83,7 @@
                     ],
                     [
                         'label' => 'Адміністратор',
+                        'permission'=>Permissions::PERMISSION_MANAGE,
                         'icon' => 'dashboard',
                         'url' => ['#'],
                         'items' => [
@@ -82,6 +93,8 @@
                     ],
                     [
                         'label' => 'Статистика',
+
+                        'permission'=>Permissions::PERMISSION_STATISTIC,
                         'icon' => 'bar-chart-o',
                         'url' => ['#'],
                         'items' => [
@@ -92,6 +105,7 @@
                     ],
                     [
                         'label' => 'Налаштування',
+                        'permission'=>Permissions::PERMISSION_SETTINGS,
                         'icon' => 'wrench',
                         'url' => ['#'],
                         'items' => [
@@ -107,6 +121,7 @@
                     ],
                     [
                         'label' => 'Tech',
+                        'permission'=>Permissions::PERMISSION_DEBUG,
                         'icon' => 'dashboard',
                         'url' => ['#'],
                         'items' => [
@@ -126,7 +141,7 @@
                             ],
                         ]
                     ],
-                ],
+                ]),
             ]
         ) ?>
 

@@ -9,6 +9,8 @@ namespace app\services\rbac;
 class Permissions
 {
 
+    const PERMISSION_ALL = '*';
+
     const PERMISSION_SCHEDULE = 'schedule';
     const PERMISSION_MEET = 'meet';
     const PERMISSION_PATIENTS = 'patients';
