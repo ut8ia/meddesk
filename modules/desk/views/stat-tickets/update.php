@@ -1,8 +1,5 @@
 <?php
 
-use app\modules\desk\widgets\expertSchedule\ExpertScheduleCalendar;
-use app\modules\desk\widgets\patientSchedule\PatientScheduleCalendar;
-
 /* @var $this yii\web\View */
 /* @var $model app\modules\desk\models\Meets */
 
@@ -15,7 +12,6 @@ $this->params['breadcrumbs'][] = Yii::t('desk', 'Update');
 $this->blocks['content-header'] = Yii::t('desk', 'Meets');
 ?>
 
-<div class="box box-primary">
 
     <?= $this->render('_form', [
         'model' => $model,
@@ -23,4 +19,3 @@ $this->blocks['content-header'] = Yii::t('desk', 'Meets');
         'availableExpertGroups' => $availableExpertGroups
     ]) ?>
 
-</div>

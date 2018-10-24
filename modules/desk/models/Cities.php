@@ -49,10 +49,10 @@ class Cities extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'name' => Yii::t('app', 'Name'),
-            'type' => Yii::t('app', 'Type'),
-            'region_id' => Yii::t('app', 'Region ID'),
+            'id' => Yii::t('desk', 'ID'),
+            'name' => Yii::t('desk', 'Name'),
+            'type' => Yii::t('desk', 'Type'),
+            'region_id' => Yii::t('desk', 'Region ID'),
         ];
     }
 }

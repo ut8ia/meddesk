@@ -20,12 +20,10 @@ class m180123_001712_schedule_teplates extends Migration
                 'comment' => Schema::TYPE_STRING . '(255) NOT NULL',
             ], $tableOptions);
 
-
- }
+    }
 
     public function safeDown()
     {
-
         $this->dropTable('{{%med_schedule_teplates}}');
     }
 }

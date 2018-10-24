@@ -164,7 +164,7 @@ class Experts extends ActiveRecord
      */
     public static function getDefaultImage()
     {
-        return Yii::getAlias('@storageUrl/storage/placeholder/240x240.png');
+        return Yii::getAlias('@storageUrl/storage/placeholders/user.png');
     }
 
 

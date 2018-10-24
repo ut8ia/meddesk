@@ -44,7 +44,7 @@ class Autocomplete
     public static function expertAutocomplete($request, $limit = 25)
     {
         $found = Experts::find()
-            ->where(['like', 'surname', $request])
+            ->andWhere(['like', 'surname', $request])
             ->all();
 
         if (!$found) {

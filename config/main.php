@@ -1,4 +1,5 @@
 <?php
+use ut8ia\slacklog\SlackTarget;
 
 $params = require(__DIR__ . '/params.php');
 
@@ -59,11 +60,33 @@ $config = [
             'useFileTransport' => true,
         ],
         'log' => [
-            'traceLevel' => YII_DEBUG ? 3 : 0,
+            'flushInterval' => 1,
+//            'traceLevel' => YII_DEBUG ? 3 : 0,
+            'traceLevel' => 3,
             'targets' => [
-                [
+                'file' => [
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
+                    'exportInterval' => 1
+                ],
+                'slackErrors' => [
+                    'class' => SlackTarget::class,
+                    'enabled' => true,
+                    'urlWebHook' => "https://hooks.slack.com/services/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",
+                    'emoji' => ':bug:',
+                    'botName' => 'Error bot',
+                    'levels' => ['error'],
+                ],
+                'slackDebug' => [
+                    'class' => SlackTarget::class,
+                    'enabled' => true,
+                    'botName' => 'Confirmation bot',
+                    'categories' => [
+                        'DEBUG'
+                    ],
+                    'urlWebHook' => "https://hooks.slack.com/services/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",
+                    'emoji' => ':gear:',
+                    'levels' => ['info'],
                 ],
             ],
         ],

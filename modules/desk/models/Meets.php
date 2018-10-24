@@ -22,6 +22,8 @@ use Yii;
  * @property string $plan_to
  * @property string $time_from
  * @property string $time_to
+ * @property int $first_meet
+ * @property int $first_meet_in_year
  */
 class Meets extends \yii\db\ActiveRecord
 {
@@ -52,7 +54,8 @@ class Meets extends \yii\db\ActiveRecord
     {
         return [
             [['expert_id', 'expert_group_id', 'patient_id', 'status', 'meet_type'], 'required'],
-            [['expert_id', 'expert_group_id', 'patient_id', 'place_id', 'course_id', 'for_excerpt'], 'integer'],
+            [['expert_id', 'expert_group_id', 'patient_id', 'place_id', 'course_id', 'for_excerpt',
+            'first_meet','first_meet_in_year'], 'integer'],
             [['status', 'meet_type'], 'string'],
             [['plan_from', 'plan_to', 'time_from', 'time_to'], 'safe'],
             [['text'], 'string', 'max' => 1024],
@@ -79,7 +82,9 @@ class Meets extends \yii\db\ActiveRecord
             'comment' => Yii::t('desk', 'Comment'),
             'time_from' => Yii::t('desk', 'Time From'),
             'time_to' => Yii::t('desk', 'Time To'),
-            'patient_name'=> Yii::t('desk', 'Patient Name'),
+            'patient_name' => Yii::t('desk', 'Patient Name'),
+            'first_meet' => Yii::t('desk', 'First meet'),
+            'first_meet_in_year' => Yii::t('desk', 'First meet in year'),
         ];
     }
 

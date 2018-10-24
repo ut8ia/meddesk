@@ -9,7 +9,7 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('desk', 'Meets'), 'url' => [
 $this->params['breadcrumbs'][] = $this->title;
 $this->blocks['content-header'] = Yii::t('desk', 'Create statistic Ticket');
 ?>
-<div class="box box-success">
+
 
 
     <?= $this->render('_form', [
@@ -18,4 +18,4 @@ $this->blocks['content-header'] = Yii::t('desk', 'Create statistic Ticket');
         'availableExpertGroups' => $availableExpertGroups
     ]) ?>
 
-</div>
+

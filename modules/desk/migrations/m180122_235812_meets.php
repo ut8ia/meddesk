@@ -25,6 +25,8 @@ class m180122_235812_meets extends Migration
                 'plan_to' => Schema::TYPE_DATETIME . '',
                 'time_from' => Schema::TYPE_DATETIME . '',
                 'time_to' => Schema::TYPE_DATETIME . '',
+                'first_meet' => Schema::TYPE_BOOLEAN . '(1) NOT NULL DEFAULT `0`',
+                'first_meet_in_year' => Schema::TYPE_BOOLEAN . '(1) NOT NULL DEFAULT `0`',
             ], $tableOptions);
 
     }

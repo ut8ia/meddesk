@@ -10,8 +10,6 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use yii\helpers\Json;
-use app\modules\desk\helpers\Converter;
 use app\modules\desk\models\forms\StatTicketForm;
 use app\modules\desk\models\Places;
 use app\modules\desk\models\ExpertGroups;
@@ -51,9 +49,7 @@ class StatTicketsController extends Controller
     }
 
     /**
-     * Lists all Buildings models.
-     * @return mixed
-     *
+     * @return string
      */
     public function actionIndex()
     {
@@ -67,7 +63,7 @@ class StatTicketsController extends Controller
     }
 
     /**
-     * Displays a single Buildings model.
+     * Displays a single StatTicket model.
      * @param integer $id
      * @return mixed
      *
@@ -75,8 +71,11 @@ class StatTicketsController extends Controller
      */
     public function actionView($id)
     {
+        $model = $this->findModel($id);
+        $model->formatParams();
+        $model->loadValues();
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $model,
         ]);
     }
 
@@ -87,8 +86,9 @@ class StatTicketsController extends Controller
     {
 
         $model = new StatTicketForm();
+        $model->formatParams();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->saveForm()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
         return $this->render('create', [
@@ -100,7 +100,7 @@ class StatTicketsController extends Controller
     }
 
     /**
-     * Updates an existing Buildings model.
+     * Updates an existing StatTicket model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -110,18 +110,22 @@ class StatTicketsController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $model->formatParams();
+        $model->loadValues();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->saveForm()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
         return $this->render('update', [
             'model' => $model,
+            'availablePlaces' => Yii::$app->formatter->asPairs(Places::class),
+            'availableExpertGroups' => Yii::$app->formatter->asPairs(ExpertGroups::class)
         ]);
 
     }
 
     /**
-     * Deletes an existing Buildings model.
+     * Deletes an existing StatTicket model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -136,22 +140,6 @@ class StatTicketsController extends Controller
         return $this->redirect(['index']);
     }
 
-    /**
-     * @return string
-     *
-     */
-    public function actionFloors()
-    {
-        $out = '';
-        if (isset($_POST['depdrop_parents'])) {
-            $out = Converter::separatePairs(
-                (Buildings::findOne($_POST['depdrop_parents']))
-                ->findFloors()
-            );
-        }
-        return Json::encode(['output' => $out, 'selected' => '']);
-    }
-
 
     /**
      * Finds the Buildings model based on its primary key value.
@@ -162,7 +150,7 @@ class StatTicketsController extends Controller
      */
     protected function findModel($id)
     {
-        if (($model = Buildings::findOne($id)) !== null) {
+        if (($model = StatTicketForm::findOne($id)) !== null) {
             return $model;
         }
         throw new NotFoundHttpException('The requested page does not exist.');

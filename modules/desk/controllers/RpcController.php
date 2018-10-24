@@ -6,11 +6,12 @@ use app\modules\desk\services\autocomplete\Autocomplete;
 use app\modules\desk\services\datasource\ExpertsData;
 use app\modules\desk\services\datasource\meets\ExpertMeets;
 use app\modules\desk\services\datasource\meets\PatientMeets;
+use app\modules\desk\services\datasource\PatientsData;
 use yii\web\Controller;
 use nizsheanez\jsonRpc\Action;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
-
+use Yii;
 
 /**
  * RPC Controller handle remote procedure calls
@@ -102,5 +103,19 @@ class RpcController extends Controller
         ];
     }
 
+
+    /**
+     * @param $patientId
+     * @return array
+     */
+    public function patientProfile($patientId)
+    {
+        return [
+            'profile' => PatientsData::patientProfile($patientId),
+            'hasMeets' => (bool)PatientsData::patientMeets($patientId),
+            'hasThisYearMeets' => (bool)PatientsData::patientMeets($patientId, date('Y-01-01')),
+            'mainDiagnoseId' => PatientsData::patientDiagnoseId($patientId)
+        ];
+    }
 
 }

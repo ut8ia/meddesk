@@ -25,7 +25,33 @@ $(document).ready(
 
         $('.patient_id_value').change(function (evt) {
 
-            jsonrpcWrapper('/desk/rpc/jsonrpc', 'patientMeets', {'patientId': [$(this).val()]}, function (data) {
+            jsonrpcWrapper('/desk/rpc/jsonrpc', 'patientProfile', {'patientId': [$(this).val()]}, function (data) {
+
+                // patient profile data
+                if(typeof(data.responseJSON.result.profile) != "undefined" && data.responseJSON.result.profile !== null){
+                    var profile = data.responseJSON.result.profile;
+
+                    $('#statticketform-patient_id').val(profile.id);
+                    $('#statticketform-name').val(profile.name);
+                    $('#statticketform-surname').val(profile.surname);
+                    $('#statticketform-patronymic').val(profile.patronymic);
+                    $('#statticketform-card_number').val(profile.card_number);
+                    $('#statticketform-birthdate').val(profile.birthdate);
+                    $('#statticketform-sex').val(profile.sex);
+                    $('#statticketform-address').val(profile.address);
+                    $('#statticketform-region_id').val(profile.region_id);
+                    $('#statticketform-phone').val(profile.phone);
+                    $('#statticketform-address').val(profile.address);
+                    $('#statticketform-birthdate').kvDatepicker('update');
+
+                    // set main diagnose id
+                    $('#statticketform-diagnose_id').val(data.responseJSON.result.mainDiagnoseId).trigger('change');
+
+                    $('#statticketform-first_meet').prop('checked',!data.responseJSON.result.hasMeets);
+
+                    $('#statticketform-first_meet_in_year').prop('checked',!data.responseJSON.result.hasThisYearMeets);
+
+                }
 
             });
 
