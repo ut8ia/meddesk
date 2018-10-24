@@ -10,7 +10,7 @@ class m181021_132812_form_params_link extends Migration
         $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
         $this->createTable('{{%med_form_params_link}}',
             [
-                'form_id' => Schema::TYPE_SMALLINT . '(5) unsigned NOT NULL',
+                'form_id' => Schema::TYPE_INTEGER . '(11) NOT NULL',
                 'param_id' => Schema::TYPE_INTEGER . '(11) NOT NULL',
                 'order_num' => Schema::TYPE_SMALLINT . '(6) NULL',
             ], $tableOptions);

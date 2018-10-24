@@ -10,7 +10,7 @@ class m181021_132612_forms extends Migration
         $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
         $this->createTable('{{%med_forms}}',
             [
-                'id' => 'INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY UNSIGNED',
+                'id' => Schema::TYPE_PK . '',
                 'name' => Schema::TYPE_STRING . '(32) NOT NULL',
             ], $tableOptions);
 
