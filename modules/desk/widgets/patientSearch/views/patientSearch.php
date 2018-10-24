@@ -22,4 +22,4 @@ PatientSearchAsset::register($this);
         'class' => 'form-control',
         'placeholder' => Yii::t('desk', 'Search patient name'),
     ],
-]) ?>
+])->label(Yii::t('desk','Search patient name')) ?>
