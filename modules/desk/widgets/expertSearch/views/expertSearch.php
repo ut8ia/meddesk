@@ -22,4 +22,4 @@ ExpertSearchAsset::register($this);
         'class' => 'form-control',
         'placeholder' => Yii::t('desk', 'Search expert name'),
     ],
-]) ?>
+])->label(Yii::t('desk', 'Search expert name')) ?>
