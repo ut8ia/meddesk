@@ -15,15 +15,11 @@ class m181021_132812_form_params_link extends Migration
                 'order_num' => Schema::TYPE_SMALLINT . '(6) NULL',
             ], $tableOptions);
 
-        $this->createIndex('forms_params_param', '{{%med_form_params_link}}', 'param_id', 0);
-        $this->addForeignKey('fk_med_form_params_link_form_id', '{{%med_form_params_link}}', 'form_id', 'med_forms', 'id');
-        $this->addForeignKey('fk_med_form_params_link_param_id', '{{%med_form_params_link}}', 'param_id', 'med_form_params', 'id');
-    }
+ }
 
     public function safeDown()
     {
-        $this->dropForeignKey('fk_med_form_params_link_form_id', '{{%med_form_params_link}}');
-        $this->dropForeignKey('fk_med_form_params_link_param_id', '{{%med_form_params_link}}');
+
         $this->dropTable('{{%med_form_params_link}}');
     }
 }

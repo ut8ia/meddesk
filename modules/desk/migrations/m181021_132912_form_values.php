@@ -16,18 +16,11 @@ class m181021_132912_form_values extends Migration
                 'value' => Schema::TYPE_STRING . '(255)',
             ], $tableOptions);
 
-        $this->createIndex('meet_id', '{{%med_form_values}}', 'meet_id', 0);
-        $this->createIndex('param_id', '{{%med_form_values}}', 'param_id', 0);
-        $this->addForeignKey('fk_med_form_values_form_id', '{{%med_form_values}}', 'form_id', 'med_forms', 'id');
-        $this->addForeignKey('fk_med_form_values_meet_id', '{{%med_form_values}}', 'meet_id', 'med_meets', 'id');
-        $this->addForeignKey('fk_med_form_values_param_id', '{{%med_form_values}}', 'param_id', 'med_form_params', 'id');
-    }
+   }
 
     public function safeDown()
     {
-        $this->dropForeignKey('fk_med_form_values_form_id', '{{%med_form_values}}');
-        $this->dropForeignKey('fk_med_form_values_meet_id', '{{%med_form_values}}');
-        $this->dropForeignKey('fk_med_form_values_param_id', '{{%med_form_values}}');
+
         $this->dropTable('{{%med_form_values}}');
     }
 }
