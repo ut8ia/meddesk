@@ -47,9 +47,6 @@ class StatTicketForm extends Meets
 
 
     public $isFromCity;
-
-//    public $firstMeet;
-//    public $firstMeetInYear;
     public $directedFrom;
     public $meetReason;
 
@@ -83,6 +80,71 @@ class StatTicketForm extends Meets
         ];
     }
 
+    public function attributeLabels()
+    {
+        return [
+            'id' => Yii::t('desk', 'ID'),
+            'expert_id' => Yii::t('desk', 'Expert ID'),
+            'expert_group_id' => Yii::t('desk', 'Expert Group ID'),
+            'patient_id' => Yii::t('desk', 'Patient ID'),
+            'place_id' => Yii::t('desk', 'Place ID'),
+            'course_id' => Yii::t('desk', 'Course ID'),
+            'status' => Yii::t('desk', 'Status'),
+            'meet_type' => Yii::t('desk', 'Meet Type'),
+            'for_excerpt' => Yii::t('desk', 'For Excerpt'),
+            'text' => Yii::t('desk', 'Text'),
+            'comment' => Yii::t('desk', 'Comment'),
+            'time_from' => Yii::t('desk', 'Time From'),
+            'time_to' => Yii::t('desk', 'Time To'),
+            'patient_name' => Yii::t('desk', 'Patient Name'),
+            'first_meet' => Yii::t('desk', 'First meet'),
+            'first_meet_in_year' => Yii::t('desk', 'First meet in year'),
+
+            'name' => Yii::t('desk', 'Name'),
+            'surname' => Yii::t('desk', 'Surname'),
+            'patronymic' => Yii::t('desk', 'Patronymic'),
+            'card_number' => Yii::t('desk', 'Card Number'),
+            'sex' => Yii::t('desk', 'Sex'),
+            'birthdate' => Yii::t('desk', 'Birthdate'),
+            'region_id' => Yii::t('desk', 'Region ID'),
+            'city' => Yii::t('desk', 'City'),
+            'city_id' => Yii::t('desk', 'City ID'),
+            'district' => Yii::t('desk', 'District'),
+            'district_a' => Yii::t('desk', 'District A'),
+            'user_id' => Yii::t('desk', 'User ID'),
+            'address' => Yii::t('desk', 'Address'),
+            'phone' => Yii::t('desk', 'Phone'),
+            'email' => Yii::t('desk', 'Email'),
+
+            'isFromCity' => Yii::t('forms', 'Is from city'),
+            'directedFrom' => Yii::t('forms', 'Directed from'),
+            'meetReason' => Yii::t('forms', 'Meet reason'),
+            'diagnose_id' => Yii::t('forms', 'diagnose'),
+            'diagnoseEquality' => Yii::t('forms', 'Diagnose equality'),
+            'illState' => Yii::t('forms', 'Ill state'),
+            'ticketResult' => Yii::t('forms', 'Ticket Result'),
+
+            "without source" => Yii::t('params', 'without source'),
+            "medical organisation" => Yii::t('params', "medical organisation"),
+            "from city" => Yii::t('params', "from city"),
+            "not from city" => Yii::t('params', "not from city"),
+            "treatment" => Yii::t('params', "treatment"),
+            "treatment correction" => Yii::t('params', "treatment correction"),
+            "diagnose correction" => Yii::t('params', "diagnose correction"),
+            "equal" => Yii::t('params', "equal"),
+            "not equal" => Yii::t('params', "not equal"),
+            "chronic" => Yii::t('params', "chronic"),
+            "acute" => Yii::t('params', "acute"),
+            "progressive" => Yii::t('params', "progressive"),
+            "issued conclusion" => Yii::t('params', "issued conclusion"),
+            "hospitalized" => Yii::t('params', "hospitalized"),
+            "redirected" => Yii::t('params', "redirected"),
+            "reapplication" => Yii::t('params', "reapplication"),
+            "other" => Yii::t('params', "other"),
+
+
+        ];
+    }
 
     /**
      * @return string
@@ -100,8 +162,7 @@ class StatTicketForm extends Meets
 
         if ($this->id) {
             $this->loadPatientData();
-        }
-        else{
+        } else {
             $this->loadDefaultFormData();
         }
 
@@ -138,7 +199,8 @@ class StatTicketForm extends Meets
 
     }
 
-    private function loadDefaultFormData(){
+    private function loadDefaultFormData()
+    {
         $this->first_meet = true;
         $this->first_meet_in_year = true;
     }
