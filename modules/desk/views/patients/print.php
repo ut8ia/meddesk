@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a(Yii::t('desk', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
     </p>
 
-
-    <h1 class="text-center"> <?=  $model->card_number." ".ucfirst($model->surname) . " " . ucfirst($model->name) . " " . ucfirst($model->patronymic) . " " .$model->birthdate ?></h1>
-
+    <div id="printf" name="printf">
+    <h1 class="text-center"> <?=  $model->card_number."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <b>  ".ucfirst($model->surname) . " </b>" . ucfirst($model->name) . " " . ucfirst($model->patronymic) . " " ?></h1>
+    </div>
 </div>
