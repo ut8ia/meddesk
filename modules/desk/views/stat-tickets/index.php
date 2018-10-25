@@ -50,21 +50,14 @@ $this->blocks['content-header'] = Yii::t('desk', 'Statistic Tickets');
                     return ['object' =>$model->experts, 'view' => 'snp_styled'];
                 },
             ],
-//            ['contentOptions' => ['class' => 'col-lg-1'],
-//                'attribute' => 'expertGroup',
-//                'label' => Yii::t('desk', 'Expert group'),
-//                'format' => 'object',
-//                'value' => function($model) {
-//                    return ['object' => $model->expertGroups, 'view' => 'label'];
-//                },
-//            ],
+
             [
                 'contentOptions' => ['class' => 'col-lg-3'],
                 'attribute' => 'patient_id',
                 'label' => Yii::t('desk', 'Patient'),
                 'format' => 'object',
                 'value' => function($model) {
-                    return $model->patients;
+                    return ['object' =>$model->patients, 'view' => 'snp_styled'];
                 },
             ],
             [
@@ -79,19 +72,10 @@ $this->blocks['content-header'] = Yii::t('desk', 'Statistic Tickets');
             [
                 'contentOptions' => ['class' => 'col-lg-2'],
                 'attribute' => 'status',
-                'label' => Yii::t('desk', 'From'),
+                'label' => Yii::t('desk', 'Date'),
                 'format' => 'html',
                 'value' => function($model) {
                     return Yii::$app->time->datetime2front($model->plan_from);
-                },
-            ],
-            [
-                'contentOptions' => ['class' => 'col-lg-1'],
-                'attribute' => 'status',
-                'label' => Yii::t('desk', 'Status'),
-                'format' => 'html',
-                'value' => function($model) {
-                    return $model->status;
                 },
             ]
         ],

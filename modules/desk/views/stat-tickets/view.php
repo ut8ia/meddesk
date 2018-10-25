@@ -13,7 +13,6 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="meets-view">
 
 
-
     <p>
         <?= Html::a(Yii::t('desk', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a(Yii::t('desk', 'Delete'), ['delete', 'id' => $model->id], [
@@ -29,18 +28,34 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'expert_id',
-            'expert_group_id',
-            'patient_id',
-            'place_id',
-            'course_id',
-            'status',
-            'meet_type',
-            'for_excerpt',
-            'text',
+            [
+                'label' => Yii::t('desk', 'Expert'),
+                'format' => 'object',
+                'value' => function($model) {
+                    return ['object' => $model->experts, 'view' => 'snp_styled'];
+                },
+            ],
+            [
+                'label' => Yii::t('desk', 'Patient'),
+                'format' => 'object',
+                'value' => function($model) {
+                    return ['object' => $model->patients, 'view' => 'snp_styled'];
+                },
+            ],
+            [
+                'label' => Yii::t('desk', 'Place'),
+                'format' => 'object',
+                'value' => function($model) {
+                    return $model->places;
+                },
+            ], [
+                'label' => Yii::t('desk', 'Date'),
+                'format' => 'html',
+                'value' => function($model) {
+                    return $model->time_from;
+                },
+            ],
             'comment',
-            'time_from',
-            'time_to',
         ],
     ]) ?>
 

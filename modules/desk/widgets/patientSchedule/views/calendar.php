@@ -5,6 +5,7 @@ use Yii;
 /**
  * @var $events array
  */
+
 ?>
 
 

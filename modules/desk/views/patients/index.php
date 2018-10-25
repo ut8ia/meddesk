@@ -25,7 +25,7 @@ $this->blocks['content-header'] = Yii::t('desk', 'Patients');
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
-                'template' => '{update} {delete} {view} {calendar}',
+                'template' => '{update} {view} {calendar} {print}',
                 'contentOptions' => [
                     'nowrap' => 'nowrap'
                 ],
@@ -45,7 +45,15 @@ $this->blocks['content-header'] = Yii::t('desk', 'Patients');
                             'data-pjax' => 1,
                             'class' => 'grid-calendar-action'
                         ]);
+                    },
+                    'print' => function($url, $model) {
+                        return Html::a('<span class="glyphicon glyphicon-print"></span>', $url, [
+                            'title' => Yii::t('desk', 'Print'),
+                            'data-pjax' => 1,
+                            'class' => 'grid-print-action'
+                        ]);
                     }
+
                 ]
             ],
             [
@@ -54,10 +62,10 @@ $this->blocks['content-header'] = Yii::t('desk', 'Patients');
                 'label' => Yii::t('desk', 'Patient'),
                 'format' => 'html',
                 'value' => function($model) {
-                    return  Yii::$app->formatter->asObject([
-                            'object' => $model,
-                            'view' => 'snp_styled'
-                        ]);
+                    return Yii::$app->formatter->asObject([
+                        'object' => $model,
+                        'view' => 'snp_styled'
+                    ]);
                 },
             ],
             [

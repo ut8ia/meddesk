@@ -47,7 +47,7 @@ class PatientMeets
                 'object' => $meet->experts,
                 'view' => 'short'
             ]);
-        $event->start = $meet->plan_from;
+        $event->start = $meet->plan_from?$meet->plan_from:$meet->time_from ;
         $event->end = $meet->plan_to ?: null;
 //        $event->backgroundColor = '#fff';
 //        $event->borderColor = '#fff';

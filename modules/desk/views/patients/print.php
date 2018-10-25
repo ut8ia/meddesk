@@ -13,27 +13,11 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="patients-view">
 
 
-
     <p>
         <?= Html::a(Yii::t('desk', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
     </p>
 
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id',
-            'name',
-            'surname',
-            'patronymic',
-            'card_number',
-            'sex',
-            'birthdate',
-            'region_id',
-            'city',
-            'city_id',
-            'district',
-            'district_a',
-        ],
-    ]) ?>
+
+    <h1 class="text-center"> <?=  $model->card_number." ".ucfirst($model->surname) . " " . ucfirst($model->name) . " " . ucfirst($model->patronymic) . " " .$model->birthdate ?></h1>
 
 </div>

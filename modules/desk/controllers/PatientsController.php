@@ -88,6 +88,12 @@ class PatientsController extends Controller
         ]);
     }
 
+    public function actionPrint($id)
+    {
+        return $this->render('print', [
+            'model' => $this->findModel($id),
+        ]);
+    }
 
     /**
      * Displays a single Patients model.
