@@ -55,6 +55,7 @@ class StatTicketsController extends Controller
     {
         $searchModel = new StatTicketsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $searchModel->formatParams();
 
         return $this->render('index', [
             'searchModel' => $searchModel,

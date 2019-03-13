@@ -8,7 +8,7 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('desk', 'Patients'), 'url' =
 $this->params['breadcrumbs'][] = $this->title;
 $this->blocks['content-header'] = Yii::t('desk', 'Patients');
 ?>
->
+
 
     <?= $this->render('_form', [
         'model' => $model,

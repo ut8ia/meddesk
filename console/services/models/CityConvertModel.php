@@ -8,6 +8,8 @@ use app\modules\desk\models\Cities;
 /**
  * Class CityConvertModel
  * @package app\console\services\models
+ * @property string $pattern
+ * @property string $cleanName
  */
 class CityConvertModel extends Cities
 {

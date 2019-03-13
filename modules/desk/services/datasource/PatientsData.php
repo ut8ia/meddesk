@@ -84,7 +84,11 @@ class PatientsData
             ->one();
 
         $num = explode('-', $lastPatient->card_number);
-        return $patient->region_id . '-' . ((int)$num[1] + 1);
+        // increment +1 , convert to string and add leading zeros like 00001 , 00002 e.t.c.
+        $newNum = str_pad((string)((int)$num[1] + 1), 5,'0',STR_PAD_LEFT);
+        //lead zero to region_id
+        $reg_id = str_pad((string)$patient->region_id , 2,'0',STR_PAD_LEFT);
+        return $reg_id. '-' . $newNum;
 
     }
 

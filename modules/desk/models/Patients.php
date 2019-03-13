@@ -33,7 +33,7 @@ class Patients extends \yii\db\ActiveRecord
     /**
      * @return array
      */
-    public static function getStatuses()
+    public static function getSexes()
     {
         return [
             self::SEX_FEMALE => Yii::t('desk', 'female'),
@@ -161,6 +161,23 @@ class Patients extends \yii\db\ActiveRecord
         return $this->hasMany(Experts::class, ['id' => 'experts_id'])
             ->via('meets');
     }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCityOrigin()
+    {
+        return $this->hasOne(Cities::class, ['id' => 'city_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getRegion()
+    {
+        return $this->hasOne(Cities::class, ['id' => 'region_id']);
+    }
+
 
     /**
      * @return bool

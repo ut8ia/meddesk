@@ -8,7 +8,6 @@ use app\modules\desk\models\Places;
 use Yii;
 use app\modules\desk\models\search\ExpertsSearch;
 use yii\base\InvalidArgumentException;
-use yii\base\InvalidParamException;
 use yii\db\StaleObjectException;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

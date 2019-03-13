@@ -99,7 +99,7 @@ use dmstr\widgets\Menu;
                         'url' => ['#'],
                         'items' => [
                             ['label' => 'Загальна', 'icon' => 'signal', 'url' => ['/desk/statcommon'],],
-//                            ['label' => 'По Фахівціям', 'icon' => 'user-plus', 'url' => ['/desk/statexperts'],],
+                            ['label' => 'По Фахівціям', 'icon' => 'user-plus', 'url' => ['/desk/statexperts'],],
 //                            ['label' => 'По Пацієнтам', 'icon' => 'child', 'url' => ['/desk/statpatients'],],
                         ]
                     ],

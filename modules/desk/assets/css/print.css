@@ -1,0 +1,29 @@
+.rehabilitationFolderlabel table {
+    width: 100%;
+}
+
+.rehabilitationFolderlabel td {
+    border: solid 4px #aaa;
+    border-style: double;
+}
+
+/* ------ outpatient label ---- */
+.labelfont{
+font-size: 10px;
+}
+
+.labelsmallfont{
+    font-size:8px;
+}
+
+.labelbigfont {
+    font-size: 16px;
+}
+
+.labelheader {
+    font-size: 24px;
+}
+
+.underlined{
+    text-decoration: underline;
+}

@@ -16,12 +16,13 @@ $expertPlaces = isset($model->experts->places) ? Converter::formatSelector($mode
 
 StatTicketsFormAsset::register($this);
 
+$form = ActiveForm::begin(Yii::$app->controller->module->formsConfig);
+
 /* @var $this yii\web\View */
 /* @var $model app\modules\desk\models\forms\StatTicketForm */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<?php $form = ActiveForm::begin(Yii::$app->controller->module->formsConfig); ?>
     <div class="row">
     <div class="col-lg-4">
         <div class="box box-success">
@@ -46,7 +47,7 @@ StatTicketsFormAsset::register($this);
                     </div>
                     <div class="col-lg-4">
                         <?= $form->field($model, 'sex')
-                            ->dropDownList(Patients::getStatuses(), ['prompt' => '']) ?>
+                            ->dropDownList(Patients::getSexes(), ['prompt' => '']) ?>
                     </div>
                     <div class="col-lg-8">
                         <?= $form->field($model, 'birthdate')->widget(DatePicker::class, [

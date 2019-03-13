@@ -43,26 +43,9 @@ class CityConvert
         foreach ($patients as $patient) {
             /** @var  $patient Patients */
 
-            $name = trim(mb_strtolower($patient->city));
-            $city = $this->resolveType($name);
-            $city->region_id = $patient->region_id;
-            $city->clean();
-            $city->name = $city->cleanName;
-
-            if (!$exist = $this->checkCity($city)) {
-                if($city->save()) {
-                    $patient->city_id = $city->id;
-                }
-                else{
-                    continue;
-                }
+            if (!$city = $this->convertPatient($patient)){
+                continue;
             }
-
-            else {
-                $patient->city_id = $exist->id;
-            }
-
-            $patient->save();
 
             $c++;
             echo $c . " | " . $city->type . " | " . $city->name . " | " . $city->cleanName . " | " . $city->pattern . "|";
@@ -71,6 +54,35 @@ class CityConvert
         }
 
 
+    }
+
+
+    /**
+     * @param Patients $patient
+     * @return CityConvertModel | null
+     */
+    public function convertPatient($patient){
+        $name = mb_strtolower(trim($patient->city));
+        $city = $this->resolveType($name);
+        $city->region_id = $patient->region_id;
+        $city->clean();
+        $city->name = $city->cleanName;
+
+        if (!$exist = $this->checkCity($city)) {
+            if($city->save()) {
+                $patient->city_id = $city->id;
+            }
+            else{
+                return null;
+            }
+        }
+
+        else {
+            $patient->city_id = $exist->id;
+        }
+
+        $patient->save();
+        return $city;
     }
 
 

@@ -13,6 +13,11 @@ use app\modules\desk\models\Meets;
  */
 class StatTicketsSearch extends Meets
 {
+
+    public $patient_name;
+    public $expert_name;
+    public $time_filter_to;
+
     /**
      * @inheritdoc
      */
@@ -20,7 +25,7 @@ class StatTicketsSearch extends Meets
     {
         return [
             [['id', 'expert_id', 'expert_group_id', 'patient_id', 'place_id', 'course_id', 'for_excerpt'], 'integer'],
-            [['status', 'text', 'comment', 'time_from', 'time_to'], 'safe'],
+            [['status', 'text', 'comment', 'time_from', 'time_to', 'time_filter_to'], 'safe'],
         ];
     }
 
@@ -31,6 +36,22 @@ class StatTicketsSearch extends Meets
     {
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();
+    }
+
+
+    public function formatParams()
+    {
+        $this->patient_name = Yii::$app->formatter
+            ->asObject([
+                'object' => $this->patients,
+                'view' => 'search_result'
+            ]);
+
+        $this->expert_name = Yii::$app->formatter
+            ->asObject([
+                'object' => $this->experts,
+                'view' => 'search_result'
+            ]);
     }
 
     /**
@@ -48,7 +69,7 @@ class StatTicketsSearch extends Meets
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-            'sort'=> ['defaultOrder' => ['id'=>SORT_DESC]]
+            'sort' => ['defaultOrder' => ['id' => SORT_DESC]]
         ]);
 
         $this->load($params);
@@ -68,8 +89,13 @@ class StatTicketsSearch extends Meets
             'place_id' => $this->place_id,
             'course_id' => $this->course_id,
             'for_excerpt' => $this->for_excerpt,
-            'time_from' => $this->time_from,
-            'time_to' => $this->time_to,
+        ]);
+
+        $query->andFilterWhere([
+            'between',
+            'time_from',
+            Yii::$app->time->datetime2db($this->time_from),
+            Yii::$app->time->datetime2db($this->time_filter_to)
         ]);
 
         $query->andFilterWhere(['like', 'status', $this->status])

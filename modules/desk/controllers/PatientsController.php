@@ -88,13 +88,6 @@ class PatientsController extends Controller
         ]);
     }
 
-    public function actionPrint($id)
-    {
-        return $this->render('print', [
-            'model' => $this->findModel($id),
-        ]);
-    }
-
     /**
      * Displays a single Patients model.
      * @param integer $id
@@ -119,8 +112,9 @@ class PatientsController extends Controller
     public function actionCreate()
     {
         $model = new PatientsForm();
+        $model->formatParams();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->saveForm()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
         return $this->render('create', [

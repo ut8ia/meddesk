@@ -18,7 +18,7 @@ class Forms extends \yii\db\ActiveRecord
 {
 
     const FORM_STAT_TICKET = 'statticketform';
-
+    const FORM_PATIENTS = 'patientsform';
 
     /**
      * {@inheritdoc}

@@ -15,7 +15,6 @@ use Yii;
 class Cities extends \yii\db\ActiveRecord
 {
 
-
     const TYPE_CITY = 'city';
     const TYPE_TOWN = 'town';
     const TYPE_VILLAGE = 'village';
@@ -55,4 +54,25 @@ class Cities extends \yii\db\ActiveRecord
             'region_id' => Yii::t('desk', 'Region ID'),
         ];
     }
+
+    /**
+     * @return array
+     */
+    public static function getTypes()
+    {
+        return [
+            self::TYPE_CITY => Yii::t('desk', 'city'),
+            self::TYPE_TOWN => Yii::t('desk', 'town'),
+            self::TYPE_VILLAGE => Yii::t('desk', 'village'),
+            self::TYPE_UNKNOWN => Yii::t('desk', 'unknown')
+        ];
+    }
+
+
+    /** @return \yii\db\ActiveQuery */
+    public function getRegion()
+    {
+        return $this->hasOne(Regions::class, ['id' => 'region_id']);
+    }
+
 }

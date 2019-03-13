@@ -44,4 +44,13 @@ class Regions extends \yii\db\ActiveRecord
             'card_chars' => 'Card chars',
         ];
     }
+
+
+    /** @return \yii\db\ActiveQuery */
+    public function getCities()
+    {
+        return $this->hasMany(Cities::class, ['region_id' => 'id']);
+    }
+
+
 }

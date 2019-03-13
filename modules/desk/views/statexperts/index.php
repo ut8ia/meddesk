@@ -1,136 +1,59 @@
 <?php
-use dosamigos\chartjs\ChartJs;
 
+use yii\helpers\Html;
+use yii\grid\GridView;
+use yii\widgets\Pjax;
+
+/* @var $this yii\web\View */
+/* @var $searchModel app\modules\desk\models\search\ExpertsSearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = Yii::t('desk', 'Experts');
+$this->params['breadcrumbs'][] = $this->title;
+$this->blocks['content-header'] = Yii::t('desk', 'Experts');
 ?>
-<div class="row">
-    <div class="col-lg-3 col-xs-6">
-        <!-- small box -->
-        <div class="small-box bg-aqua">
-            <div class="inner">
-                <h3>150</h3>
 
-                <p>Первинних прийомів</p>
-            </div>
-            <div class="icon">
-                <i class="fa fa-child"></i>
-            </div>
-            <a href="#" class="small-box-footer">Детальніше<i class="fa fa-arrow-circle-right"></i></a>
-        </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-xs-6">
-        <!-- small box -->
-        <div class="small-box bg-green">
-            <div class="inner">
-                <h3>53<sup style="font-size: 20px">%</sup></h3>
+<div class="box box-info">
+    <?php Pjax::begin(); ?>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-                <p>Повторних</p>
-            </div>
-            <div class="icon">
-                <i class="fa fa-file"></i>
-            </div>
-            <a href="#" class="small-box-footer">Детальніше<i class="fa fa-arrow-circle-right"></i></a>
-        </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-xs-6">
-        <!-- small box -->
-        <div class="small-box bg-yellow">
-            <div class="inner">
-                <h3>44</h3>
-
-                <p>Прийома на курсі</p>
-            </div>
-            <div class="icon">
-                <i class="fa fa-check"></i>
-            </div>
-            <a href="#" class="small-box-footer">Детальніше<i class="fa fa-arrow-circle-right"></i></a>
-        </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-xs-6">
-        <!-- small box -->
-        <div class="small-box bg-red">
-            <div class="inner">
-                <h3>65</h3>
-
-                <p>Запланованих прийома</p>
-            </div>
-            <div class="icon">
-                <i class="fa fa-arrow-circle-right"></i>
-            </div>
-            <a href="#" class="small-box-footer">Детальніше<i class="fa fa-arrow-circle-right"></i></a>
-        </div>
-    </div>
-    <!-- ./col -->
-</div>
-<!-- /.row -->
-<div class="row">
-    <div class="col-lg-3">
-        <div class="box box-primary">
-            <div class="box-body no-padding">
-                <?=
-
-                ChartJs::widget([
-                    'type' => 'doughnut',
-                    'options' => [
-                        'height' => 480,
-                        'width' => 300
-                    ],
-                    'data' => [
-                        'labels' => ["G80.1", "G80.2", "G80.3", "G80.4", "G80.5"],
-                        'datasets' => [
-                            [
-                                'label' => "My First dataset",
-                                'backgroundColor' => ['blue', 'red', 'yellow', 'green', 'aqua'],
-                                'data' => [65, 20, 90, 81, 40]
-                            ],
-                        ]
-                    ]
-                ]);
-
-                ?>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-9">
-        <div class="box box-primary">
-            <div class="box-body no-padding">
-                <?= ChartJs::widget([
-                    'type' => 'line',
-                    'options' => [
-                        'height' => 200,
-                        'width' => 400
-                    ],
-                    'data' => [
-                        'labels' => ["January", "February", "March", "April", "May", "June", "July"],
-                        'datasets' => [
-                            [
-                                'label' => "Консультація",
-                                'backgroundColor' => "rgba(179,181,198,0.2)",
-                                'borderColor' => "rgba(179,181,198,1)",
-                                'pointBackgroundColor' => "rgba(179,181,198,1)",
-                                'pointBorderColor' => "#fff",
-                                'pointHoverBackgroundColor' => "#fff",
-                                'pointHoverBorderColor' => "rgba(179,181,198,1)",
-                                'data' => [65, 59, 90, 81, 56, 55, 40]
-                            ],
-                            [
-                                'label' => "Курс",
-                                'backgroundColor' => "rgba(255,99,132,0.2)",
-                                'borderColor' => "rgba(255,99,132,1)",
-                                'pointBackgroundColor' => "rgba(255,99,132,1)",
-                                'pointBorderColor' => "#fff",
-                                'pointHoverBackgroundColor' => "#fff",
-                                'pointHoverBorderColor' => "rgba(255,99,132,1)",
-                                'data' => [28, 48, 40, 19, 96, 27, 100]
-                            ]
-                        ]
-                    ]
-                ]);
-                ?>
-            </div>
-        </div>
-    </div>
-
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+//            ['class' => 'yii\grid\ActionColumn',
+//                'template' => '{view}',
+//                'contentOptions' => [
+//                    'nowrap' => 'nowrap'
+//                ],
+//            ],
+            [
+                'contentOptions' => ['class' => 'col-lg-4 '],
+                'label' => Yii::t('desk', 'Expert'),
+                'attribute' => 'surname',
+                'format' => 'object',
+                'value' => function($model) {
+                    return ['object' => $model, 'view' => 'snp_styled'];
+                },
+            ],
+//            [
+//                'contentOptions' => ['class' => 'col-lg-4 '],
+//                'label' => Yii::t('desk', 'Expert groups'),
+//                'attribute' => 'expertGroups',
+//                'format' => 'object',
+//                'value' => function($model) {
+//                    return ['object' => $model->expertGroups, 'view' => 'ExpertGroups/label'];
+//                },
+//            ],
+            [
+                'contentOptions' => ['class' => 'col-lg-8 '],
+                'label' => Yii::t('desk', 'Reports'),
+                'format' => 'html',
+                'value' => function($model) {
+                    return Html::a('Відомість обліку відвідувань' ,'statexperts/report?id='.$model->id);
+                },
+            ],
+        ],
+    ]); ?>
+    <?php Pjax::end(); ?>
 </div>

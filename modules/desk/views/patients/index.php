@@ -46,14 +46,6 @@ $this->blocks['content-header'] = Yii::t('desk', 'Patients');
                             'class' => 'grid-calendar-action'
                         ]);
                     },
-                    'print' => function($url, $model) {
-                        return Html::a('<span class="glyphicon glyphicon-print"></span>', $url, [
-                            'title' => Yii::t('desk', 'Print'),
-                            'data-pjax' => 1,
-                            'class' => 'grid-print-action'
-                        ]);
-                    }
-
                 ]
             ],
             [

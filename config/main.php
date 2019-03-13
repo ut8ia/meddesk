@@ -60,7 +60,7 @@ $config = [
             'useFileTransport' => true,
         ],
         'log' => [
-            'flushInterval' => 1,
+            'flushInterval' => 3,
 //            'traceLevel' => YII_DEBUG ? 3 : 0,
             'traceLevel' => 3,
             'targets' => [
@@ -72,7 +72,7 @@ $config = [
                 'slackErrors' => [
                     'class' => SlackTarget::class,
                     'enabled' => true,
-                    'urlWebHook' => "https://hooks.slack.com/services/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",
+                    'urlWebHook' => "https://hooks.slack.com/services/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",
                     'emoji' => ':bug:',
                     'botName' => 'Error bot',
                     'levels' => ['error'],
@@ -84,7 +84,7 @@ $config = [
                     'categories' => [
                         'DEBUG'
                     ],
-                    'urlWebHook' => "https://hooks.slack.com/services/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",
+                    'urlWebHook' => "https://hooks.slack.com/services/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",
                     'emoji' => ':gear:',
                     'levels' => ['info'],
                 ],
