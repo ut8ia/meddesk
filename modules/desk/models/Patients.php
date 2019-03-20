@@ -175,7 +175,7 @@ class Patients extends \yii\db\ActiveRecord
      */
     public function getRegion()
     {
-        return $this->hasOne(Cities::class, ['id' => 'region_id']);
+        return $this->hasOne(Regions::class, ['id' => 'region_id']);
     }
 
 
