@@ -76,7 +76,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
 
-    <div class="hidden1">
+    <div class="hidden">
         <div class="rehabilitationFolderlabel">
             <?= $this->render('rehabilitation_folder_lable', [
                 'model' => $model,
