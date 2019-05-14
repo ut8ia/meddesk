@@ -27,7 +27,8 @@ use Yii;
  * @property string $info
  * @property string $slug
  * @property int $deleted
- */
+ * @property string $theme
+ * */
 class Experts extends ActiveRecord
 {
 
@@ -58,7 +59,7 @@ class Experts extends ActiveRecord
     {
         return [
             [['status', 'surname', 'name', 'patronymic'], 'required'],
-            [['status'], 'string'],
+            [['status' ,'theme'], 'string'],
             [['password_change', 'deleted'], 'integer'],
 //            [['created_at', 'updated_at'], 'datetime','format' => 'php:Y-m-d H:i:s'],
             [['created_at', 'updated_at'], 'safe'],
@@ -89,6 +90,7 @@ class Experts extends ActiveRecord
             'short_info' => Yii::t('desk', 'Short Info'),
             'info' => Yii::t('desk', 'Info'),
             'slug' => Yii::t('desk', 'Slug'),
+            'theme' => Yii::t('desk', 'Theme'),
             'expert_name' => Yii::t('desk', 'Expert Name'),
         ];
     }

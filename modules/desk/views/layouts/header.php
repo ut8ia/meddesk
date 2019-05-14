@@ -86,9 +86,9 @@ use yii\helpers\Html;
                 <li>
                     <a href="/site/logout" data-method="post"><i class="fa fa-sign-out"></i></a>
                 </li>
-<!--                <li>-->
-<!--                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>-->
-<!--                </li>-->
+                <li>
+                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                </li>
             </ul>
         </div>
     </nav>

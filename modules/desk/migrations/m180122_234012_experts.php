@@ -28,6 +28,7 @@ class m180122_234012_experts extends Migration
                 'deleted'=> Schema::TYPE_BOOLEAN.'(1)',
                 'file_version'=> Schema::TYPE_INTEGER.'(11)',
                 'file_extension'=> Schema::TYPE_STRING.'(6)',
+                'theme'=> Schema::TYPE_STRING.'(32) NULL',
             ], $tableOptions);
 
     }

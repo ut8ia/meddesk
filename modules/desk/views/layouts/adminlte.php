@@ -8,6 +8,7 @@ use app\modules\desk\assets\CommonFormsAsset;
 use app\modules\desk\assets\JsonRpcAsset;
 use dmstr\web\AdminLteAsset;
 use app\modules\desk\assets\ItemsStyleAsset;
+use app\modules\desk\helpers\Theme;
 
 AdminAppAsset::register($this);
 CommonFormsAsset::register($this);
@@ -30,7 +31,7 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed201
         <link rel="icon" href="/img/design/favicon.ico" type="image/x-icon"/>
         <?php $this->head() ?>
     </head>
-    <body class="hold-transition skin-blue sidebar-mini">
+    <body class="hold-transition <?= Theme::getTheme() ?> sidebar-mini">
     <?php $this->beginBody() ?>
     <div class="wrapper">
 

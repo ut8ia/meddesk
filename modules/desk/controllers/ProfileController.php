@@ -2,11 +2,11 @@
 
 namespace app\modules\desk\controllers;
 
-use Yii;
+use app\modules\desk\helpers\Theme;
 use yii\web\Controller;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
-
+use Yii;
 
 /**
  * Class ProfileController
@@ -51,6 +51,18 @@ class ProfileController extends Controller
     public function actionIndex()
     {
         return $this->render('index');
+    }
+
+    /**
+     * @param $theme
+     * @return string
+     */
+    public function actionSetTheme($theme)
+    {
+
+        Theme::setTheme($theme);
+        return $this->redirect(Yii::$app->request->referrer);
+
     }
 
 }
