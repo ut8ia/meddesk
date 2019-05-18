@@ -2,6 +2,7 @@
 
 namespace app\modules\desk\models\search;
 
+use app\modules\desk\helpers\DateFilter;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
@@ -10,6 +11,8 @@ use app\modules\desk\models\Meets;
 /**
  * Class StatTicketsSearch
  * @package app\modules\desk\models\search
+ *
+ * @property string $time_filter_to
  */
 class StatTicketsSearch extends Meets
 {
@@ -65,8 +68,6 @@ class StatTicketsSearch extends Meets
     {
         $query = Meets::find();
 
-        // add conditions that should always apply here
-
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             'sort' => ['defaultOrder' => ['id' => SORT_DESC]]
@@ -75,7 +76,6 @@ class StatTicketsSearch extends Meets
         $this->load($params);
 
         if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
             // $query->where('0=1');
             return $dataProvider;
         }
@@ -91,12 +91,7 @@ class StatTicketsSearch extends Meets
             'for_excerpt' => $this->for_excerpt,
         ]);
 
-        $query->andFilterWhere([
-            'between',
-            'time_from',
-            Yii::$app->time->datetime2db($this->time_from),
-            Yii::$app->time->datetime2db($this->time_filter_to)
-        ]);
+        DateFilter::apply($query,$this->time_from,$this->time_filter_to ,'time_from');
 
         $query->andFilterWhere(['like', 'status', $this->status])
             ->andFilterWhere(['like', 'text', $this->text])
@@ -105,3 +100,4 @@ class StatTicketsSearch extends Meets
         return $dataProvider;
     }
 }
+

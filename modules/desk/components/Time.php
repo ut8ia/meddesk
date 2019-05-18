@@ -91,7 +91,6 @@ class Time extends Component
      */
     public function datetime2db($datetime)
     {
-
         return $this->makeDatetimeDb(strtotime($datetime));
     }
 

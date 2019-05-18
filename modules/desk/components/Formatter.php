@@ -75,7 +75,7 @@ class Formatter extends \yii\i18n\Formatter
 
     /**
      * @param mixed $value
-     * @param null $keyName
+     * @param null|string $keyName
      * @return array
      */
     public function asPair($value, $keyName = null)
@@ -101,10 +101,10 @@ class Formatter extends \yii\i18n\Formatter
         $options = (isset($value['options'])) ? $value['options'] : null;
 
         // condition signature - no huge if-else tree
-        $a = (int)(is_array($value));
+        $a = (int)is_array($value);
         $v = (int)(!empty($view));
         $o = (int)(!empty($object));
-        $ao = (int)(is_array($object));
+        $ao = (int)is_array($object);
 
         switch ($a . $v . $o . $ao) {
             case '0000':
@@ -134,7 +134,7 @@ class Formatter extends \yii\i18n\Formatter
      */
     public function renderByClassname($object, $view)
     {
-        $class = ((new \ReflectionClass($object))->getShortName());
+        $class = (new \ReflectionClass($object))->getShortName();
         return (new  View())->render($this->partialsPath . $class . '/' . $view, ['model' => $object]);
     }
 
@@ -176,6 +176,5 @@ class Formatter extends \yii\i18n\Formatter
         }
         return $out;
     }
-
 
 }

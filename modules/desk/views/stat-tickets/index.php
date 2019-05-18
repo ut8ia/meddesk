@@ -43,6 +43,14 @@ $this->blocks['content-header'] = Yii::t('desk', 'Statistic Tickets');
                         }
                     ]
                 ],
+                ['contentOptions' => ['class' => 'col-lg-1'],
+                    'attribute' => 'expertGroup',
+                    'label' => Yii::t('desk', 'Expert group'),
+                    'format' => 'object',
+                    'value' => function($model) {
+                        return ['object' => $model->expertGroups, 'view' => 'default'];
+                    },
+                ],
                 [
                     'contentOptions' => ['class' => 'col-lg-3'],
                     'attribute' => 'expert_id',
@@ -52,7 +60,6 @@ $this->blocks['content-header'] = Yii::t('desk', 'Statistic Tickets');
                         return ['object' => $model->experts, 'view' => 'snp_styled'];
                     },
                 ],
-
                 [
                     'contentOptions' => ['class' => 'col-lg-3'],
                     'attribute' => 'patient_id',

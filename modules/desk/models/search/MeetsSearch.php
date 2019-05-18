@@ -2,6 +2,7 @@
 
 namespace app\modules\desk\models\search;
 
+use app\modules\desk\helpers\DateFilter;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
@@ -12,6 +13,10 @@ use app\modules\desk\models\Meets;
  */
 class MeetsSearch extends Meets
 {
+    public $patient_name;
+    public $expert_name;
+    public $time_filter_to;
+
     /**
      * @inheritdoc
      */
@@ -19,7 +24,7 @@ class MeetsSearch extends Meets
     {
         return [
             [['id', 'expert_id', 'expert_group_id', 'patient_id', 'place_id', 'course_id', 'for_excerpt'], 'integer'],
-            [['status', 'text', 'comment', 'time_from', 'time_to'], 'safe'],
+            [['status', 'text', 'comment', 'time_from', 'time_to', 'time_filter_to'], 'safe'],
         ];
     }
 
@@ -30,6 +35,22 @@ class MeetsSearch extends Meets
     {
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();
+    }
+
+
+    public function formatParams()
+    {
+        $this->patient_name = Yii::$app->formatter
+            ->asObject([
+                'object' => $this->patients,
+                'view' => 'search_result'
+            ]);
+
+        $this->expert_name = Yii::$app->formatter
+            ->asObject([
+                'object' => $this->experts,
+                'view' => 'search_result'
+            ]);
     }
 
     /**
@@ -43,17 +64,14 @@ class MeetsSearch extends Meets
     {
         $query = Meets::find();
 
-        // add conditions that should always apply here
-
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-            'sort'=> ['defaultOrder' => ['id'=>SORT_DESC]]
+            'sort' => ['defaultOrder' => ['id' => SORT_DESC]]
         ]);
 
         $this->load($params);
 
         if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
             // $query->where('0=1');
             return $dataProvider;
         }
@@ -67,9 +85,9 @@ class MeetsSearch extends Meets
             'place_id' => $this->place_id,
             'course_id' => $this->course_id,
             'for_excerpt' => $this->for_excerpt,
-            'time_from' => $this->time_from,
-            'time_to' => $this->time_to,
         ]);
+
+        DateFilter::apply($query,$this->time_from,$this->time_filter_to ,'time_from');
 
         $query->andFilterWhere(['like', 'status', $this->status])
             ->andFilterWhere(['like', 'text', $this->text])
