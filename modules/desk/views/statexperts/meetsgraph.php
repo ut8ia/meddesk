@@ -10,6 +10,7 @@ use dosamigos\chartjs\ChartJs;
 $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('desk', 'Experts'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
+$this->blocks['content-header'] = Yii::t('desk', 'Expert Report');
 
 $report = new CommonReport();
 $report->expert_id = $model->id;
