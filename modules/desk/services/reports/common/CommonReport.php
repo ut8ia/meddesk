@@ -10,7 +10,7 @@ class CommonReport extends BaseReport
 {
 
 
-    public $dateFormat = 'Y';
+    public $dateFormat = 'd.m.Y';
 //    public $dateTimeFormat = 'd.m.Y H:i';
 //    public $formatSwitchCount = 10;
 //    public $appId;
