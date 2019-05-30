@@ -23,7 +23,7 @@ $outpatientMeets = isset($data[Meets::TYPE_CONSULTATION])?$data[Meets::TYPE_CONS
 $courseMeets= isset($data[Meets::TYPE_COURSE])?$data[Meets::TYPE_COURSE]:[];
 
 
-$commonData = $data['common'];
+$commonData = isset($data['common'])?$data['common']:[];
 
 $patients = Patients::find()->count();
 
