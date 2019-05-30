@@ -4,6 +4,8 @@ namespace app\modules\desk\services\datasource;
 
 
 use app\modules\desk\models\ExpertGroups;
+use app\modules\desk\models\ExpertGroupsLink;
+use app\modules\desk\models\ExpertPlacesLink;
 use app\modules\desk\models\Places;
 use app\modules\desk\helpers\Converter;
 
@@ -23,7 +25,7 @@ class ExpertsData
     {
         $places = Places::find()
             ->joinWith('expertPlacesLink')
-            ->where(['med_expert_places_link.expert_id' => $expertId])
+            ->where([ExpertPlacesLink::tableName() . '.expert_id' => $expertId])
             ->all();
         return Converter::formatRpcSelector($places);
     }
@@ -36,7 +38,7 @@ class ExpertsData
     {
         $places = ExpertGroups::find()
             ->joinWith('expertGroupsLink')
-            ->where(['med_expert_groups_link.expert_id' => $expertId])
+            ->where([ExpertGroupsLink::tableName() . '.expert_id' => $expertId])
             ->all();
         return Converter::formatRpcSelector($places);
     }

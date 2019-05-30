@@ -10,7 +10,7 @@ $this->blocks['content-header'] = $this->title;
 
 $patients = Patients::find()->count();
 
-$report = new CommonReport();
+$report = new CommonSexReport();
 $report->makeReport();
 $types = $report->getTypesCount();
 $maleCount = $types[Patients::SEX_MALE];

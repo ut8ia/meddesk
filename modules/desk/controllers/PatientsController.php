@@ -115,7 +115,7 @@ class PatientsController extends Controller
         $model->formatParams();
 
         if ($model->load(Yii::$app->request->post()) && $model->saveForm()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         }
         return $this->render('create', [
             'model' => $model,
@@ -136,7 +136,7 @@ class PatientsController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         }
         $model->formatParams();
         return $this->render('update', ['model' => $model]);

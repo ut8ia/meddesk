@@ -30,5 +30,4 @@ class Statistic
         $this->courseListPlanned = CoursesList::find()->where(['status' => CoursesList::STATUS_PLANNED])->count();
     }
 
-
 }

@@ -8,13 +8,14 @@ use dmstr\widgets\Alert;
 
 
         <h1><?= $this->blocks['content-header'] ?: '&nbsp' ?></h1>
-        <?=
-        Breadcrumbs::widget(
-            [
-                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+        <?= Breadcrumbs::widget([
+            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            'homeLink' => [
+                'label' => 'Home',
+                'url' => '/desk/start'
             ]
-        )
-        ?>
+
+        ]) ?>
     </section>
 
     <section class="content">
@@ -40,10 +41,11 @@ use dmstr\widgets\Alert;
             <!-- /.control-sidebar-menu -->
             <h3 class="control-sidebar-heading">Skins</h3>
             <ul class="list-unstyled clearfix">
-                <li style="float:left; width: 33.33333%; padding: 5px;"><a href="/desk/profile/set-theme?theme=skin-blue"
-                                                                           data-skin="skin-blue"
-                                                                           style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
-                                                                           class="clearfix full-opacity-hover">
+                <li style="float:left; width: 33.33333%; padding: 5px;"><a
+                            href="/desk/profile/set-theme?theme=skin-blue"
+                            data-skin="skin-blue"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
                         <div>
                             <span style="display:block; width: 20%; float: left; height: 7px; background: #367fa9"></span><span
                                     class="bg-light-blue"
@@ -54,10 +56,11 @@ use dmstr\widgets\Alert;
                         </div>
                     </a>
                     <p class="text-center no-margin">Blue</p></li>
-                <li style="float:left; width: 33.33333%; padding: 5px;"><a href="/desk/profile/set-theme?theme=skin-black"
-                                                                           data-skin="skin-black"
-                                                                           style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
-                                                                           class="clearfix full-opacity-hover">
+                <li style="float:left; width: 33.33333%; padding: 5px;"><a
+                            href="/desk/profile/set-theme?theme=skin-black"
+                            data-skin="skin-black"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
                         <div style="box-shadow: 0 0 2px rgba(0,0,0,0.1)" class="clearfix"><span
                                     style="display:block; width: 20%; float: left; height: 7px; background: #fefefe"></span><span
                                     style="display:block; width: 80%; float: left; height: 7px; background: #fefefe"></span>
@@ -68,10 +71,11 @@ use dmstr\widgets\Alert;
                         </div>
                     </a>
                     <p class="text-center no-margin">Black</p></li>
-                <li style="float:left; width: 33.33333%; padding: 5px;"><a href="/desk/profile/set-theme?theme=skin-purple"
-                                                                           data-skin="skin-purple"
-                                                                           style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
-                                                                           class="clearfix full-opacity-hover">
+                <li style="float:left; width: 33.33333%; padding: 5px;"><a
+                            href="/desk/profile/set-theme?theme=skin-purple"
+                            data-skin="skin-purple"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
                         <div><span style="display:block; width: 20%; float: left; height: 7px;"
                                    class="bg-purple-active"></span><span class="bg-purple"
                                                                          style="display:block; width: 80%; float: left; height: 7px;"></span>
@@ -82,10 +86,11 @@ use dmstr\widgets\Alert;
                         </div>
                     </a>
                     <p class="text-center no-margin">Purple</p></li>
-                <li style="float:left; width: 33.33333%; padding: 5px;"><a href="/desk/profile/set-theme?theme=skin-green"
-                                                                           data-skin="skin-green"
-                                                                           style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
-                                                                           class="clearfix full-opacity-hover">
+                <li style="float:left; width: 33.33333%; padding: 5px;"><a
+                            href="/desk/profile/set-theme?theme=skin-green"
+                            data-skin="skin-green"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
                         <div><span style="display:block; width: 20%; float: left; height: 7px;"
                                    class="bg-green-active"></span><span class="bg-green"
                                                                         style="display:block; width: 80%; float: left; height: 7px;"></span>
@@ -110,10 +115,11 @@ use dmstr\widgets\Alert;
                         </div>
                     </a>
                     <p class="text-center no-margin">Red</p></li>
-                <li style="float:left; width: 33.33333%; padding: 5px;"><a href="/desk/profile/set-theme?theme=skin-yellow"
-                                                                           data-skin="skin-yellow"
-                                                                           style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
-                                                                           class="clearfix full-opacity-hover">
+                <li style="float:left; width: 33.33333%; padding: 5px;"><a
+                            href="/desk/profile/set-theme?theme=skin-yellow"
+                            data-skin="skin-yellow"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
                         <div><span style="display:block; width: 20%; float: left; height: 7px;"
                                    class="bg-yellow-active"></span><span class="bg-yellow"
                                                                          style="display:block; width: 80%; float: left; height: 7px;"></span>
@@ -124,10 +130,11 @@ use dmstr\widgets\Alert;
                         </div>
                     </a>
                     <p class="text-center no-margin">Yellow</p></li>
-                <li style="float:left; width: 33.33333%; padding: 5px;"><a href="/desk/profile/set-theme?theme=skin-blue-light"
-                                                                           data-skin="skin-blue-light"
-                                                                           style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
-                                                                           class="clearfix full-opacity-hover">
+                <li style="float:left; width: 33.33333%; padding: 5px;"><a
+                            href="/desk/profile/set-theme?theme=skin-blue-light"
+                            data-skin="skin-blue-light"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
                         <div>
                             <span style="display:block; width: 20%; float: left; height: 7px; background: #367fa9"></span><span
                                     class="bg-light-blue"
@@ -138,10 +145,11 @@ use dmstr\widgets\Alert;
                         </div>
                     </a>
                     <p class="text-center no-margin" style="font-size: 12px">Blue Light</p></li>
-                <li style="float:left; width: 33.33333%; padding: 5px;"><a href="/desk/profile/set-theme?theme=skin-black-light"
-                                                                           data-skin="skin-black-light"
-                                                                           style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
-                                                                           class="clearfix full-opacity-hover">
+                <li style="float:left; width: 33.33333%; padding: 5px;"><a
+                            href="/desk/profile/set-theme?theme=skin-black-light"
+                            data-skin="skin-black-light"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
                         <div style="box-shadow: 0 0 2px rgba(0,0,0,0.1)" class="clearfix"><span
                                     style="display:block; width: 20%; float: left; height: 7px; background: #fefefe"></span><span
                                     style="display:block; width: 80%; float: left; height: 7px; background: #fefefe"></span>
@@ -152,10 +160,11 @@ use dmstr\widgets\Alert;
                         </div>
                     </a>
                     <p class="text-center no-margin" style="font-size: 12px">Black Light</p></li>
-                <li style="float:left; width: 33.33333%; padding: 5px;"><a href="/desk/profile/set-theme?theme=skin-purple-light"
-                                                                           data-skin="skin-purple-light"
-                                                                           style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
-                                                                           class="clearfix full-opacity-hover">
+                <li style="float:left; width: 33.33333%; padding: 5px;"><a
+                            href="/desk/profile/set-theme?theme=skin-purple-light"
+                            data-skin="skin-purple-light"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
                         <div><span style="display:block; width: 20%; float: left; height: 7px;"
                                    class="bg-purple-active"></span><span class="bg-purple"
                                                                          style="display:block; width: 80%; float: left; height: 7px;"></span>
@@ -166,10 +175,11 @@ use dmstr\widgets\Alert;
                         </div>
                     </a>
                     <p class="text-center no-margin" style="font-size: 12px">Purple Light</p></li>
-                <li style="float:left; width: 33.33333%; padding: 5px;"><a href="/desk/profile/set-theme?theme=skin-green-light"
-                                                                           data-skin="skin-green-light"
-                                                                           style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
-                                                                           class="clearfix full-opacity-hover">
+                <li style="float:left; width: 33.33333%; padding: 5px;"><a
+                            href="/desk/profile/set-theme?theme=skin-green-light"
+                            data-skin="skin-green-light"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
                         <div><span style="display:block; width: 20%; float: left; height: 7px;"
                                    class="bg-green-active"></span><span class="bg-green"
                                                                         style="display:block; width: 80%; float: left; height: 7px;"></span>
@@ -180,10 +190,11 @@ use dmstr\widgets\Alert;
                         </div>
                     </a>
                     <p class="text-center no-margin" style="font-size: 12px">Green Light</p></li>
-                <li style="float:left; width: 33.33333%; padding: 5px;"><a href="/desk/profile/set-theme?theme=skin-red-light"
-                                                                           data-skin="skin-red-light"
-                                                                           style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
-                                                                           class="clearfix full-opacity-hover">
+                <li style="float:left; width: 33.33333%; padding: 5px;"><a
+                            href="/desk/profile/set-theme?theme=skin-red-light"
+                            data-skin="skin-red-light"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
                         <div><span style="display:block; width: 20%; float: left; height: 7px;"
                                    class="bg-red-active"></span><span class="bg-red"
                                                                       style="display:block; width: 80%; float: left; height: 7px;"></span>
@@ -194,10 +205,11 @@ use dmstr\widgets\Alert;
                         </div>
                     </a>
                     <p class="text-center no-margin" style="font-size: 12px">Red Light</p></li>
-                <li style="float:left; width: 33.33333%; padding: 5px;"><a href="/desk/profile/set-theme?theme=skin-yellow-light"
-                                                                           data-skin="skin-yellow-light"
-                                                                           style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
-                                                                           class="clearfix full-opacity-hover">
+                <li style="float:left; width: 33.33333%; padding: 5px;"><a
+                            href="/desk/profile/set-theme?theme=skin-yellow-light"
+                            data-skin="skin-yellow-light"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
                         <div><span style="display:block; width: 20%; float: left; height: 7px;"
                                    class="bg-yellow-active"></span><span class="bg-yellow"
                                                                          style="display:block; width: 80%; float: left; height: 7px;"></span>

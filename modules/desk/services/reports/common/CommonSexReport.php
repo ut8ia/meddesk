@@ -2,20 +2,14 @@
 
 namespace app\modules\desk\services\reports\common;
 
-use app\modules\desk\models\Meets;
 use app\modules\desk\models\Patients;
 use app\modules\desk\services\reports\BaseReport;
 
 
-class CommonReport extends BaseReport
+class CommonSexReport extends BaseReport
 {
 
-
     public $dateFormat = 'Y';
-//    public $dateTimeFormat = 'd.m.Y H:i';
-//    public $formatSwitchCount = 10;
-//    public $appId;
-    public $expert_id;
 
     private $labels = [];
     private $setLabels = [];
@@ -28,8 +22,8 @@ class CommonReport extends BaseReport
      * possible parameter types
      */
     const PARAM_TYPES = [
-        Meets::TYPE_CONSULTATION,
-        Meets::TYPE_URGENT,
+        Patients::SEX_FEMALE,
+        Patients::SEX_MALE,
         'common'
     ];
 
@@ -75,26 +69,28 @@ class CommonReport extends BaseReport
     private function processData()
     {
         $count = 0;
-        /** @var $row Meets */
+        /** @var $row Patients */
         foreach ($this->models as $row) {
             $this->processRow($row);
-            $label = date($this->dateFormat, strtotime($row->time_from));
+            $label = date($this->dateFormat, strtotime($row->birthdate));
 
             if (!isset($this->setLabels[$label])) {
                 $this->labels[] = $label;
             }
 
-            if (!isset($this->setLabels[$label][$row->meet_type])) {
-                $this->setLabels[$label][$row->meet_type] = 1;
+            if (!isset($this->setLabels[$label][$row->sex])) {
+                $this->setLabels[$label][$row->sex] = 1;
             } else {
-                $this->setLabels[$label][$row->meet_type]++;
+                $this->setLabels[$label][$row->sex]++;
             }
+
 
             if (!isset($this->setLabels[$label]['common'])) {
                 $this->setLabels[$label]['common'] = 1;
             } else {
                 $this->setLabels[$label]['common']++;
             }
+
 
             $count++;
         }
@@ -114,14 +110,14 @@ class CommonReport extends BaseReport
 
 
     /**
-     * @param Meets $row
+     * @param Patients $row
      */
     private function processRow($row)
     {
-        if (!isset($this->typesCount[$row->meet_type])) {
-            $this->typesCount[$row->meet_type] = 1;
+        if (!isset($this->typesCount[$row->sex])) {
+            $this->typesCount[$row->sex] = 1;
         } else {
-            $this->typesCount[$row->meet_type]++;
+            $this->typesCount[$row->sex]++;
         }
 
 
@@ -135,9 +131,8 @@ class CommonReport extends BaseReport
 
     private function findData()
     {
-        $this->models = Meets::find()
-            ->where(['expert_id'=>$this->expert_id])
-            ->orderBy(['plan_from' => SORT_ASC])
+        $this->models = Patients::find()
+            ->orderBy(['birthdate' => SORT_ASC])
             ->all();
     }
 

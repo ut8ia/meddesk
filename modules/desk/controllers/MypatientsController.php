@@ -4,7 +4,7 @@ namespace app\modules\desk\controllers;
 
 use app\modules\desk\models\forms\PatientsForm;
 use Yii;
-use app\modules\desk\models\search\PatientsSearch;
+use app\modules\desk\models\search\MypatientsSearch;
 use yii\db\StaleObjectException;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -66,7 +66,7 @@ class MypatientsController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new PatientsSearch();
+        $searchModel = new MypatientsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [

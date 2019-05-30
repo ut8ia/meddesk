@@ -90,7 +90,7 @@ class StatTicketsController extends Controller
         $model->formatParams();
 
         if ($model->load(Yii::$app->request->post()) && $model->saveForm()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         }
         return $this->render('create', [
             'model' => $model,
@@ -115,7 +115,7 @@ class StatTicketsController extends Controller
         $model->loadValues();
 
         if ($model->load(Yii::$app->request->post()) && $model->saveForm()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         }
         return $this->render('update', [
             'model' => $model,

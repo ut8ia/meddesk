@@ -43,7 +43,13 @@ use dmstr\widgets\Menu;
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget' => 'tree'],
                 'items' => MenuHelper::allow([
                     ['label' => 'Menu ', 'options' => ['class' => 'header']],
-                    ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
+//                    ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
+                    [
+                        'label' => 'Домівка',
+                        'permission' => Permissions::PERMISSION_ALL,
+                        'icon' => 'home',
+                        'url' => ['/desk/start/'],
+                    ],
                     [
                         'label' => 'Мій кабінет',
                         'permission' => Permissions::PERMISSION_ALL,
@@ -51,8 +57,8 @@ use dmstr\widgets\Menu;
                         'url' => ['#'],
                         'items' => [
                             ['label' => 'Мої пацієнти', 'icon' => 'child', 'url' => ['/desk/mypatients'],],
-                            ['label' => 'Приймання', 'icon' => 'heartbeat', 'url' => ['/desk/mymeets'],],
-                            ['label' => 'Розклад прийому', 'icon' => 'calendar', 'url' => ['/desk/myschedule'],],
+                            ['label' => 'Мої Приймання', 'icon' => 'heartbeat', 'url' => ['/desk/mymeets'],],
+//                            ['label' => 'Мій Розклад прийому', 'icon' => 'calendar', 'url' => ['/desk/myschedule'],],
                             ['label' => 'Моя статистика', 'icon' => 'bar-chart', 'url' => ['/desk/mystatistics'],],
                             ['label' => 'Мої налаштування', 'icon' => 'gear', 'url' => ['/desk/profile'],],
                         ]
@@ -65,8 +71,8 @@ use dmstr\widgets\Menu;
                         'items' => [
                             ['label' => 'Пацієнти', 'icon' => 'child', 'url' => ['/desk/patients'],],
                             ['label' => 'Приймання', 'icon' => 'heartbeat', 'url' => ['/desk/meets'],],
-                            ['label' => 'Розклад прийому', 'icon' => 'calendar', 'url' => ['/desk/schedule'],],
-                            ['label' => 'Шаблони розкладу', 'icon' => 'calendar-check-o', 'url' => ['/desk/scheduletemplates'],],
+//                            ['label' => 'Розклад прийому', 'icon' => 'calendar', 'url' => ['/desk/schedule'],],
+//                            ['label' => 'Шаблони розкладу', 'icon' => 'calendar-check-o', 'url' => ['/desk/scheduletemplates'],],
                             ['label' => 'Стат талони', 'icon' => 'calendar', 'url' => ['/desk/stat-tickets'],],
                         ]
                     ],
