@@ -65,7 +65,7 @@ if (is_array($meets)) {
             . '<td>' . Yii::t('desk',$meet->patients->sex) . '</td>'
             . '<td>' . $meet->patients->birthdate . '</td>'
             . '<td> Так </td>'
-            . '<td>' . $meet->patients->cityOrigin->type . '</td>'
+            . '<td>' . $cityType . '</td>'
             . '<td>' . $meet->patients->address . '</td>'
             . '<td>' . $is_amb . '</td>'
             . '</tr>';
