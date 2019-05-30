@@ -136,7 +136,7 @@ class CommonReport extends BaseReport
     private function findData()
     {
         $this->models = Meets::find()
-            ->where(['expert_id'=>$this->expert_id])
+            ->filterWhere(['expert_id'=>$this->expert_id])
             ->orderBy(['plan_from' => SORT_ASC])
             ->all();
     }

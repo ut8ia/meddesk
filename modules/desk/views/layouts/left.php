@@ -104,7 +104,8 @@ use dmstr\widgets\Menu;
                         'icon' => 'bar-chart-o',
                         'url' => ['#'],
                         'items' => [
-                            ['label' => 'Загальна', 'icon' => 'signal', 'url' => ['/desk/statcommon'],],
+                            ['label' => 'Загальна', 'icon' => 'signal', 'url' => ['/desk/statcommon/index'],],
+                            ['label' => 'Граф прийомів', 'icon' => 'signal', 'url' => ['/desk/statcommon/meets'],],
                             ['label' => 'По Фахівціям', 'icon' => 'user-plus', 'url' => ['/desk/statexperts'],],
                             ['label' => 'По Діагнозам', 'icon' => 'child', 'url' => ['/desk/statdiagnoses'],],
                             ['label' => 'По Регіонам', 'icon' => 'globe', 'url' => ['/desk/statregions'],],

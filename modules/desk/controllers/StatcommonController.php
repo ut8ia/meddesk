@@ -48,4 +48,12 @@ class StatcommonController extends Controller
         return $this->render('index');
     }
 
+    /**
+     * @return string
+     */
+    public function actionMeets()
+    {
+        return $this->render('meetsgraph');
+    }
+
 }
