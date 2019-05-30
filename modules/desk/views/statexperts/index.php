@@ -46,7 +46,7 @@ $this->blocks['content-header'] = Yii::t('desk', 'Experts');
 //                },
 //            ],
             [
-                'contentOptions' => ['class' => 'col-lg-8 '],
+                'contentOptions' => ['class' => 'col-lg-4 '],
                 'label' => Yii::t('desk', 'Reports'),
                 'format' => 'html',
                 'value' => function($model) {
@@ -54,7 +54,7 @@ $this->blocks['content-header'] = Yii::t('desk', 'Experts');
                 },
             ],
             [
-                'contentOptions' => ['class' => 'col-lg-8 '],
+                'contentOptions' => ['class' => 'col-lg-4 '],
                 'label' => Yii::t('desk', 'Reports'),
                 'format' => 'html',
                 'value' => function($model) {
