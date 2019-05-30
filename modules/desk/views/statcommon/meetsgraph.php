@@ -5,12 +5,11 @@ use app\modules\desk\services\reports\common\CommonReport;
 use dosamigos\chartjs\ChartJs;
 
 /* @var $this yii\web\View */
-/* @var $model app\modules\desk\models\Experts */
 
 $this->title = Yii::t('desk','Meets graph');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('desk', 'Experts'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
-$this->blocks['content-header'] = Yii::t('desk', 'Expert Report');
+$this->blocks['content-header'] = Yii::t('desk','Meets graph');
 
 $report = new CommonReport();
 $report->makeReport();
