@@ -1,8 +1,8 @@
 <?php
 use app\modules\desk\models\Patients;
+use app\modules\desk\services\reports\common\CommonSexReport;
 use app\modules\desk\services\reports\common\Statistic;
 use dosamigos\chartjs\ChartJs;
-use app\modules\desk\services\reports\common\CommonReport;
 
 $this->title = Yii::t('desk', 'Common statistic');
 $this->params['breadcrumbs'][] = $this->title;
