@@ -83,7 +83,7 @@ $this->blocks['content-header'] = Yii::t('desk', 'Meets');
                 'label' => Yii::t('desk', 'Date'),
                 'format' => 'html',
                 'value' => function($model) {
-                    return Yii::$app->time->datetime2front($model->plan_from);
+                    return $model->time_from?Yii::$app->time->datetime2front($model->time_from):Yii::$app->time->datetime2front($model->plan_from);
                 },
             ],
             [
