@@ -78,6 +78,14 @@ class StatexpertsController extends Controller
     }
 
 
+    public function actionMeetsgraph($id)
+    {
+        return $this->render('meetsgraph', [
+            'model' => $this->findModel($id),
+        ]);
+    }
+
+
     /**
      * Finds the Experts model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.

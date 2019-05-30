@@ -21,8 +21,6 @@ $labels = $report->getLabels();
 $data = $report->getData();
 $outpatientMeets = isset($data[Meets::TYPE_CONSULTATION])?$data[Meets::TYPE_CONSULTATION]:[];
 $courseMeets= isset($data[Meets::TYPE_COURSE])?$data[Meets::TYPE_COURSE]:[];
-
-
 $commonData = isset($data['common'])?$data['common']:[];
 
 $patients = Patients::find()->count();
