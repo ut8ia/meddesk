@@ -106,7 +106,7 @@ use dmstr\widgets\Menu;
                         'items' => [
                             ['label' => 'Загальна', 'icon' => 'signal', 'url' => ['/desk/statcommon'],],
                             ['label' => 'По Фахівціям', 'icon' => 'user-plus', 'url' => ['/desk/statexperts'],],
-//                            ['label' => 'По Пацієнтам', 'icon' => 'child', 'url' => ['/desk/statpatients'],],
+                            ['label' => 'По Діагнозам', 'icon' => 'child', 'url' => ['/desk/statdiagnoses'],],
                         ]
                     ],
                     [
