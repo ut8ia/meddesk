@@ -53,4 +53,13 @@ class Regions extends \yii\db\ActiveRecord
     }
 
 
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getPatients()
+    {
+        return $this->hasMany(Patients::class, ['region_id' => 'id']);
+    }
+
+
 }
