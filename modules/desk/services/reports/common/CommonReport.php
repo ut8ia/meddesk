@@ -6,7 +6,6 @@ use app\modules\desk\models\Meets;
 use app\modules\desk\models\Patients;
 use app\modules\desk\services\reports\BaseReport;
 
-
 class CommonReport extends BaseReport
 {
 
@@ -24,12 +23,13 @@ class CommonReport extends BaseReport
 
     /** @var array $models */
     private $models;
+
     /**
      * possible parameter types
      */
     const PARAM_TYPES = [
         Meets::TYPE_CONSULTATION,
-        Meets::TYPE_URGENT,
+        Meets::TYPE_COURSE,
         'common'
     ];
 

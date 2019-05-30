@@ -50,7 +50,7 @@ $this->blocks['content-header'] = Yii::t('desk', 'Experts');
                 'label' => Yii::t('desk', 'Reports'),
                 'format' => 'html',
                 'value' => function($model) {
-                    return Html::a('Відомість обліку відвідувань' ,'statexperts/report?id='.$model->id);
+                    return Html::a('Відомість обліку відвідувань' ,'/desk/statexperts/report?id='.$model->id);
                 },
             ],
         ],
