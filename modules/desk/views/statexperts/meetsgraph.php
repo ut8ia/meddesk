@@ -2,6 +2,7 @@
 
 use app\modules\desk\models\Meets;
 use app\modules\desk\services\reports\common\CommonReport;
+use dosamigos\chartjs\ChartJs;
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\desk\models\Experts */
