@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('desk', 'Experts'), 'url' =>
 $this->params['breadcrumbs'][] = $this->title;
 
 $report = new CommonReport();
-$report->expert_id = Yii::$app->user->identity->id;
+$report->expert_id = $model->id;
 $report->makeReport();
 $types = $report->getTypesCount();
 $labels = $report->getLabels();
