@@ -56,6 +56,7 @@ if (is_array($meets)) {
             $is_amb = 'Курс №'.$meet->courses->number;
         }
 
+        $cityType = isset($meet->patients->cityOrigin) ? $meet->patients->cityOrigin->type : '';
         /** @var $meet Meets */
         $rows .= '<tr style="border:solid 1px #222">'
             . '<td>' . $c . '</td>'
