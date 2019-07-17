@@ -70,7 +70,7 @@ class PatientsForm extends Patients
     {
         $this->card_number = PatientsData::makeCardNumber($this);
         $this->user_id = time();
-        $this->district_a = "00";
+//        $this->district_a = "00";
 
         if ($this->validate()) {
             $convertor = new CityConvert();
@@ -79,5 +79,7 @@ class PatientsForm extends Patients
         }
         return false;
     }
+
+
 
 }

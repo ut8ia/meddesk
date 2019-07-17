@@ -15,6 +15,7 @@ use Yii;
  * @property string $sex
  * @property string $birthdate
  * @property int $region_id
+ * @property int $district_id
  * @property string $city
  * @property int $city_id
  * @property string $district
@@ -58,14 +59,14 @@ class Patients extends \yii\db\ActiveRecord
         return [
 //            [['name', 'surname', 'patronymic', 'card_number', 'sex', 'birthdate', 'region_id', 'city', 'city_id', 'district', 'district_a', 'user_id'], 'required'],
 
-            [['name', 'surname', 'patronymic', 'card_number', 'sex', 'birthdate', 'region_id', 'district_a', 'user_id'], 'required'],
+            [['name', 'surname', 'patronymic', 'card_number', 'sex', 'birthdate', 'region_id', 'user_id'], 'required'],
 
             [['sex'], 'string'],
             ['address', 'string', 'max' => 128],
             ['phone', 'string', 'max' => 16],
             ['email', 'email'],
             [['birthdate'], 'safe'],
-            [['region_id', 'city_id', 'user_id'], 'integer'],
+            [['region_id', 'district_id', 'city_id', 'user_id'], 'integer'],
             [['name', 'surname', 'patronymic'], 'string', 'max' => 255],
             [['card_number'], 'string', 'max' => 8],
             [['city'], 'string', 'max' => 64],
@@ -88,6 +89,7 @@ class Patients extends \yii\db\ActiveRecord
             'sex' => Yii::t('desk', 'Sex'),
             'birthdate' => Yii::t('desk', 'Birthdate'),
             'region_id' => Yii::t('desk', 'Region ID'),
+            'district_id' => Yii::t('desk', 'District ID'),
             'city' => Yii::t('desk', 'City'),
             'city_id' => Yii::t('desk', 'City ID'),
             'district' => Yii::t('desk', 'District'),

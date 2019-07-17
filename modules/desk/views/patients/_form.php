@@ -1,13 +1,18 @@
 <?php
 
 use app\modules\desk\models\Cities;
+use app\modules\desk\models\Districts;
 use app\modules\desk\models\Regions;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\widgets\DatePicker;
 use app\modules\desk\models\Patients;
+use app\modules\desk\assets\PatientsFormAsset;
+
+PatientsFormAsset::register($this);
 
 $form = ActiveForm::begin(Yii::$app->controller->module->formsConfig);
+$hideDistrictClass = $model->region_id == 26 ? '' : 'hidden';
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\desk\models\Patients */
@@ -68,6 +73,24 @@ $form = ActiveForm::begin(Yii::$app->controller->module->formsConfig);
                         <?= $form->field($model, 'city')->textInput(); ?>
                     </div>
 
+                </div>
+                <div class="row <?= $hideDistrictClass ?>" id='districtRow'>
+
+                    <div class="col-lg-4">
+                        <?= $form->field($model, 'district_id')->dropDownList(
+                            Yii::$app->formatter->asPairs(
+                                Districts::class,
+                                null,
+                                null,
+                                ['view' => 'selector']),
+                            ['prompt' => '']
+                        ); ?>
+                    </div>
+                    <div class="col-lg-8">
+                    </div>
+
+                </div>
+                <div class="row">
                     <div class="col-lg-8">
                         <?= $form->field($model, 'address')->textInput(); ?>
                     </div>
@@ -89,16 +112,16 @@ $form = ActiveForm::begin(Yii::$app->controller->module->formsConfig);
             </div>
         </div>
     </div>
-<!--    <div class="col-lg-4">-->
-<!--        <div class="box box-info">-->
-<!--            <div class="box-body">-->
-<!--            </div>-->
-<!--            <div class="box-footer clearfix no-border">-->
-<!--                <div class="form-group">-->
-<!--                </div>-->
-<!--                -->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+    <!--    <div class="col-lg-4">-->
+    <!--        <div class="box box-info">-->
+    <!--            <div class="box-body">-->
+    <!--            </div>-->
+    <!--            <div class="box-footer clearfix no-border">-->
+    <!--                <div class="form-group">-->
+    <!--                </div>-->
+    <!--                -->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
     <?php ActiveForm::end(); ?>
 </div>

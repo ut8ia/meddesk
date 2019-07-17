@@ -62,6 +62,7 @@ class  PatientImport
         $patient->region_id = $row[8];
         $patient->district = $row[9];
         $patient->district_a = $row[10];
+        $patient->district_id = (int)$row[10];
         $patient->city = $row[11];
         $patient->address = $row[12];
         $patient->phone = $row[13];
