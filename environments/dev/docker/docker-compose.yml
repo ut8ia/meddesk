@@ -1,0 +1,56 @@
+version: "3.7"
+
+services:
+
+  md_nginx:
+    container_name: md_nginx
+    image: nginx:latest
+    volumes:
+      - ../../../:/app
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    networks:
+      - internal
+    expose:
+      - 80
+
+  md_phpfpm:
+    container_name: md_phpfpm
+    build:
+      context: ./phpfpm
+      dockerfile: ./Dockerfile
+    volumes:
+      - ../../../:/app
+    networks:
+      - internal
+
+  md_db:
+    container_name: md_db
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: meddesk
+      MYSQL_USER: techuser
+      MYSQL_PASSWORD: tech123
+    volumes:
+      - ../runtime/.data/mysql:/var/lib/mysql
+    networks:
+      - internal
+    ports:
+      - 3306:3306
+
+  md_db_admin:
+    container_name: md_db_admin
+    image: phpmyadmin/phpmyadmin
+    environment:
+      VIRTUAL_HOST: dba.md.local
+      PMA_HOST: md_db
+      PMA_PORT: 3306
+    restart: always
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge

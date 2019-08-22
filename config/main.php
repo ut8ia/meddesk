@@ -1,5 +1,4 @@
 <?php
-use ut8ia\slacklog\SlackTarget;
 
 $params = require(__DIR__ . '/params.php');
 
@@ -58,37 +57,6 @@ $config = [
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
             'useFileTransport' => true,
-        ],
-        'log' => [
-            'flushInterval' => 3,
-//            'traceLevel' => YII_DEBUG ? 3 : 0,
-            'traceLevel' => 3,
-            'targets' => [
-                'file' => [
-                    'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
-                    'exportInterval' => 1
-                ],
-                'slackErrors' => [
-                    'class' => SlackTarget::class,
-                    'enabled' => true,
-                    'urlWebHook' => "https://hooks.slack.com/services/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",
-                    'emoji' => ':bug:',
-                    'botName' => 'Error bot',
-                    'levels' => ['error'],
-                ],
-                'slackDebug' => [
-                    'class' => SlackTarget::class,
-                    'enabled' => true,
-                    'botName' => 'Confirmation bot',
-                    'categories' => [
-                        'DEBUG'
-                    ],
-                    'urlWebHook' => "https://hooks.slack.com/services/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",
-                    'emoji' => ':gear:',
-                    'levels' => ['info'],
-                ],
-            ],
         ],
         'expert' => [
             'class' => 'app\modules\desk\components\Expert'
