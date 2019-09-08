@@ -1,7 +1,7 @@
 <?php
 
 use  yii2fullcalendar\yii2fullcalendar;
-use Yii;
+
 /**
  * @var $events array
  */

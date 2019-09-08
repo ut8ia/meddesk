@@ -12,30 +12,32 @@ $this->params['breadcrumbs'][] = $this->title;
 $this->blocks['content-header'] = Yii::t('desk', 'Start page');
 
 
-
 $report = new CommonReport();
 $report->expert_id = Yii::$app->user->identity->id;
 $report->makeReport();
 $types = $report->getTypesCount();
 $labels = $report->getLabels();
 $data = $report->getData();
-$outpatientMeets = isset($data[Meets::TYPE_CONSULTATION])?$data[Meets::TYPE_CONSULTATION]:[];
-$courseMeets= isset($data[Meets::TYPE_COURSE])?$data[Meets::TYPE_COURSE]:[];
-$commonData = isset($data['common'])?$data['common']:[];
+$outpatientMeets = isset($data[Meets::TYPE_CONSULTATION]) ? $data[Meets::TYPE_CONSULTATION] : [];
+$courseMeets = isset($data[Meets::TYPE_COURSE]) ? $data[Meets::TYPE_COURSE] : [];
+$commonData = isset($data['common']) ? $data['common'] : [];
 
 $patients = Patients::find()->count();
-
-$statistic = new Statistic();
-$statistic->makeReport();
 
 $counters = new ExpertMeetsCounters();
 $counters->expert_id = Yii::$app->user->identity->id;
 
 
-$thisMonthDone =count($counters->getDone());
-$outpatToday =0;
-$courseToday =0;
+$TotalDone = count($counters->getDone());
+$outpatToday = Meets::find()
+    ->where(['plan_from'=>Yii::$app->time->date2db(date('Y-m-d H:m:s', time()))])
+    ->andWhere(['meet_type'=>Meets::TYPE_CONSULTATION])
+->count();
 
+$courseToday = Meets::find()
+    ->where(['plan_from'=>Yii::$app->time->date2db(date('Y-m-d H:m:s', time()))])
+    ->andWhere(['meet_type'=>Meets::TYPE_COURSE])
+    ->count();
 ?>
 
 
@@ -121,8 +123,8 @@ $courseToday =0;
 
         <div class="small-box bg-green">
             <div class="inner">
-                <h3><?= $thisMonthDone ?><sup style="font-size: 20px"></sup></h3>
-                <p>Прийнято цього місяця</p>
+                <h3><?= $TotalDone ?><sup style="font-size: 20px"></sup></h3>
+                <p>Здійснено прийомів</p>
             </div>
             <div class="icon">
                 <i class="fa fa-check"></i>

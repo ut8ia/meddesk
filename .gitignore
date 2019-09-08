@@ -36,7 +36,7 @@ phpunit.phar
 tests/_output/*
 tests/_support/_generated
 
-/environments/dev/runtime/.data
-/environments/dev/runtime/logs
+/environments/dev/runtime/.data/
+/environments/dev/runtime/logs/
 /environments/dev/app/front/web/assets
 /environments/prod

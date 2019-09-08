@@ -78,7 +78,7 @@ class CommonReport extends BaseReport
         /** @var $row Meets */
         foreach ($this->models as $row) {
             $this->processRow($row);
-            $label = date($this->dateFormat, strtotime($row->time_from));
+            $label = date($this->dateFormat, strtotime($row->plan_from));
 
             if (!isset($this->setLabels[$label])) {
                 $this->labels[] = $label;
@@ -137,6 +137,7 @@ class CommonReport extends BaseReport
     {
         $this->models = Meets::find()
             ->filterWhere(['expert_id'=>$this->expert_id])
+//            ->andWhere('plan_from != NULL')
             ->orderBy(['plan_from' => SORT_ASC])
             ->all();
     }
