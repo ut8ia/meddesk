@@ -78,7 +78,9 @@ class CommonReport extends BaseReport
         /** @var $row Meets */
         foreach ($this->models as $row) {
             $this->processRow($row);
-            $label = date($this->dateFormat, strtotime($row->plan_from));
+
+            $time_source = $row->time_from ?: $row->plan_from;
+            $label = date($this->dateFormat, strtotime($time_source));
 
             if (!isset($this->setLabels[$label])) {
                 $this->labels[] = $label;
