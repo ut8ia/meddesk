@@ -108,6 +108,7 @@ use dmstr\widgets\Menu;
                             ['label' => 'Граф прийомів', 'icon' => 'signal', 'url' => ['/desk/statcommon/meets'],],
                             ['label' => 'По Фахівціям', 'icon' => 'user-plus', 'url' => ['/desk/statexperts'],],
                             ['label' => 'По Діагнозам', 'icon' => 'child', 'url' => ['/desk/statdiagnoses'],],
+                            ['label' => 'По Курсам', 'icon' => 'th-list', 'url' => ['/desk/statcourses'],],
                             ['label' => 'По Регіонам', 'icon' => 'globe', 'url' => ['/desk/statregions'],],
                         ]
                     ],
