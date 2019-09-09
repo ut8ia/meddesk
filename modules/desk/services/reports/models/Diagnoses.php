@@ -34,7 +34,7 @@ class Diagnoses extends DiagnosesBase
                 ? ((date("Y") - $birthDate[0]) - 1)
                 : (date("Y") - $birthDate[0]));
             if (!isset($this->ages[$age])) {
-                $this->ages[$age] = 0;
+                $this->ages[$age] = 1;
             } else {
                 $this->ages[$age]++;
             }
@@ -57,7 +57,6 @@ class Diagnoses extends DiagnosesBase
         } else {
             $end = 0;
         }
-
 
         for ($i = $from; $i <= $end; $i++) {
             if (isset($this->ages[$i])) {
