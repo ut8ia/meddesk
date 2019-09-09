@@ -1,16 +1,16 @@
 <?php
 
-namespace app\modules\desk\models\search;
+namespace app\modules\desk\services\reports\models\search;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\modules\desk\models\Diagnoses;
+use app\modules\desk\services\reports\models\Diagnoses;
 
 /**
- * Diagnoses represents the model behind the search form of `app\modules\desk\models\Diagnoses`.
+ * Diagnoses represents the model behind the search form of `a\app\modules\desk\services\reports\models\Diagnoses`.
  */
-class DiagnosesSearch extends Diagnoses
+class DiagnosesSearch extends \app\modules\desk\services\reports\models\Diagnoses
 {
     /**
      * @inheritdoc
@@ -42,7 +42,7 @@ class DiagnosesSearch extends Diagnoses
     public function search($params)
     {
         $query = Diagnoses::find()
-        ->with('diagnosesAppointments');
+        ->with('diagnosesAppointments.patients');
 
         // add conditions that should always apply here
 

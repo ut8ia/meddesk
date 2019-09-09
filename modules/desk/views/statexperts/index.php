@@ -47,7 +47,7 @@ $this->blocks['content-header'] = Yii::t('desk', 'Experts');
 //            ],
             [
                 'contentOptions' => ['class' => 'col-lg-4 '],
-                'label' => Yii::t('desk', 'Reports'),
+                'label' => Yii::t('desk', 'Граф прийомів'),
                 'format' => 'html',
                 'value' => function($model) {
                     return Html::a('Граф прийомів' ,'/desk/statexperts/meetsgraph?id='.$model->id);
@@ -55,7 +55,7 @@ $this->blocks['content-header'] = Yii::t('desk', 'Experts');
             ],
             [
                 'contentOptions' => ['class' => 'col-lg-4 '],
-                'label' => Yii::t('desk', 'Reports'),
+                'label' => Yii::t('desk', 'Відомість обліку відвідувань'),
                 'format' => 'html',
                 'value' => function($model) {
                     return Html::a('Відомість обліку відвідувань' ,'/desk/statexperts/report?id='.$model->id);

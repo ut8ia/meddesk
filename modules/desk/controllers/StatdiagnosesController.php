@@ -2,11 +2,11 @@
 
 namespace app\modules\desk\controllers;
 
-use app\modules\desk\models\Diagnoses;
+use app\modules\desk\services\reports\models\Diagnoses;
 use app\modules\desk\models\Experts;
 use app\modules\desk\models\forms\ExpertsForm;
 
-use app\modules\desk\models\search\DiagnosesSearch;
+use app\modules\desk\services\reports\models\search\DiagnosesSearch;
 use Yii;
 use app\modules\desk\models\search\ExpertsSearch;
 use yii\base\InvalidArgumentException;
