@@ -33,14 +33,6 @@ $this->blocks['content-header'] =   Yii::t('desk', 'Regions');
                 },
             ],
             [
-                'contentOptions' => ['class' => 'col-lg-8'],
-                'attribute' => 'name',
-                'label' => Yii::t('desk', 'Patients'),
-                'format' => 'html',
-                'value' => function($model) {
-                    return count($model->patients);
-                },
-            ],[
                 'contentOptions' => ['class' => 'col-lg-1'],
                 'label' => Yii::t('desk', 'Total'),
                 'format' => 'html',
