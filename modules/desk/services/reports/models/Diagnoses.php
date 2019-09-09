@@ -60,7 +60,9 @@ class Diagnoses extends DiagnosesBase
 
 
         for ($i = $from; $i <= $end; $i++) {
-            $count += $this->ages[$i];
+            if (isset($this->ages[$i])) {
+                $count += $this->ages[$i];
+            }
         }
 
         return $count;
