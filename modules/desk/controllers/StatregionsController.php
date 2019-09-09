@@ -3,8 +3,8 @@
 namespace app\modules\desk\controllers;
 
 use app\modules\desk\models\forms\ExpertsForm;
-use app\modules\desk\models\Regions;
-use app\modules\desk\models\search\RegionsSearch;
+use app\modules\desk\services\reports\models\Regions;
+use app\modules\desk\services\reports\models\search\RegionsSearch;
 use Yii;
 use yii\base\InvalidArgumentException;
 use yii\web\Controller;

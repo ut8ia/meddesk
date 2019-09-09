@@ -40,6 +40,69 @@ $this->blocks['content-header'] =   Yii::t('desk', 'Regions');
                 'value' => function($model) {
                     return count($model->patients);
                 },
+            ],[
+                'contentOptions' => ['class' => 'col-lg-1'],
+                'label' => Yii::t('desk', 'Total'),
+                'format' => 'html',
+                'value' => function($model) {
+                    return $model->getTotal();
+                },
+            ],
+            [
+                'contentOptions' => ['class' => 'col-lg-1'],
+                'label' => Yii::t('desk', '0-1'),
+                'format' => 'html',
+                'value' => function($model) {
+                    return $model->getAge(0, 1);
+                },
+            ],
+            [
+                'contentOptions' => ['class' => 'col-lg-1'],
+                'label' => Yii::t('desk', '2-3'),
+                'format' => 'html',
+                'value' => function($model) {
+                    return $model->getAge(2, 3);
+                },
+            ],
+            [
+                'contentOptions' => ['class' => 'col-lg-1'],
+                'label' => Yii::t('desk', '4-5'),
+                'format' => 'html',
+                'value' => function($model) {
+                    return $model->getAge(4, 5);
+                },
+            ],
+            [
+                'contentOptions' => ['class' => 'col-lg-1'],
+                'label' => Yii::t('desk', '6-7'),
+                'format' => 'html',
+                'value' => function($model) {
+                    return $model->getAge(6, 7);
+                },
+            ],
+            [
+                'contentOptions' => ['class' => 'col-lg-1'],
+                'label' => Yii::t('desk', '8-10'),
+                'format' => 'html',
+                'value' => function($model) {
+                    return $model->getAge(8, 10);
+                },
+            ],
+            [
+                'contentOptions' => ['class' => 'col-lg-1'],
+                'label' => Yii::t('desk', '11-12'),
+                'format' => 'html',
+                'value' => function($model) {
+                    return $model->getAge(11, 12);
+                },
+            ],
+            [
+                'contentOptions' => ['class' => 'col-lg-1'],
+                'label' => Yii::t('desk', '>12'),
+                'format' => 'html',
+                'value' => function($model) {
+                    return $model->getAge(12, null);
+                },
             ],
 //            [
 //                'contentOptions' => ['class' => 'col-lg-2'],
